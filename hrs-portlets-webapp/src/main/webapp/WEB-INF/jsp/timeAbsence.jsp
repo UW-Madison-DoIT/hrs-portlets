@@ -37,7 +37,13 @@
       <a href="${helpUrl}" target="_blank">Help</a>
     </div>
   </div>
-    
+  <div class="fl-widget hrs-notification-wrapper alert alert-info">
+    <div class="hrs-notification-content">
+      <a href="https://uwservice.wisc.edu/news/post/254" target="_blank">
+        &quot;Sabbatical&quot; is now labeled as &quot;Banked Leave.&quot;</a> 
+      Balances are unaffected by this name change.
+    </div>
+  </div>
       <hrs:notification/>
   </div>
   
