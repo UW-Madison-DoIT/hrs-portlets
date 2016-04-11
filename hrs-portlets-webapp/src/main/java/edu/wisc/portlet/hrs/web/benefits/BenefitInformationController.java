@@ -66,6 +66,8 @@ public class BenefitInformationController extends HrsControllerBase {
       final BenefitSummary benefitSummary = this.benefitSummaryDao.getBenefitSummary(emplId);
       model.addAttribute("enrollmentFlag", benefitSummary.getEnrollmentFlag());
       model.addAttribute("tab", tab);
+      boolean isMadisonUser = !StringUtils.isBlank(userInfo.get("wiscEduSORName"));
+      model.addAttribute("isMadisonUser", isMadisonUser);
       final PortletPreferences preferences = request.getPreferences();
       model.addAttribute("learnMoreEBenefitGuide", preferences.getValue("ebenefitguidetext", null));
 
