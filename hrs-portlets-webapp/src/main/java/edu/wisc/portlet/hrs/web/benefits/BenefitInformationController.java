@@ -21,6 +21,7 @@ package edu.wisc.portlet.hrs.web.benefits;
 
 import java.util.Map;
 
+import javax.portlet.PortletPreferences;
 import javax.portlet.PortletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,7 +45,7 @@ import edu.wisc.portlet.hrs.web.HrsControllerBase;
 @RequestMapping("VIEW")
 public class BenefitInformationController extends HrsControllerBase {
     private BenefitSummaryDao benefitSummaryDao;
-    
+
     @Autowired
     public void setBenefitSummaryDao(BenefitSummaryDao benefitSummaryDao) {
         this.benefitSummaryDao = benefitSummaryDao;
@@ -55,7 +56,7 @@ public class BenefitInformationController extends HrsControllerBase {
       @SuppressWarnings("unchecked")
       Map<String, String> userInfo = (Map <String, String>) request.getAttribute(PortletRequest.USER_INFO);
       final String emplId = PrimaryAttributeUtils.getPrimaryId();
-      
+
       final String[] tabArray = request.getParameterMap().get("tab");
       String tab = "";
       if(tabArray!=null && tabArray.length == 1) {
@@ -65,11 +66,9 @@ public class BenefitInformationController extends HrsControllerBase {
       final BenefitSummary benefitSummary = this.benefitSummaryDao.getBenefitSummary(emplId);
       model.addAttribute("enrollmentFlag", benefitSummary.getEnrollmentFlag());
       model.addAttribute("tab", tab);
-      boolean isMadisonUser = !StringUtils.isBlank(userInfo.get("wiscEduSORName"));
-      model.addAttribute("isMadisonUser", isMadisonUser);
-      
+      final PortletPreferences preferences = request.getPreferences();
+      model.addAttribute("learnMoreEBenefitGuide", preferences.getValue("ebenefitguidetext", null));
+
       return "benefitInformation";
     }
-    
-    
 }

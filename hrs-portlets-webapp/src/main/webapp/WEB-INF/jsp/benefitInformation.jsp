@@ -29,15 +29,15 @@
       <div class="dl-banner-link">
         <spring:message code="benefit.summary.enrollment.O.message" text="You have a benefit enrollment opportunity. Please enroll online by clicking the following link: "/>
         <a target="_blank" href="${hrsUrls['Open Enrollment/Hire Event']}"><spring:message code="open.enrollment" text="Open Enrollment" /></a>
-        <c:if test="${isMadisonUser}">Learn more in the <a href="https://ohr.wisc.edu/ebenefits" target="blank">Madison eBenefits Guide</a>.</c:if>
+        ${learnMoreEBenefitGuide}
       </div>
     </c:when>
     <c:when test="${enrollmentFlag == 'H'}">
       <div class="dl-banner-link">
         You have a benefit enrollment opportunity. Please enroll online by clicking the following link.
         <a target="_blank" href="${hrsUrls['Open Enrollment/Hire Event']}">Benefits Enrollment</a>. A Benefit Enrollment
-        Deadlines worksheet is available in the Statements tab which details your enrollment deadlines by plan. 
-        <c:if test="${isMadisonUser}">Learn more in the <a href="https://ohr.wisc.edu/ebenefits" target="blank">Madison eBenefits Guide</a>.</c:if>
+        Deadlines worksheet is available in the Statements tab which details your enrollment deadlines by plan.
+        ${learnMoreEBenefitGuide}
       </div>
     </c:when>
     </c:choose>
@@ -45,9 +45,9 @@
       <a href="${helpUrl}" target="_blank">Help</a>
     </div>
   </div>
-  
+
   <hrs:notification/>
-  
+
   <div id="${n}dl-tabs" class="dl-tabs ui-tabs ui-widget ui-widget-content ui-corner-all inner-nav-container">
     <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all inner-nav">
       <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#${n}dl-benefits">Summary</a></li>
@@ -178,9 +178,9 @@
               dataLoadErrorMsg: "${genericErrorMessage}"
           }
         });
-        
+
         dl.pager.init("#${n}dl-dependents", {
-          columnDefs: [ 
+          columnDefs: [
             dl.pager.colDef("name", {sortable: true}),
             dl.pager.colDef("relationship", {sortable: true})
           ],
@@ -190,14 +190,14 @@
               dataLoadErrorMsg: "${genericErrorMessage}"
           }
         });
-        
+
         var benefitStatementUrl = dl.util.templateUrl("${benefitsPdfUrl}");
         dl.pager.init("#${n}dl-benefit-statements", {
           model: {
               /* sortKey: "name",
-              sortDir: 1 */              
+              sortDir: 1 */
           },
-          columnDefs: [ 
+          columnDefs: [
               dl.pager.linkColDef("year", benefitStatementUrl, {sortable: true}),
               dl.pager.linkColDef("name", benefitStatementUrl, {sortable: true})
           ],
@@ -209,31 +209,31 @@
                   if (data == undefined || data.length == 0) {
                       //Hide the ${n}-dl-benefit-statement-links
                       $('.${n}-dl-benefit-statement-links').hide();
-                      
+
                   }
               }
           }
         });
-        
+
         var opt = 0;
-        
+
         if("statements" === "${tab}") {
             opt = 1;
         } else if ("dependents" === "${tab}") {
             opt = 2;
         }
-        
+
         $("#${n}dl-tabs").tabs({
             show: function(event, ui) {
                 $.log("Showing tab: " + ui.index);
                 dl.pager.show(ui.panel);
             }
         });
-        
+
         $("#${n}dl-tabs").tabs("select",opt);
-        
+
         dl.util.clickableContainer("#${n}dl-benefit-summary");
-    });    
+    });
 })(dl_v1.jQuery, dl_v1);
 </rs:compressJs>
 </script>
