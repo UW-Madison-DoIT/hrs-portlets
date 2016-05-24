@@ -53,7 +53,7 @@
         <a href="${hrsUrls['Request Absence']}" target="_blank">Enter Absence</a><br/>
       </div>
     </sec:authorize>
-    <%-- <sec:authorize ifAnyGranted="ROLE_VIEW_TIME_SHEET,ROLE_VIEW_WEB_CLOCK,ROLE_VIEW_TIME_CLOCK"> --%>
+    <sec:authorize ifAnyGranted="ROLE_VIEW_TIME_SHEET,ROLE_VIEW_WEB_CLOCK,ROLE_VIEW_TIME_CLOCK">
       <div class="dl-link">
         <div style='display: inline-block;'>
           <a class="btn btn-primary" href="${hrsUrls['Timesheet']}" target="_blank">Timesheet</a>
@@ -63,7 +63,7 @@
         </c:if>
         <br/>
       </div>
-    <%-- </sec:authorize> --%>
+    </sec:authorize>
     <sec:authorize ifAnyGranted="ROLE_VIEW_WEB_CLOCK">
       <div class="dl-link">
         <a href="${hrsUrls['Web Clock']}" target="_blank">Web Clock</a><br/>
