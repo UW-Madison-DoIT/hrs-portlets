@@ -53,11 +53,17 @@
         <a href="${hrsUrls['Request Absence']}" target="_blank">Enter Absence</a><br/>
       </div>
     </sec:authorize>
-    <sec:authorize ifAnyGranted="ROLE_VIEW_TIME_SHEET,ROLE_VIEW_WEB_CLOCK,ROLE_VIEW_TIME_CLOCK">
+    <%-- <sec:authorize ifAnyGranted="ROLE_VIEW_TIME_SHEET,ROLE_VIEW_WEB_CLOCK,ROLE_VIEW_TIME_CLOCK"> --%>
       <div class="dl-link">
-        <a href="${hrsUrls['Timesheet']}" target="_blank">Timesheet</a><br/>
+        <div style='display: inline-block;'>
+          <a class="btn btn-primary" href="${hrsUrls['Timesheet']}" target="_blank">Timesheet</a>
+        </div>
+        <c:if test="${not empty timesheetNotice}">
+          <div class="timesheet-notice">${timesheetNotice}</div>
+        </c:if>
+        <br/>
       </div>
-    </sec:authorize>
+    <%-- </sec:authorize> --%>
     <sec:authorize ifAnyGranted="ROLE_VIEW_WEB_CLOCK">
       <div class="dl-link">
         <a href="${hrsUrls['Web Clock']}" target="_blank">Web Clock</a><br/>
@@ -216,7 +222,7 @@
           <hrs:pagerNavBar position="bottom" />
         </div>
       </div>
-      
+
       <div id="${n}dl-sabbatical-reports">
         <div class="fl-pager">
           <hrs:pagerNavBar position="top" showSummary="${true}" />
@@ -239,11 +245,11 @@
           <hrs:pagerNavBar position="bottom" />
         </div>
       </div>
-      
+
       <div id="${n}no-statements">
         <spring:message code="noLeaveOrSabbaticalStatements" />
       </div>
-      
+
     </div>
   </div>
   <div>
@@ -315,7 +321,7 @@
                 sortDir: -1
             },
             summary: {
-                type: "fluid.pager.summary", 
+                type: "fluid.pager.summary",
                 options: {
                   message: "%first-%last of %total absences"
                 }
@@ -349,14 +355,14 @@
             }
           });
         </sec:authorize>
-        
+
 
         dl.pager.init("#${n}dl-leave-balance", {
             model: {
                 sortKey: "entitlement",
                 sortDir: 1
             },
-            columnDefs: [ 
+            columnDefs: [
                dl.pager.colDef("entitlement", {sortable: true}),
                dl.pager.colDef("balance", {sortable: true, sortValueExtractor : dl.pager.numberExtractor}),
                dl.pager.colDef("title", {sortable: true})
@@ -380,7 +386,7 @@
               }
             }
           });
-        
+
         <sec:authorize ifAnyGranted="ROLE_VIEW_WEB_CLOCK,ROLE_VIEW_TIME_CLOCK,ROLE_VIEW_TIME_SHEET">
           dl.pager.init("#${n}dl-time-entry", {
             model: {
@@ -388,12 +394,12 @@
                 sortDir: -1
             },
             summary: {
-                type: "fluid.pager.summary", 
+                type: "fluid.pager.summary",
                 options: {
                   message: "%first-%last of %total entries"
                 }
             },
-            columnDefs: [ 
+            columnDefs: [
                dl.pager.colDef("date", {sortable: true, sortValueExtractor : dl.pager.dateExtractor}),
                dl.pager.colDef("status", {sortable: true}),
                dl.pager.colDef("total", {sortable: true, sortValueExtractor : dl.pager.numberExtractor}),
@@ -421,22 +427,22 @@
               }
           });
         </sec:authorize>
-        
+
         var noStatementsDiv = $("#${n}no-statements");
         noStatementsDiv.data("showStatus", { sabbatical: true, statements: true });
         noStatementsDiv.hide();
-        
+
         dl.pager.init("#${n}dl-leave-statements", {
           model: {
               sortKey: "payPeriod",
               sortDir: -1
           },
-          columnDefs: [ 
+          columnDefs: [
              dl.pager.colDef("payPeriod", {sortable: true, sortValueExtractor: dl.pager.mmyyyyDateExtractor}),
              {
-                 key: name, 
-                 valuebinding: "*.leaveFurloughReportLinks", 
-                 components: { 
+                 key: name,
+                 valuebinding: "*.leaveFurloughReportLinks",
+                 components: {
                      markup: dl.util.templateUrl("TMPLT_*.leaveFurloughReportLinks_TMPLT")
                  }
              }
@@ -448,7 +454,7 @@
                 if (data == undefined || data.length == 0) {
                     //Hide the leave reports block
                     $("#${n}dl-leave-statements").hide();
-                    
+
                     //Increment the show count on the no statements block, if result is 2 show the no statements block
                     var showStatus = noStatementsDiv.data("showStatus");
                     showStatus.statements = false;
@@ -460,7 +466,7 @@
                     //Hide no statements block and decrement the show count
                     noStatementsDiv.hide();
                     noStatementsDiv.data("showStatus").statements = true;
-                    
+
                     $("#${n}dl-leave-statements").show();
                 }
             },
@@ -468,8 +474,8 @@
             dataExtractor: function (dataKey, data) {
                 data = data.report;
                 $.each(data, function(index, leaveStatement) {
-                    //leave / furlough Reports 
-                	
+                    //leave / furlough Reports
+
                 	if (leaveStatement.leaveReports && leaveStatement.leaveReports.length > 0) {
                       leaveStatement.leaveFurloughReportLinks = "";
                       $.each(leaveStatement.leaveReports, function (index, leaveFurloughReport) {
@@ -483,12 +489,12 @@
                     else {
                         leaveStatement.leaveFurloughReportLinks = "&nbsp;";
                     }
-                    
-                    
+
+
                 });
-                
+
               //missing report ajax call (doing it here so it uses the cached from call in leave report collection)
-                
+
             	$.ajax({
   		          type: "POST",
   		          url: "${missingReportUrl}",
@@ -505,18 +511,18 @@
   		       	  	var response = jQuery.parseJSON(e.responseText);
   		          }
   		        });
-                
+
                 return data;
             }
           }
         });
-        
+
         dl.pager.init("#${n}dl-sabbatical-reports", {
           model: {
               sortKey: "payPeriod",
               sortDir: -1
           },
-          columnDefs: [ 
+          columnDefs: [
              dl.pager.linkColDef("year", dl.util.templateUrl("${sabbaticalReportPdfUrl}"), {sortable: true}),
              dl.pager.linkColDef("fullTitle", dl.util.templateUrl("${sabbaticalReportPdfUrl}"), {sortable: true})
           ],
@@ -527,7 +533,7 @@
             	if (data == undefined || data.length == 0) {
             		//Hide the sabbatical reports block
             		$("#${n}dl-sabbatical-reports").hide();
-            		
+
             		//Increment the show count on the no statements block, if result is 2 show the no statements block
             		var showStatus = noStatementsDiv.data("showStatus");
             		showStatus.sabbatical = false;
@@ -539,18 +545,18 @@
             		//Hide no statements block and decrement the show count
             		noStatementsDiv.hide();
             		noStatementsDiv.data("showStatus").sabbatical = true;
-            		
+
             		$("#${n}dl-sabbatical-reports").show();
             	}
-            },	
+            },
             dataLoadErrorMsg: "${genericErrorMessage}"
           }
         });
-        
+
         dl.tabs("#${n}dl-tabs");
 
         dl.util.clickableContainer("#${n}dl-time-absence");
-    });    
+    });
 })(dl_v1.jQuery, dl_v1.fluid, dl_v1);
 </rs:compressJs>
 </script>

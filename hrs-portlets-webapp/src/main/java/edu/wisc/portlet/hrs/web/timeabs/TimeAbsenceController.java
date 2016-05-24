@@ -19,12 +19,14 @@
 
 package edu.wisc.portlet.hrs.web.timeabs;
 
+import javax.portlet.PortletPreferences;
 import javax.portlet.PortletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 
 import edu.wisc.hr.dao.person.ContactInfoDao;
 import edu.wisc.hr.dm.person.PersonInformation;
@@ -32,27 +34,34 @@ import org.jasig.springframework.security.portlet.authentication.PrimaryAttribut
 import edu.wisc.portlet.hrs.web.HrsControllerBase;
 
 /**
- * 
- * 
+ *
+ *
  * @author Eric Dalquist
  */
 @Controller
 @RequestMapping("VIEW")
 public class TimeAbsenceController extends HrsControllerBase {
     private ContactInfoDao contactInfoDao;
-    
+
     @Autowired
     public void setContactInfoDao(ContactInfoDao contactInfoDao) {
         this.contactInfoDao = contactInfoDao;
     }
-    
+
+    @ModelAttribute("timesheetNotice")
+    public final String getTimesheetNotice(PortletRequest request) {
+        final PortletPreferences preferences = request.getPreferences();
+
+        return preferences.getValue("timesheetNotice", null);
+    }
+
     @RequestMapping
     public String viewContactInfo(ModelMap model, PortletRequest request) {
         final String emplId = PrimaryAttributeUtils.getPrimaryId();
-        
+
         final PersonInformation personalData = this.contactInfoDao.getPersonalData(emplId);
         model.addAttribute("personalData", personalData);
-        
+
         return "timeAbsence";
     }
 }

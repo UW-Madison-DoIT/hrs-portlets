@@ -16,27 +16,27 @@
  * specific language governing permissions and limitations
  * under the License.
  */
- 
- .hrs p.padded-paragraph 
+
+ .hrs p.padded-paragraph
  {
- 	padding-top: 1em; 
+ 	padding-top: 1em;
  	padding-bottom: 1em;
  }
- 
+
  .hrs .pref-name-edit-error
  {
  	padding : 1em;
  }
- 
+
  .hrs.dl-contact-info {
     padding : 5px;
  }
- 
+
  .hrs .dl-contact-info p.pref-notice {
  	font-style: italic;
  	font-size: x-small;
  }
- 
+
 .hrs.dl-contact-info .fancy-button {
 	background: #990000;
 	color: white !important;
@@ -56,15 +56,15 @@
  {
  	padding : 1em;
  }
- 
+
  .hrs.dl-contact-info .dl-contact-info p {
  	font-style: italic;
  	font-size: x-small;
  	margin: .5em;
  }
- 
+
  .hrs.dl-contact-info .edit-name {
-	float : left; 
+	float : left;
  }
  .hrs.dl-contact-info input {
    margin : 5px;
@@ -72,16 +72,16 @@
  .hrs.dl-contact-info .edit-notice {
  	clear : left;
  }
- 
+
  .hrs.dl-contact-info .edit-buttons {
-  text-align: inherit; 
+  text-align: inherit;
 
  }
- 
+
  .hrs.dl-contact-info .pn-label {
 	font-size : x-small;
  }
- 
+
   .hrs.dl-contact-info .pref-name-edit {
      margin-left: 1em;
      background-color: #F3F3F3;
@@ -89,29 +89,29 @@
      border-radius: 4px;
      padding: 5px;
  }
- 
+
  .hrs.dl-contact-info .pref-name-edit .names {
    display: inline-block;
  }
- 
+
  .hrs.dl-contact-info .label {
     color: black;
  }
- 
+
  .hrs.dl-contact-info .error {
     color : red;
  }
- 
+
  .hrs.dl-contact-info .info-text {
    font-size: 12px;
    padding-left: 5px;
  }
- 
- 
+
+
  .hrs.dl-benefit-summary .dl-banner-links .dl-banner-link {
     font-size:1.15em;
  }
- 
+
  .hrs.dl-benefit-summary .dl-banner-links .dl-banner-link a {
     font-weight:bold;
  }
@@ -170,11 +170,25 @@
   .hrs .fl-pager .fl-pager-ui .flc-pager-previous {
     position:relative;
   }
-  
+
   .hrs .dl-payroll-links {
     padding-left : 15px;
   }
-  
+
   .ui-tabs .ui-tabs-hide {
     display: none!important;
+  }
+
+  .hrs.dl-time-absence .timesheet-notice {
+    padding: 10px 5px 0;
+    vertical-align: top;
+    display: inline-block;
+    width: 50%;
+  }
+
+  @media (max-width:768px) {
+    .hrs.dl-time-absence .timesheet-notice {
+      display: block;
+      width: 100%;
+    }
   }
