@@ -116,9 +116,6 @@
                 <div class='col-xs-6'>
                     <a href="https://uwservice.wisc.edu/help/wrs-benefits-statement.php" target="_blank" class="btn btn-default">ETF Annual Statement of Benefits: Enclosures and Explanation</a>
                 </div>
-                <div class='col-xs-6'>
-                    <a href="https://uwservice.wisc.edu/help/benefits-statement.php" target="_blank" class="btn btn-default">Explanation of Staff Benefits Statement</a>
-                </div>
             </div>
         </div>
       </div>
