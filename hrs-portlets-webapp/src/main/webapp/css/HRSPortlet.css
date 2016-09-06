@@ -22,7 +22,7 @@
  	padding-top: 1em;
  	padding-bottom: 1em;
  }
-
+ 
  .hrs .pref-name-edit-error
  {
  	padding : 1em;
@@ -177,6 +177,11 @@
 
   .ui-tabs .ui-tabs-hide {
     display: none!important;
+  }
+  
+  .hrs.change-business-email-dialog .dl-email-update-label .label
+  {
+    color: black;
   }
 
   .hrs.dl-time-absence .timesheet-notice {

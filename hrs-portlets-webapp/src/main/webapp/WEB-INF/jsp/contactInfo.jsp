@@ -250,7 +250,7 @@
     </div>
   </div>
   
-  <div class="change-business-email-dialog" title="Change Campus Business Email">
+  <div class="change-business-email-dialog hrs" title="Change Campus Business Email">
     <div>
       Email address used for official campus communications, for the directory, and other authorized uses.
     </div>
@@ -262,7 +262,7 @@
         <table>
           <tbody>
             <tr>
-              <th class="dl-email-update-label">Current Campus Business Email:</th>
+              <th class="dl-email-update-label"><span class="label">Current Campus Business Email:</span></th>
               <td class="${n}business-email-address">${fn:escapeXml(contactInformation.email)}</td>
             </tr>
             <tr>
