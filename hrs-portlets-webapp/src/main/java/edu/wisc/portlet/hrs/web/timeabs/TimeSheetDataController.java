@@ -36,21 +36,20 @@ import edu.wisc.hr.dm.tlpayable.TimeSheet;
 import org.jasig.springframework.security.portlet.authentication.PrimaryAttributeUtils;
 
 /**
- * 
- * 
+ *
+ *
  * @author Eric Dalquist
  */
 @Controller
 @RequestMapping("VIEW")
 public class TimeSheetDataController {
     private TimeSheetDao timeSheetDao;
-    
+
     @Autowired
     public void setTimeSheetDao(TimeSheetDao timeSheetDao) {
         this.timeSheetDao = timeSheetDao;
     }
 
-    
     /**
      * Gets Time sheets - limited to most recent 80 results for the requesting user
      * @param modelMap
@@ -62,7 +61,7 @@ public class TimeSheetDataController {
         final String emplid = PrimaryAttributeUtils.getPrimaryId();
 
         final List<TimeSheet> timeSheets = this.timeSheetDao.getTimeSheets(emplid);
-        
+
         //sorts the list from most recent time sheets to oldest time sheets
         Collections.sort(timeSheets, new Comparator<TimeSheet>(){
             @Override
@@ -79,5 +78,4 @@ public class TimeSheetDataController {
         modelMap.addAttribute("report", timeSheets.subList(0, timeSheets.size()>80 ? 80:timeSheets.size()));
         return "reportAttrJsonView";
     }
-
 }

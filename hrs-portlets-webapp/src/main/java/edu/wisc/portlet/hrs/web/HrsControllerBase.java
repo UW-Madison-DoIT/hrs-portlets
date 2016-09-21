@@ -28,18 +28,20 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.portlet.bind.annotation.ResourceMapping;
 
 import edu.wisc.hr.dao.url.HrsUrlDao;
 
 /**
  * Common functions and dependencies for HRS controllers
- * 
+ *
  * @author Eric Dalquist
  * @version $Revision: 1.2 $
  */
 public class HrsControllerBase {
     protected final Logger logger = LoggerFactory.getLogger(getClass());
-    
+
     private String notificationPreferences = "notification";
     protected static final String helpUrlPreferences = "helpUrl";
     private static final String GENERIC_ERROR_MESSAGE_PREFERENCE_NAME = "genericErrorMessage";
@@ -54,7 +56,7 @@ public class HrsControllerBase {
     public void setHrsUrlDao(HrsUrlDao hrsUrlDao) {
         this.hrsUrlDao = hrsUrlDao;
     }
-    
+
     /**
      * Populate the ModelMap with the navigation links from the portlet preferences
      */
@@ -63,9 +65,9 @@ public class HrsControllerBase {
         final PortletPreferences preferences = request.getPreferences();
         return preferences.getValue(helpUrlPreferences, "#");
     }
-    
+
     /**
-     * The generic Message if you want to override the default in 
+     * The generic Message if you want to override the default in
      * messages.properties
      */
     @ModelAttribute("genericErrorMessage")
@@ -73,17 +75,17 @@ public class HrsControllerBase {
         final PortletPreferences preferences = request.getPreferences();
         return preferences.getValue(GENERIC_ERROR_MESSAGE_PREFERENCE_NAME, DEFAULT_ERROR_MESSAGE);
     }
-    
+
     /**
      * Populate the ModelMap with the notification message
      */
     @ModelAttribute("notification")
     public final String[] getNotification(PortletRequest request) {
         final PortletPreferences preferences = request.getPreferences();
-        
+
         return preferences.getValues(this.notificationPreferences, null);
     }
-    
+
     /**
      * Populate the ModelMap with the HRS Urls
      */
@@ -91,4 +93,11 @@ public class HrsControllerBase {
     public final Map<String, String> getHrsUrls() {
         return this.hrsUrlDao.getHrsUrls();
     }
+
+    @ResourceMapping("getHrsUrlsJson")
+    public String getURLRestService(ModelMap modelMap) {
+      modelMap.addAttribute("report", this.hrsUrlDao.getHrsUrls());
+      return "reportAttrJsonView";
+    }
+
 }
