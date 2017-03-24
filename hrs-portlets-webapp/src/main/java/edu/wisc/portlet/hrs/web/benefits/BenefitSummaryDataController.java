@@ -51,7 +51,9 @@ public class BenefitSummaryDataController {
         final BenefitSummary benefitSummary = this.benefitSummaryDao.getBenefitSummary(emplid);
         modelMap.addAttribute("benefits", benefitSummary.getBenefits());
         modelMap.addAttribute("dependents", benefitSummary.getDependents());
-        
+        modelMap.addAttribute(
+          "enrollmentFlag", benefitSummary.getEnrollmentFlag())
+
         return "jsonView";
     }
 }
