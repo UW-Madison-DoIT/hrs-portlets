@@ -31,6 +31,11 @@
                 <xs:element name="benefits" type="Benefit" minOccurs="0" maxOccurs="unbounded" />
                 <xs:element name="dependents" type="Dependent" minOccurs="0" maxOccurs="unbounded" />
                 <xs:element name="enrollmentFlag" type="xs:string" />
+                  <!-- Values for enrollmentFlag seem to be
+                       O : indicates enrollment opportunity arising from
+                       _o_pen enrollment aka annual benefits enrollment.
+                       H : indicates personal enrollment opportunity arising from _h_iring or another Qualifying Event.
+                  -->
             </xs:sequence>
         </xs:complexType>
     </xs:element>
