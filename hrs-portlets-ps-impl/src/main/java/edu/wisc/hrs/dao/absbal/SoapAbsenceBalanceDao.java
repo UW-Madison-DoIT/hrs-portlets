@@ -24,6 +24,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
+import com.google.common.base.Predicate;
+import com.google.common.base.Predicates;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
@@ -52,6 +54,13 @@ import edu.wisc.hrs.xdm.absbal.res.UwGpAbsBalVwTypeShape;
 public class SoapAbsenceBalanceDao extends BaseHrsSoapDao implements AbsenceBalanceDao {
     private WebServiceOperations webServiceOperations;
     private ContactInfoDao contactInfoDao;
+
+    /**
+     * Predicate matching absence balances that are
+     * of type ClassifiedFurloughAllocated AND have zero balance.
+     */
+    protected final Predicate degenerateFurloughPredicate =
+        Predicates.and(new ClassifiedFurloughAllocatedPredicate(), new ZeroBalancePredicate());
     
     @Autowired
     public void setWebServiceOperations(@Qualifier("absenceBalanceWebServiceTemplate") WebServiceOperations webServiceOperations) {
@@ -114,8 +123,13 @@ public class SoapAbsenceBalanceDao extends BaseHrsSoapDao implements AbsenceBala
             final Integer jobId = HrsUtils.getValue(uwGpAbsBalVwTypeShape.getEmplRcd());
             final Job job = jobs.get(jobId);
             absenceBalance.setJob(job);
-            
-            absenceBalances.add(absenceBalance);
+
+            // filter out not-currently-relevant furlough leave
+            if (! degenerateFurloughPredicate.apply(absenceBalance)) {
+                absenceBalances.add(absenceBalance);
+            } else {
+                logger.trace("Filtered out classified furlough " + absenceBalance + " .");
+            }
         }
         
         return absenceBalances;
