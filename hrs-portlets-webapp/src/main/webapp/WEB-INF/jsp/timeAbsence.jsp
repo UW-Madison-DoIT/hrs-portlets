@@ -440,7 +440,7 @@
           columnDefs: [
              dl.pager.colDef("payPeriod", {sortable: true, sortValueExtractor: dl.pager.mmyyyyDateExtractor}),
              {
-                 key: name,
+                 key: "",
                  valuebinding: "*.leaveFurloughReportLinks",
                  components: {
                      markup: dl.util.templateUrl("TMPLT_*.leaveFurloughReportLinks_TMPLT")
