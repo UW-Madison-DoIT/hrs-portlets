@@ -220,19 +220,20 @@
             linked HRS self-service UI. -->
       
       <div class="dl-contact-info-update">
-        <strong>
-          <a href="${prefs['updateMyPersonalInfoUrl'][0]}" 
-            target="_blank" rel="noopener noreferer">
-            Update My Personal Information
-          </a>
-        </strong>
-        <br/>
         <div>
-          <p class="padded-paragraph">
+          <p>
+            <strong>
+            <a href="${prefs['updateMyPersonalInfoUrl'][0]}" 
+              target="_blank" rel="noopener noreferer">
+              Update My Personal Information
+            </a>
+            </strong>
+          </p>
+          <p>
             <strong>
               Please note that you can update the following personal information in HRS:
             </strong>
-            <p class="padded-paragraph" style="padding-left: 2cm;">
+            <p style="padding-left: 2cm;">
               <strong>
                 Addresses (Home &amp; Mail); Contact Details (Phone &amp; Email); Emergency Contacts; Release Home Information; Marital Status; Coordination of Benefits; Medicare Information; Ethnic Groups; Veteran Status; Disability.
               </strong>
