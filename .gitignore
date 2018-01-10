@@ -7,3 +7,5 @@
 *.iml
 */*.iml
 hrs-portlets-webapp/overlays
+/hrs-portlets-webapp/nbproject/
+
