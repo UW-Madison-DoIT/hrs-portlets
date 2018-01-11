@@ -68,6 +68,16 @@ public class BenefitStatementDataController {
         this.benefitStatementDao = benefitStatementDao;
     }
     
+    /**
+     * Sorts the provided list of statements by
+     * "Issued" date desc, name asc, then by year desc.
+     * 
+     * Intended functionality is to split Enrollment Confirmations and ETF's and
+     * and list newest first.
+     * 
+     * CAUTION: Works via side-effects
+     * @param statements 
+     */
     protected static void sortStatements(List<BenefitStatement> statements) {
         ComparatorChain chainSort = new ComparatorChain();
         chainSort.addComparator(new BenefitStatementIssuedComparator(), true);
@@ -101,6 +111,10 @@ public class BenefitStatementDataController {
         this.benefitStatementDao.getBenefitStatement(emplid, year, docId, mode, new PortletResourceProxyResponse(response, ignoredProxyHeaders));
     }
     
+    /**
+     * Compares the Issued date in the name field.
+     * Dates must be in the medium format format, eg "Jan 1, 2018"
+     */
     private static class BenefitStatementIssuedComparator implements Comparator<BenefitStatement> {
       private static final int GREATER_THAN = 1;
       private static final int LESS_THAN = -1;
