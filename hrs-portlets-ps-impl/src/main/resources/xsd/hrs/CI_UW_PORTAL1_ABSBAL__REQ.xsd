@@ -19,4 +19,26 @@
     under the License.
 
 -->
-<xsd:schema elementFormDefault="qualified" targetNamespace="http://devreports.hrtest.ps.wisconsin.edu:7022/Enterprise/Tools/schemas/M360749.V1" xmlns="http://devreports.hrtest.ps.wisconsin.edu:7022/Enterprise/Tools/schemas/M360749.V1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><xsd:element name="Get__CompIntfc__UW_PORTAL1_ABSBAL" type="Get__CompIntfc__UW_PORTAL1_ABSBALTypeShape"/><xsd:complexType name="Get__CompIntfc__UW_PORTAL1_ABSBALTypeShape"><xsd:sequence><xsd:element name="Emplid" type="EmplidTypeShape"/></xsd:sequence></xsd:complexType><xsd:complexType name="EmplidTypeShape"><xsd:simpleContent><xsd:extension base="EmplidTypeDef"/></xsd:simpleContent></xsd:complexType><xsd:simpleType name="EmplidTypeDef"><xsd:restriction base="xsd:string"><xsd:maxLength value="11"/><xsd:whiteSpace value="preserve"/></xsd:restriction></xsd:simpleType></xsd:schema>
+<xsd:schema elementFormDefault="qualified"
+    targetNamespace="http://devreports.hrtest.ps.wisconsin.edu:7022/Enterprise/Tools/schemas/M360749.V1"
+    xmlns="http://devreports.hrtest.ps.wisconsin.edu:7022/Enterprise/Tools/schemas/M360749.V1"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="Get__CompIntfc__UW_PORTAL1_ABSBAL"
+        type="Get__CompIntfc__UW_PORTAL1_ABSBALTypeShape" />
+    <xsd:complexType name="Get__CompIntfc__UW_PORTAL1_ABSBALTypeShape">
+        <xsd:sequence>
+            <xsd:element name="Emplid" type="EmplidTypeShape" />
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="EmplidTypeShape">
+        <xsd:simpleContent>
+            <xsd:extension base="EmplidTypeDef" />
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:simpleType name="EmplidTypeDef">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="11" />
+            <xsd:whiteSpace value="preserve" />
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema>

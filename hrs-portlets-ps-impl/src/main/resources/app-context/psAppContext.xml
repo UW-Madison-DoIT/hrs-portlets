@@ -141,6 +141,11 @@
         <property name="destinationProvider" ref="absenceHistoryDestinationProvider" />
     </bean>
     
+    <bean id="approvalsCountDestinationProvider" class="org.jasig.springframework.ws.client.support.destination.FailSafeWsdl11DestinationProvider" />
+    <bean id="approvalsCountWebServiceTemplate" parent="baseHrsWebServiceTemplate">
+        <property name="destinationProvider" ref="approvalsCountDestinationProvider" />
+    </bean>
+    
     <bean id="personDestinationProvider" class="org.jasig.springframework.ws.client.support.destination.FailSafeWsdl11DestinationProvider" />
     <bean id="personWebServiceTemplate" parent="baseHrsWebServiceTemplate">
         <property name="destinationProvider" ref="personDestinationProvider" />
@@ -193,6 +198,9 @@
                 <value>edu.wisc.hrs.xdm.abshis.fault</value>
                 <value>edu.wisc.hrs.xdm.abshis.req</value>
                 <value>edu.wisc.hrs.xdm.abshis.res</value>
+                <value>edu.wisc.hrs.xdm.apprcnt.fault</value>
+                <value>edu.wisc.hrs.xdm.apprcnt.req</value>
+                <value>edu.wisc.hrs.xdm.apprcnt.res</value>
                 <value>edu.wisc.hrs.xdm.bnsumm.fault</value>
                 <value>edu.wisc.hrs.xdm.bnsumm.req</value>
                 <value>edu.wisc.hrs.xdm.bnsumm.res</value>

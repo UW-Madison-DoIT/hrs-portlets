@@ -19,4 +19,113 @@
     under the License.
 
 -->
-<xsd:schema elementFormDefault="qualified" targetNamespace="http://devreports.hrtest.ps.wisconsin.edu:7022/Enterprise/Tools/schemas/M969074.V1" xmlns="http://devreports.hrtest.ps.wisconsin.edu:7022/Enterprise/Tools/schemas/M969074.V1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><xsd:element name="Get__CompIntfc__UW_PORTAL1_ABSBALResponse" type="Get__CompIntfc__UW_PORTAL1_ABSBALResponseTypeShape"/><xsd:complexType name="Get__CompIntfc__UW_PORTAL1_ABSBALResponseTypeShape"><xsd:sequence><xsd:element name="Emplid" type="EmplidTypeShape"/><xsd:element maxOccurs="unbounded" minOccurs="0" name="Uw_Gp_AbsBal_Vw" type="Uw_Gp_AbsBal_VwTypeShape"/></xsd:sequence></xsd:complexType><xsd:complexType name="EmplidTypeShape"><xsd:simpleContent><xsd:extension base="EmplidTypeDef"/></xsd:simpleContent></xsd:complexType><xsd:complexType name="Uw_Gp_AbsBal_VwTypeShape"><xsd:sequence><xsd:element name="Empl_Rcd" type="Empl_RcdTypeShape"/><xsd:element minOccurs="0" name="Descr" type="DescrTypeShape"/><xsd:element name="Acm_From_Dt" type="Acm_From_DtTypeShape"/><xsd:element name="Acm_Thru_Dt" type="Acm_Thru_DtTypeShape"/><xsd:element minOccurs="0" name="XlatLongName" type="XlatLongNameTypeShape"/><xsd:element minOccurs="0" name="Calc_Rslt_Val" type="Calc_Rslt_ValTypeShape"/><xsd:element minOccurs="0" name="Unit_Type" type="Unit_TypeTypeShape"/></xsd:sequence></xsd:complexType><xsd:complexType name="Empl_RcdTypeShape"><xsd:simpleContent><xsd:extension base="Empl_RcdTypeDef"/></xsd:simpleContent></xsd:complexType><xsd:complexType name="DescrTypeShape"><xsd:simpleContent><xsd:extension base="DescrTypeDef"/></xsd:simpleContent></xsd:complexType><xsd:complexType name="Acm_From_DtTypeShape"><xsd:simpleContent><xsd:extension base="Acm_From_DtTypeDef"/></xsd:simpleContent></xsd:complexType><xsd:complexType name="Acm_Thru_DtTypeShape"><xsd:simpleContent><xsd:extension base="Acm_Thru_DtTypeDef"/></xsd:simpleContent></xsd:complexType><xsd:complexType name="XlatLongNameTypeShape"><xsd:simpleContent><xsd:extension base="XlatLongNameTypeDef"/></xsd:simpleContent></xsd:complexType><xsd:complexType name="Calc_Rslt_ValTypeShape"><xsd:simpleContent><xsd:extension base="Calc_Rslt_ValTypeDef"/></xsd:simpleContent></xsd:complexType><xsd:complexType name="Unit_TypeTypeShape"><xsd:simpleContent><xsd:extension base="Unit_TypeTypeDef"/></xsd:simpleContent></xsd:complexType><xsd:simpleType name="EmplidTypeDef"><xsd:restriction base="xsd:string"><xsd:maxLength value="11"/><xsd:whiteSpace value="preserve"/></xsd:restriction></xsd:simpleType><xsd:simpleType name="Empl_RcdTypeDef"><xsd:restriction base="xsd:int"><xsd:totalDigits value="3"/></xsd:restriction></xsd:simpleType><xsd:simpleType name="DescrTypeDef"><xsd:restriction base="xsd:string"><xsd:maxLength value="30"/><xsd:whiteSpace value="preserve"/></xsd:restriction></xsd:simpleType><xsd:simpleType name="Acm_From_DtTypeDef"><xsd:restriction base="xsd:date"/></xsd:simpleType><xsd:simpleType name="Acm_Thru_DtTypeDef"><xsd:restriction base="xsd:date"/></xsd:simpleType><xsd:simpleType name="XlatLongNameTypeDef"><xsd:restriction base="xsd:string"><xsd:maxLength value="30"/><xsd:whiteSpace value="preserve"/></xsd:restriction></xsd:simpleType><xsd:simpleType name="Calc_Rslt_ValTypeDef"><xsd:restriction base="xsd:decimal"><xsd:fractionDigits value="6"/><xsd:totalDigits value="20"/></xsd:restriction></xsd:simpleType><xsd:simpleType name="Unit_TypeTypeDef"><xsd:restriction base="xsd:string"><xsd:maxLength value="1"/><xsd:whiteSpace value="preserve"/></xsd:restriction></xsd:simpleType></xsd:schema>
+<xsd:schema elementFormDefault="qualified"
+    targetNamespace="http://devreports.hrtest.ps.wisconsin.edu:7022/Enterprise/Tools/schemas/M969074.V1"
+    xmlns="http://devreports.hrtest.ps.wisconsin.edu:7022/Enterprise/Tools/schemas/M969074.V1"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="Get__CompIntfc__UW_PORTAL1_ABSBALResponse"
+        type="Get__CompIntfc__UW_PORTAL1_ABSBALResponseTypeShape" />
+    <xsd:complexType
+        name="Get__CompIntfc__UW_PORTAL1_ABSBALResponseTypeShape">
+        <xsd:sequence>
+            <xsd:element name="Emplid" type="EmplidTypeShape" />
+            <xsd:element maxOccurs="unbounded" minOccurs="0"
+                name="Uw_Gp_AbsBal_Vw" type="Uw_Gp_AbsBal_VwTypeShape" />
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="EmplidTypeShape">
+        <xsd:simpleContent>
+            <xsd:extension base="EmplidTypeDef" />
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="Uw_Gp_AbsBal_VwTypeShape">
+        <xsd:sequence>
+            <xsd:element name="Empl_Rcd" type="Empl_RcdTypeShape" />
+            <xsd:element minOccurs="0" name="Descr" type="DescrTypeShape" />
+            <xsd:element name="Acm_From_Dt" type="Acm_From_DtTypeShape" />
+            <xsd:element name="Acm_Thru_Dt" type="Acm_Thru_DtTypeShape" />
+            <xsd:element minOccurs="0" name="XlatLongName"
+                type="XlatLongNameTypeShape" />
+            <xsd:element minOccurs="0" name="Calc_Rslt_Val"
+                type="Calc_Rslt_ValTypeShape" />
+            <xsd:element minOccurs="0" name="Unit_Type"
+                type="Unit_TypeTypeShape" />
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Empl_RcdTypeShape">
+        <xsd:simpleContent>
+            <xsd:extension base="Empl_RcdTypeDef" />
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="DescrTypeShape">
+        <xsd:simpleContent>
+            <xsd:extension base="DescrTypeDef" />
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="Acm_From_DtTypeShape">
+        <xsd:simpleContent>
+            <xsd:extension base="Acm_From_DtTypeDef" />
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="Acm_Thru_DtTypeShape">
+        <xsd:simpleContent>
+            <xsd:extension base="Acm_Thru_DtTypeDef" />
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="XlatLongNameTypeShape">
+        <xsd:simpleContent>
+            <xsd:extension base="XlatLongNameTypeDef" />
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="Calc_Rslt_ValTypeShape">
+        <xsd:simpleContent>
+            <xsd:extension base="Calc_Rslt_ValTypeDef" />
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="Unit_TypeTypeShape">
+        <xsd:simpleContent>
+            <xsd:extension base="Unit_TypeTypeDef" />
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:simpleType name="EmplidTypeDef">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="11" />
+            <xsd:whiteSpace value="preserve" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="Empl_RcdTypeDef">
+        <xsd:restriction base="xsd:int">
+            <xsd:totalDigits value="3" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="DescrTypeDef">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="30" />
+            <xsd:whiteSpace value="preserve" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="Acm_From_DtTypeDef">
+        <xsd:restriction base="xsd:date" />
+    </xsd:simpleType>
+    <xsd:simpleType name="Acm_Thru_DtTypeDef">
+        <xsd:restriction base="xsd:date" />
+    </xsd:simpleType>
+    <xsd:simpleType name="XlatLongNameTypeDef">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="30" />
+            <xsd:whiteSpace value="preserve" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="Calc_Rslt_ValTypeDef">
+        <xsd:restriction base="xsd:decimal">
+            <xsd:fractionDigits value="6" />
+            <xsd:totalDigits value="20" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="Unit_TypeTypeDef">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1" />
+            <xsd:whiteSpace value="preserve" />
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema>

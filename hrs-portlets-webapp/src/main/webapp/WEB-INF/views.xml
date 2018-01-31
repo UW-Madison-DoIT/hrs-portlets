@@ -36,6 +36,11 @@
         <property name="modelKey" value="report" />
     </bean>
     
+    <bean id="countAttrJsonView" class="org.springframework.web.servlet.view.json.MappingJackson2JsonView">
+        <property name="objectMapper" ref="objectMapper" />
+        <property name="modelKey" value="quantity" />
+    </bean>
+    
     <bean id="objectMapper" class="com.fasterxml.jackson.databind.ObjectMapper" />
     
     <bean id="javaVersion" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">

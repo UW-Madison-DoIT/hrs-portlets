@@ -53,6 +53,23 @@
             <jaxb:package name="edu.wisc.hrs.xdm.abshis.fault" />
         </jaxb:schemaBindings>
     </jaxb:bindings>
+    
+    <!-- CI_UW_PORTAL1_APPR_CNT.1.wsdl -->
+    <jaxb:bindings schemaLocation="../resources/xsd/hrs/CI_UW_PORTAL1_APPR_CNT__REQ.xsd">
+        <jaxb:schemaBindings>
+            <jaxb:package name="edu.wisc.hrs.xdm.apprcnt.req" />
+        </jaxb:schemaBindings>
+    </jaxb:bindings>
+    <jaxb:bindings schemaLocation="../resources/xsd/hrs/CI_UW_PORTAL1_APPR_CNT__RES.xsd">
+        <jaxb:schemaBindings>
+            <jaxb:package name="edu.wisc.hrs.xdm.apprcnt.res" />
+        </jaxb:schemaBindings>
+    </jaxb:bindings>
+    <jaxb:bindings schemaLocation="../resources/xsd/hrs/CI_UW_PORTAL1_APPR_CNT__ERR.xsd">
+        <jaxb:schemaBindings>
+            <jaxb:package name="edu.wisc.hrs.xdm.apprcnt.fault" />
+        </jaxb:schemaBindings>
+    </jaxb:bindings>
 
     <!-- CI_UW_PORTAL1_BNSUMM.1.wsdl -->
     <jaxb:bindings schemaLocation="../resources/xsd/hrs/CI_UW_PORTAL1_BNSUMM__REQ.xsd">

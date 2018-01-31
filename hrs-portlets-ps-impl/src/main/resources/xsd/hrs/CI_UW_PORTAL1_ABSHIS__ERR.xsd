@@ -19,4 +19,98 @@
     under the License.
 
 -->
-<xsd:schema elementFormDefault="qualified" targetNamespace="http://devreports.hrtest.ps.wisconsin.edu:7022/Enterprise/Tools/schemas/M327698.V1" xmlns="http://devreports.hrtest.ps.wisconsin.edu:7022/Enterprise/Tools/schemas/M327698.V1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><xsd:element name="IBResponse" type="IBResponseTypeShape"/><xsd:complexType name="IBResponseTypeShape"><xsd:sequence><xsd:element minOccurs="0" name="DefaultTitle" type="DefaultTitleTypeShape"/><xsd:element minOccurs="0" name="StatusCode" type="StatusCodeTypeShape"/><xsd:element minOccurs="0" name="MessageSetID" type="MessageSetIDTypeShape"/><xsd:element minOccurs="0" name="MessageID" type="MessageIDTypeShape"/><xsd:element minOccurs="0" name="DefaultMessage" type="DefaultMessageTypeShape"/><xsd:element minOccurs="0" name="MessageParameters" type="MessageParametersTypeShape"/></xsd:sequence><xsd:attribute name="type" type="xsd:string"/></xsd:complexType><xsd:complexType name="DefaultTitleTypeShape"><xsd:simpleContent><xsd:extension base="DefaultTitleTypeDef"/></xsd:simpleContent></xsd:complexType><xsd:complexType name="StatusCodeTypeShape"><xsd:simpleContent><xsd:extension base="StatusCodeTypeDef"/></xsd:simpleContent></xsd:complexType><xsd:complexType name="MessageSetIDTypeShape"><xsd:simpleContent><xsd:extension base="MessageSetIDTypeDef"/></xsd:simpleContent></xsd:complexType><xsd:complexType name="MessageIDTypeShape"><xsd:simpleContent><xsd:extension base="MessageIDTypeDef"/></xsd:simpleContent></xsd:complexType><xsd:complexType name="DefaultMessageTypeShape"><xsd:simpleContent><xsd:extension base="DefaultMessageTypeDef"/></xsd:simpleContent></xsd:complexType><xsd:complexType name="MessageParametersTypeShape"><xsd:sequence><xsd:element minOccurs="0" name="keyinformation" type="keyinformationTypeShape"/></xsd:sequence></xsd:complexType><xsd:complexType name="keyinformationTypeShape"><xsd:sequence><xsd:element name="Emplid" type="EmplidTypeShape"/></xsd:sequence></xsd:complexType><xsd:complexType name="EmplidTypeShape"><xsd:simpleContent><xsd:extension base="EmplidTypeDef"/></xsd:simpleContent></xsd:complexType><xsd:simpleType name="DefaultTitleTypeDef"><xsd:restriction base="xsd:string"><xsd:whiteSpace value="preserve"/></xsd:restriction></xsd:simpleType><xsd:simpleType name="StatusCodeTypeDef"><xsd:restriction base="xsd:int"><xsd:totalDigits value="4"/></xsd:restriction></xsd:simpleType><xsd:simpleType name="MessageSetIDTypeDef"><xsd:restriction base="xsd:int"><xsd:totalDigits value="5"/></xsd:restriction></xsd:simpleType><xsd:simpleType name="MessageIDTypeDef"><xsd:restriction base="xsd:int"><xsd:totalDigits value="5"/></xsd:restriction></xsd:simpleType><xsd:simpleType name="DefaultMessageTypeDef"><xsd:restriction base="xsd:string"><xsd:whiteSpace value="preserve"/></xsd:restriction></xsd:simpleType><xsd:simpleType name="EmplidTypeDef"><xsd:restriction base="xsd:string"><xsd:maxLength value="11"/><xsd:whiteSpace value="preserve"/></xsd:restriction></xsd:simpleType></xsd:schema>
+<xsd:schema elementFormDefault="qualified"
+    targetNamespace="http://devreports.hrtest.ps.wisconsin.edu:7022/Enterprise/Tools/schemas/M327698.V1"
+    xmlns="http://devreports.hrtest.ps.wisconsin.edu:7022/Enterprise/Tools/schemas/M327698.V1"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="IBResponse" type="IBResponseTypeShape" />
+    <xsd:complexType name="IBResponseTypeShape">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="DefaultTitle"
+                type="DefaultTitleTypeShape" />
+            <xsd:element minOccurs="0" name="StatusCode"
+                type="StatusCodeTypeShape" />
+            <xsd:element minOccurs="0" name="MessageSetID"
+                type="MessageSetIDTypeShape" />
+            <xsd:element minOccurs="0" name="MessageID"
+                type="MessageIDTypeShape" />
+            <xsd:element minOccurs="0" name="DefaultMessage"
+                type="DefaultMessageTypeShape" />
+            <xsd:element minOccurs="0" name="MessageParameters"
+                type="MessageParametersTypeShape" />
+        </xsd:sequence>
+        <xsd:attribute name="type" type="xsd:string" />
+    </xsd:complexType>
+    <xsd:complexType name="DefaultTitleTypeShape">
+        <xsd:simpleContent>
+            <xsd:extension base="DefaultTitleTypeDef" />
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="StatusCodeTypeShape">
+        <xsd:simpleContent>
+            <xsd:extension base="StatusCodeTypeDef" />
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="MessageSetIDTypeShape">
+        <xsd:simpleContent>
+            <xsd:extension base="MessageSetIDTypeDef" />
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="MessageIDTypeShape">
+        <xsd:simpleContent>
+            <xsd:extension base="MessageIDTypeDef" />
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="DefaultMessageTypeShape">
+        <xsd:simpleContent>
+            <xsd:extension base="DefaultMessageTypeDef" />
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="MessageParametersTypeShape">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="keyinformation"
+                type="keyinformationTypeShape" />
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="keyinformationTypeShape">
+        <xsd:sequence>
+            <xsd:element name="Emplid" type="EmplidTypeShape" />
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="EmplidTypeShape">
+        <xsd:simpleContent>
+            <xsd:extension base="EmplidTypeDef" />
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:simpleType name="DefaultTitleTypeDef">
+        <xsd:restriction base="xsd:string">
+            <xsd:whiteSpace value="preserve" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="StatusCodeTypeDef">
+        <xsd:restriction base="xsd:int">
+            <xsd:totalDigits value="4" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="MessageSetIDTypeDef">
+        <xsd:restriction base="xsd:int">
+            <xsd:totalDigits value="5" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="MessageIDTypeDef">
+        <xsd:restriction base="xsd:int">
+            <xsd:totalDigits value="5" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="DefaultMessageTypeDef">
+        <xsd:restriction base="xsd:string">
+            <xsd:whiteSpace value="preserve" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="EmplidTypeDef">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="11" />
+            <xsd:whiteSpace value="preserve" />
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema>

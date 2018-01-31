@@ -92,6 +92,10 @@
         maxElementsInMemory="1000" overflowToDisk="false" diskPersistent="false"
         timeToIdleSeconds="0" timeToLiveSeconds="300"
         memoryStoreEvictionPolicy="LRU" statistics="true" />
+    <cache name="approvalsCount" eternal="false"
+        maxElementsInMemory="1000" overflowToDisk="false" diskPersistent="false"
+        timeToIdleSeconds="0" timeToLiveSeconds="300"
+        memoryStoreEvictionPolicy="LRU" statistics="true" />
     <cache name="benefitSummary" eternal="false"
         maxElementsInMemory="1000" overflowToDisk="false" diskPersistent="false"
         timeToIdleSeconds="0" timeToLiveSeconds="300"

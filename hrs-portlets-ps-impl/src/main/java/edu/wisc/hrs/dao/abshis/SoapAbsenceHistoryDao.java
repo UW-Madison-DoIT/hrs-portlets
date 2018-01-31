@@ -101,32 +101,32 @@ public class SoapAbsenceHistoryDao extends BaseHrsSoapDao implements AbsenceHist
         if (response == null) {
             return Collections.emptyList();
         }
-        
+
         final List<UwGpAbsHisVwTypeShape> uwGpAbsHisVws = response.getUwGpAbsHisVws();
-        
+
         final List<AbsenceHistory> absenceHistories = new ArrayList<AbsenceHistory>(uwGpAbsHisVws.size());
-        
+
         for (final UwGpAbsHisVwTypeShape uwGpAbsHisVwTypeShape : uwGpAbsHisVws) {
             final AbsenceHistory absenceBalance = new AbsenceHistory();
-            
+
             absenceBalance.setName((String)HrsUtils.getValue(uwGpAbsHisVwTypeShape.getDescr30()));
             absenceBalance.setStatus((String)HrsUtils.getValue(uwGpAbsHisVwTypeShape.getXlatLongName()));
-            
+
             final DateMidnight start = HrsUtils.getValue(uwGpAbsHisVwTypeShape.getOrigBeginDt());
             absenceBalance.setStart(start);
-            
+
             final DateMidnight end = HrsUtils.getValue(uwGpAbsHisVwTypeShape.getOrigEndDt());
             absenceBalance.setEnd(end);
-            
+
             absenceBalance.setTotal((BigDecimal)HrsUtils.getValue(uwGpAbsHisVwTypeShape.getDurationAbs()));
-            
+
             final Integer jobId = HrsUtils.getValue(uwGpAbsHisVwTypeShape.getEmplRcd());
             final Job job = jobs.get(jobId);
             absenceBalance.setJob(job);
-            
+
             absenceHistories.add(absenceBalance);
         }
-        
+
         return absenceHistories;
     }
 }
