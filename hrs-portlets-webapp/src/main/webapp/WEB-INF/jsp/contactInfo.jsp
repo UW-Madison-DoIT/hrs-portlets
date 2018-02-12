@@ -206,8 +206,6 @@
     </c:choose>
   </div>
 
-
-
   <c:choose>
     <c:when test="${not empty prefs['updateMyPersonalInfoUrl']
       && not empty prefs['updateMyPersonalInfoUrl'][0]}">
@@ -241,8 +239,22 @@
           </p>
           <p>
             <strong>
-              <spring:message code="bottomNotePart2"
-                text="To update your Business/Office Address, contact your human resources office."/>
+              <spring:message code="updateBusinessOfficeAddressInstructionsPart1"
+                text="To update your Business/Office Address, please contact"/> 
+              <c:choose>
+                <c:when test="${not empty humanResourceOfficeContactUrl}">
+                  <a href="${humanResourceOfficeContactUrl}"
+                   target="_blank"
+                   rel="noopener noreferer">
+                    <spring:message code="updateBusinessOfficeAddressInstructionsPart2"
+                     text="your human resources office"/>
+                  </a>.
+                </c:when>
+                <c:otherwise>
+                  <spring:message code="updateBusinessOfficeAddressInstructionsPart2"
+                   text="your human resources office"/>.
+                </c:otherwise>
+              </c:choose>
             </strong>
           </p>
         </div>
@@ -335,8 +347,22 @@
           </p>
           <p>
             <strong>
-              <spring:message code="bottomNotePart2"
-                text="To update your Business/Office Address, please contact your human resources office."/>
+              <spring:message code="updateBusinessOfficeAddressInstructionsPart1"
+                text="To update your Business/Office Address, please contact "/> 
+              <c:choose>
+                <c:when test="${not empty humanResourceOfficeContactUrl}">
+                  <a href="${humanResourceOfficeContactUrl}"
+                   target="_blank"
+                   rel="noopener noreferer">
+                    <spring:message code="updateBusinessOfficeAddressInstructionsPart2"
+                     text="your human resources office"/>
+                  </a>.
+                </c:when>
+                <c:otherwise>
+                  <spring:message code="updateBusinessOfficeAddressInstructionsPart2"
+                   text="your human resources office"/>.
+                </c:otherwise>
+              </c:choose>
             </strong>
           </p>
         </div>

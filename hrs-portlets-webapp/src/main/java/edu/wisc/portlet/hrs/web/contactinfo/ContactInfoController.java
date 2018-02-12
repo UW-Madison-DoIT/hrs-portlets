@@ -37,6 +37,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ValidationUtils;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.portlet.bind.annotation.ActionMapping;
@@ -66,6 +67,7 @@ import edu.wisc.portlet.hrs.web.HrsControllerBase;
 public class ContactInfoController extends HrsControllerBase {
 	private final String PVI_ATTR = "wiscedupvi";
     private final EmailValidator emailValidator = EmailValidator.getInstance();
+    private static final String HR_CONTACT_URL_PREFERENCE_NAME="humanResourceContactUrl";
     
     private String businessEmailRolesPreferences = "businessEmailRoles";
     private ContactInfoDao contactInfoDao;
@@ -89,6 +91,17 @@ public class ContactInfoController extends HrsControllerBase {
     @Autowired
     public void setContactInfoDao(ContactInfoDao contactInfoDao) {
         this.contactInfoDao = contactInfoDao;
+    }
+    
+    /**
+     * Populate the ModelMap with the link of humanResourceOffice
+     * @param request
+     * @return
+     */
+    @ModelAttribute("humanResourceOfficeContactUrl")
+    public final String getHumanResourceOfficeContainLink(PortletRequest request) {
+        final PortletPreferences preferences = request.getPreferences();
+        return preferences.getValue(HR_CONTACT_URL_PREFERENCE_NAME, null);
     }
 
     @RenderMapping
