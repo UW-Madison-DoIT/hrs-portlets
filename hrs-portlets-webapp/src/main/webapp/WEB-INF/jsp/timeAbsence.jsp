@@ -191,7 +191,7 @@
       </div>
       <div id="${n}dl-leave-statements">
       	<p class="padded-paragraph">
-      		<a href="#" id="${n}oustandingMissingLeaveReports" target="_blank" style="display: none;">Outstanding Missing Leave Reports</a>
+          <md-button id="${n}oustandingMissingLeaveReports" style="display: none;" target="_blank" ng-href="#" class="md-raised md-primary">My Unsubmitted Reports</md-button>
       	</p>
         <div class="fl-pager">
           <hrs:pagerNavBar position="top" showSummary="${true}" />
