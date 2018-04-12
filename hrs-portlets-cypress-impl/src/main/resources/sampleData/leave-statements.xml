@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Licensed to Jasig under one or more contributor license
+    agreements. See the NOTICE file distributed with this work
+    for additional information regarding copyright ownership.
+    Jasig licenses this file to you under the Apache License,
+    Version 2.0 (the "License"); you may not use this file
+    except in compliance with the License. You may obtain a
+    copy of the License at:
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on
+    an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied. See the License for the
+    specific language governing permissions and limitations
+    under the License.
+
+-->
+<leave-statements>
+    <leave-statement>
+        <document-title>U9205 lpr</document-title>
+        <report-title>June 2010</report-title>
+        <pay-period>7/2010</pay-period>
+        <type>Leave Statement</type>
+        <pages>1</pages>
+        <doc_id>8421667</doc_id>
+    </leave-statement>
+    <leave-statement>
+        <document-title>U9205 lpr</document-title>
+        <report-title>September 2010</report-title>
+        <pay-period>8/2010</pay-period>
+        <type>Leave Report/Furlough</type>
+        <pages>1</pages>
+        <doc_id>8421667</doc_id>
+    </leave-statement>
+    <leave-statement>
+        <document-title>U9205 lpr</document-title>
+        <report-title>May 2010</report-title>
+        <pay-period>6/2010</pay-period>
+        <type>Leave Statement</type>
+        <pages>1</pages>
+        <doc_id>8421671</doc_id>
+    </leave-statement>
+    <leave-statement>
+        <document-title>U9205 lpr</document-title>
+        <report-title>August 2010</report-title>
+        <pay-period>7/2010</pay-period>
+        <type>Leave Report/Furlough</type>
+        <pages>1</pages>
+        <doc_id>8421671</doc_id>
+    </leave-statement>
+    <leave-statement>
+        <document-title>U9205 lpr</document-title>
+        <report-title>April 2010</report-title>
+        <pay-period>5/2010</pay-period>
+        <type>Leave Statement</type>
+        <pages>1</pages>
+        <doc_id>8421675</doc_id>
+    </leave-statement>
+    <leave-statement>
+        <document-title>U9205 lpr</document-title>
+        <report-title>July 2010</report-title>
+        <pay-period>6/2010</pay-period>
+        <type>Leave Report/Furlough</type>
+        <pages>1</pages>
+        <doc_id>8421675</doc_id>
+    </leave-statement>
+    <leave-statement>
+        <document-title>U9205 lpr</document-title>
+        <report-title>May 2010</report-title>
+        <pay-period>6/2010</pay-period>
+        <type>Leave Statement</type>
+        <pages>1</pages>
+        <doc_id>8421728</doc_id>
+    </leave-statement>
+    <leave-statement>
+        <document-title>U9205 lpr</document-title>
+        <report-title>July 2010</report-title>
+        <pay-period>6/2010</pay-period>
+        <type>Leave Report/Furlough</type>
+        <pages>2</pages>
+        <doc_id>8421728</doc_id>
+    </leave-statement>
+    <leave-statement>
+        <document-title>U9205 lpr</document-title>
+        <report-title>June 2010</report-title>
+        <pay-period>7/2010</pay-period>
+        <type>Leave Statement</type>
+        <pages>1</pages>
+        <doc_id>8421732</doc_id>
+    </leave-statement>
+    <leave-statement>
+        <document-title>U9205 lpr</document-title>
+        <report-title>August 2010</report-title>
+        <pay-period>7/2010</pay-period>
+        <type>Leave Report/Furlough</type>
+        <pages>2</pages>
+        <doc_id>8421732</doc_id>
+    </leave-statement>
+    <leave-statement>
+        <document-title>U9205 lpr</document-title>
+        <report-title>July 2010</report-title>
+        <pay-period>8/2010</pay-period>
+        <type>Leave Statement</type>
+        <pages>1</pages>
+        <doc_id>8421736</doc_id>
+    </leave-statement>
+    <leave-statement>
+        <document-title>U9205 lpr</document-title>
+        <report-title>September 2010</report-title>
+        <pay-period>8/2010</pay-period>
+        <type>Leave Report/Furlough</type>
+        <pages>2</pages>
+        <doc_id>8421736</doc_id>
+    </leave-statement>
+</leave-statements> 
