@@ -70,9 +70,12 @@ public class RestLeaveStatementDao implements LeaveStatementDao {
     @Cacheable(cacheName="leaveStatement", exceptionCacheName="cypressUnknownExceptionCache")
     @Override
     public Collection<SummarizedLeaveStatement> getLeaveStatements(String emplid) {
+// DO NOT PROMOTE THIS CODE TO PRODUCTION
+
         final HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.set("HRID", emplid);
-        final XmlLeaveStatements leaveStatements = this.restOperations.getForObject(this.statementsUrl, XmlLeaveStatements.class, httpHeaders, emplid);
+        final XmlLeaveStatements leaveStatements = this.restOperations.getForObject("/sampleData/leave-statements.xml", 
+            XmlLeaveStatements.class, httpHeaders, emplid);
         return this.summarizeLeaveStatements(leaveStatements);
     }
     
