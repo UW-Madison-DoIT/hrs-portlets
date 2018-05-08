@@ -70,7 +70,7 @@
         <property name="validationQuery" value="SELECT 1 FROM DUAL" />
         <property name="testWhileIdle" value="true" />
         <property name="testOnBorrow" value="true" />
-        <property name="connectionProperties" value="oracle.net.CONNECT_TIMEOUT=5000;oracle.net.READ_TIMEOUT=30000;oracle.jdbc.ReadTimeout=30000" />
+        <property name="connectionProperties" value="oracle.net.CONNECT_TIMEOUT=5000;oracle.net.READ_TIMEOUT=30000;oracle.jdbc.ReadTimeout=30000;oracle.net.encryption_client=REQUIRED;" />
 
         <property name="driverClassName" value="${emailUpdateJdbc.driverClassName}" />
         <property name="url" value="${emailUpdateJdbc.url}" />
@@ -133,7 +133,7 @@
         <property name="validationQuery" value="SELECT 1 FROM DUAL" />
         <property name="testWhileIdle" value="true" />
         <property name="testOnBorrow" value="true" />
-        <property name="connectionProperties" value="oracle.net.CONNECT_TIMEOUT=5000;oracle.net.READ_TIMEOUT=30000;oracle.jdbc.ReadTimeout=30000" />
+        <property name="connectionProperties" value="oracle.net.CONNECT_TIMEOUT=5000;oracle.net.READ_TIMEOUT=30000;oracle.jdbc.ReadTimeout=30000;oracle.net.encryption_client=REQUIRED;" />
 
         <property name="driverClassName" value="${prefnameJdbc.driverClassName}" />
         <property name="url" value="${prefnameJdbc.url}" />
