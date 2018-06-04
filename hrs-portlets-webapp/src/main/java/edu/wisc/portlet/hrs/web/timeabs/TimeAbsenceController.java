@@ -55,6 +55,13 @@ public class TimeAbsenceController extends HrsControllerBase {
         return preferences.getValue("timesheetNotice", null);
     }
 
+    @ModelAttribute("leaveReportingNotice")
+    public final String leaveReportingNotice(PortletRequest request) {
+        final PortletPreferences preferences = request.getPreferences();
+
+        return preferences.getValue("leaveReportingNotice", null);
+    }
+
     @RequestMapping
     public String viewContactInfo(ModelMap model, PortletRequest request) {
         final String emplId = PrimaryAttributeUtils.getPrimaryId();

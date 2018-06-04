@@ -38,7 +38,18 @@
     </div>
   </div>
 
-      <hrs:notification/>
+  <hrs:notification/>
+
+  <div id="${n}leaveReportingNotice" style="display: none;">
+    <%-- style changes as side effect of Outstanding Missing Leave Report statement callback. --%>
+    <c:if test="${not empty leaveReportingNotice}">
+      <div class="fl-widget hrs-notification-wrapper alert alert-info">
+        <div class="hrs-notification-content">${leaveReportingNotice}</div>
+      </div>
+    </c:if>
+  </div>
+
+
   </div>
 
   <div>
@@ -520,6 +531,7 @@
       		        	var reportLink = "${missingLeaveReportPdfUrl}".replace("missingLeaveReportDocId", missingReport.docId);
                         $("#${n}oustandingMissingLeaveReports").attr("href",reportLink);
                         $("#${n}oustandingMissingLeaveReports").show();
+                        $("#${n}leaveReportingNotice").show();
   		        	}
   		          },
   		          error: function(e){

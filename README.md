@@ -104,6 +104,14 @@ technically the underlying portlet name is `ContactInfo`.
 + When set, adds a "Edit/Cancel Absence" link to this URL that shows to employees who see the nearby "Enter Absence" link.
 + When not set, the "Edit/Cancel Absence" link does not appear.
 
+#### `leaveReportingNotice` portlet preference (optional)
+
++ When set, adds an in-app-message near the top of Time and Absence showing to employees who see the 
+  Outstanding Missing Leave Reports link.
++ When not set, does not show. For employees who do not see the Outstanding Missing Leave Reports 
+  link, does not show.
++ Intended for messaging to employees subject to annual leave reporting requirements
+
 #### `timesheetNotice` portlet preference (optional)
 
 + When set, adds text to the UI near the timesheet launch button.
