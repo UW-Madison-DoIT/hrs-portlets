@@ -5,8 +5,9 @@
 
 ? Date TBD
 
-New feature
+New features
 
++ Add `leaveReportingNotice` feature in Time and Absence ( #118 )
 + Style HRS roles as <em>emphasized</em> as used as sentences in Troubleshooter ( #116 )
 
 
