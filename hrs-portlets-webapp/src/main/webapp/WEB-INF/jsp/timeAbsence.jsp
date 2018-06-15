@@ -325,6 +325,28 @@
 (function($, fluid, dl) {
    $(function() {
 
+     // missing report ajax call
+     // resolving eagerly to determine soonest whether to show the {n}leaveReportingNotice div.
+
+     $.ajax({
+       type: "POST",
+       url: "${missingReportUrl}",
+       data: "",
+       success: function(response){
+         var missingReport = response.report;
+         if(missingReport != null || missingReport != undefined) {
+           var reportLink =
+             "${missingLeaveReportPdfUrl}".replace("missingLeaveReportDocId", missingReport.docId);
+           $("#${n}oustandingMissingLeaveReports").attr("href",reportLink);
+           $("#${n}oustandingMissingLeaveReports").show();
+           $("#${n}leaveReportingNotice").show();
+         }
+       },
+       error: function(e){
+         var response = jQuery.parseJSON(e.responseText);
+       }
+     });
+
         var formatDataArray = function(dataArray) {
             var startYear = dataArray[0];
             var startMonth = dataArray[1];
@@ -518,26 +540,6 @@
 
 
                 });
-
-              //missing report ajax call (doing it here so it uses the cached from call in leave report collection)
-
-            	$.ajax({
-  		          type: "POST",
-  		          url: "${missingReportUrl}",
-  		          data: "",
-  		          success: function(response){
-  		        	var missingReport = response.report;
-  		        	if(missingReport != null || missingReport != undefined) {
-      		        	var reportLink = "${missingLeaveReportPdfUrl}".replace("missingLeaveReportDocId", missingReport.docId);
-                        $("#${n}oustandingMissingLeaveReports").attr("href",reportLink);
-                        $("#${n}oustandingMissingLeaveReports").show();
-                        $("#${n}leaveReportingNotice").show();
-  		        	}
-  		          },
-  		          error: function(e){
-  		       	  	var response = jQuery.parseJSON(e.responseText);
-  		          }
-  		        });
 
                 return data;
             }
