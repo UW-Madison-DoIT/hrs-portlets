@@ -3,6 +3,10 @@
 
 ### Unreleased
 
+Fixed
+
++ Eagerly resolve whether to show leave reporting notice div ( #119 )
+
 ### 2.1.0
 
 2018-06-04
