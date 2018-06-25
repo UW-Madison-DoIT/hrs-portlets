@@ -3,6 +3,10 @@
 
 ### Unreleased
 
+### 2.1.1 : Eagerly resolve leave reporting notice div conditional
+
+2018-06-25
+
 Fixed
 
 + Eagerly resolve whether to show leave reporting notice div ( #119 )
