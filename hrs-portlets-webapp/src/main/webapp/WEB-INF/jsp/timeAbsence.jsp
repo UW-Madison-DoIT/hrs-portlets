@@ -59,7 +59,7 @@
                target="_blank"><spring:message code="label.yearEndLeaveBalance" text="Year End University Staff Leave Balance"/></a><br/>
         </div>
     </c:if>
-    <sec:authorize ifAnyGranted="ROLE_VIEW_ABSENCE_HISTORIES">
+    <sec:authorize ifAnyGranted="ROLE_ENTER_EDIT_CANCEL_OWN_ABSENCES">
       <div class="dl-link">
         <a class="btn btn-primary" href="${hrsUrls['Request Absence']}" target="_blank">Enter Absence</a>
       </div>

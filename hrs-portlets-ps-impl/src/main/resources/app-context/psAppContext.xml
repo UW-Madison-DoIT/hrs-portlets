@@ -47,6 +47,10 @@
                   In Time and Absence
                     Allows rendering absenceHistories.json
                     Show the Absence tab
+                -->
+                <value>ROLE_ENTER_EDIT_CANCEL_OWN_ABSENCES</value>
+                <!--
+                  In Time and Absence
                     Show the Enter Absence link
                     Show the Edit Cancel Absence link, if link is configured
                 -->
