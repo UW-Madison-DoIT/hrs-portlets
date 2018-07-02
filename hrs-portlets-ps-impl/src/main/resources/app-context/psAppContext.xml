@@ -52,6 +52,12 @@
                 -->
             </set>
         </entry>
+        <entry key="UW_DYN_AM_PUNCH_TIME">
+          <set>
+            <value>ROLE_VIEW_ABSENCE_HISTORIES</value>
+            <!-- same role as above -->
+          </set>
+        </entry>
         <entry key="UW_DYN_TL_WEB_CLOCK">
             <set>
                 <value>ROLE_VIEW_WEB_CLOCK</value>
