@@ -5,13 +5,13 @@
 New features
 
 + Add mapping for new `UW_DYN_AM_PUNCH_TIME` HRS role. Split out from the
-  existing `ROLE_VIEW_ABSENCE_HISTORIES` role a role specific to creating,
-  editing, and canceling one's own absence requests
+  existing `ROLE_VIEW_ABSENCE_HISTORIES` portlet role a portlet role specific to
+  creating, editing, and canceling one's own absence requests
   (`ROLE_ENTER_EDIT_CANCEL_OWN_ABSENCES`). Grant only the absence history
   viewing (and not the entering, editing, canceling one's own absences) to the
   new `UW_DYN_AM_PUNCH_TIME` HRS role. Grant
-  `ROLE_ENTER_EDIT_CANCEL_OWN_ABSENCES` to existing `UW_DYN_AM_EMPLOYEE` role so
-  that its access is unchanged. ( #121 )
+  `ROLE_ENTER_EDIT_CANCEL_OWN_ABSENCES` portlet role to employees with existing
+  `UW_DYN_AM_EMPLOYEE` HRS role so that their access is unchanged. ( #121 )
 
 ### 2.1.1 : Eagerly resolve leave reporting notice div conditional
 
