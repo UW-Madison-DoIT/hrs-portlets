@@ -11,7 +11,7 @@ now granted by new portlet role `ROLE_ENTER_EDIT_CANCEL_OWN_ABSENCES`).
 
 Migration path: to the extent that employees ought to continue to have all the
 privileges of the prior implementation of `ROLE_VIEW_ABSENCE_HISTORIES`, also
-grant those employees `ROLE_ENTER_EDIT_CANCEL_OWN_ABSENCES`.
+grant those employees `ROLE_ENTER_EDIT_CANCEL_OWN_ABSENCES`. ( #121 )
 
 New features
 
