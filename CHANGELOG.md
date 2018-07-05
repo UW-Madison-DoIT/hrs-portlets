@@ -17,7 +17,7 @@ New features
 
 + Add new portlet role `ROLE_ENTER_EDIT_CANCEL_OWN_ABSENCES`, granting access to
   the "Enter absence" and "Edit/cancel absence buttons". This access is a subset
-  of what `ROLE_VIEW_ABSENCE_HISTORIES` historically granted.
+  of what `ROLE_VIEW_ABSENCE_HISTORIES` historically granted. ( #121 )
 + Add role mapping for new `UW_DYN_AM_PUNCH_TIME` HRS role. This HRS role grants
   `ROLE_VIEW_ABSENCE_HISTORIES` portlet role but does *not* grant new
   `ROLE_ENTER_EDIT_CANCEL_OWN_ABSENCES` portlet role. ( #121 )
