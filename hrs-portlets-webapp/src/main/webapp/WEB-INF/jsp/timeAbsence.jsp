@@ -38,8 +38,6 @@
     </div>
   </div>
 
-  <hrs:notification/>
-
   <div id="${n}leaveReportingNotice" style="display: none;">
     <%-- style changes as side effect of Outstanding Missing Leave Report statement callback. --%>
     <c:if test="${not empty leaveReportingNotice}">
@@ -49,6 +47,7 @@
     </c:if>
   </div>
 
+  <hrs:notification/>
 
   </div>
 
