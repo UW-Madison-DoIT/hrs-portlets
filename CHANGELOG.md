@@ -1,5 +1,13 @@
 # MyUW hrs-portlets change log
 
+### Next release
+
+Changes:
+
++ In Time and Absence, the `leaveReportingNotice` when present is now ordered
+  ahead of general `hrs:notifications` in-app notifications when present.
+  ([HRSPLT-348][], [#122][])
+
 ### 3.0.0: split `ROLE_VIEW_ABSENCE_HISTORIES`
 
 BREAKING CHANGE:
@@ -323,3 +331,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 
 
 [releases in the GitHub repo]: https://github.com/UW-Madison-DoIT/hrs-portlets/releases
+
+[#122]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/122
+
+[HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348
