@@ -349,6 +349,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [releases in the GitHub repo]: https://github.com/UW-Madison-DoIT/hrs-portlets/releases
 
 [#122]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/122
+[#123]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/123
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348
