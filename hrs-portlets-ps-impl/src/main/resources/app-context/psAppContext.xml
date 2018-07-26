@@ -60,6 +60,9 @@
           <set>
             <value>ROLE_VIEW_ABSENCE_HISTORIES</value>
             <!-- same role as above -->
+            <value>ROLE_UW_DYN_AM_PUNCH_TIME</value>
+            <!-- pass through HRS role specifically to enable targeting
+              messaging specifically to this role -->
           </set>
         </entry>
         <entry key="UW_DYN_TL_WEB_CLOCK">
