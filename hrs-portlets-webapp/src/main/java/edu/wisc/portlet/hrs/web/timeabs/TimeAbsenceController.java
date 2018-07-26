@@ -48,6 +48,13 @@ public class TimeAbsenceController extends HrsControllerBase {
         this.contactInfoDao = contactInfoDao;
     }
 
+    @ModelAttribute("dynPunchTimesheetNotice")
+    public final String dynPunchTimesheetNotice(PortletRequest request) {
+        final PortletPreferences preferences = request.getPreferences();
+
+        return preferences.getValue("dynPunchTimesheetNotice", null);
+    }
+
     @ModelAttribute("timesheetNotice")
     public final String getTimesheetNotice(PortletRequest request) {
         final PortletPreferences preferences = request.getPreferences();

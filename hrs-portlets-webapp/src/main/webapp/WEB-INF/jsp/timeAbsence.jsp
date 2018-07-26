@@ -113,9 +113,20 @@
         <div style='display: inline-block;'>
           <a class="btn btn-primary" href="${hrsUrls['Timesheet']}" target="_blank">Timesheet</a>
         </div>
-        <c:if test="${not empty timesheetNotice}">
-          <div class="timesheet-notice">${timesheetNotice}</div>
-        </c:if>
+        <div class="timesheet-notice">
+          <sec:authorize
+            ifAllGranted="ROLE_UW_DYN_AM_PUNCH_TIME">
+            <c:if test="${not empty dynPunchTimesheetNotice}">
+              ${dynPunchTimesheetNotice}
+            </c:if>
+            <c:if test="${not empty timesheetNotice}">
+              <hr/>
+            </c:if>
+          </sec:authorize>
+          <c:if test="${not empty timesheetNotice}">
+            ${timesheetNotice}
+          </c:if>
+        </div>
         <br/>
       </div>
     </sec:authorize>

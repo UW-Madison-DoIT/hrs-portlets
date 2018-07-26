@@ -12,6 +12,10 @@ New features:
   `nonDynPunchTimesheetersNotice` drives a new in-HRS-app message (presented
   just like `notification`) to employees who see the Timesheet button but who
   do not have the new `ROLE_UW_DYN_AM_PUNCH_TIME` role. ([HRSPLT-346][])
++ In Time and Absence, a new optional `portlet-preference`
+  `dynPunchTimesheetNotice` drives a new message near the Timesheet button
+  (presented similarly to `timesheetNotice`) to employees with the new
+  `ROLE_UW_DYN_AM_PUNCH_TIME` role. ([HRSPLT-346][])
 
 Changes:
 
