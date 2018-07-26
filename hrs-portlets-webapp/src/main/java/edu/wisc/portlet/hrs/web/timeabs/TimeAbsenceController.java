@@ -62,6 +62,19 @@ public class TimeAbsenceController extends HrsControllerBase {
         return preferences.getValue("leaveReportingNotice", null);
     }
 
+    /**
+     * Optional message shown to employees with the dyn punch timesheet role.
+     * These users lost a couple buttons related to reporting absences (since)
+     * their timesheet now includes those functions integrated) and so are
+     * messaged in the Time and Absence UI about this change.
+     */
+    @ModelAttribute("dynPunchTimesheetersNotice")
+    public final String dynPunchTimesheetersNotice(PortletRequest request) {
+        final PortletPreferences preferences = request.getPreferences();
+
+        return preferences.getValue("dynPunchTimesheetersNotice", null);
+    }
+
     @RequestMapping
     public String viewContactInfo(ModelMap model, PortletRequest request) {
         final String emplId = PrimaryAttributeUtils.getPrimaryId();

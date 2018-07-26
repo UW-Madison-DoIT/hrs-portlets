@@ -112,6 +112,17 @@ technically the underlying portlet name is `ContactInfo`.
   link, does not show.
 + Intended for messaging to employees subject to annual leave reporting requirements
 
+
+#### `dynPunchTimesheetersNotice` portlet preference (optional)
+
++ When set, adds an in-app-message near the top of Time and Absence showing to
+  employees with `ROLE_UW_DYN_AM_PUNCH_TIME`.
++ When not set, does not show. For employees who do not have
+  `ROLE_UW_DYN_AM_PUNCH_TIME`, does not show.
++ Intended for messaging to employees for whom the UI changed with the launch of
+  PHIT, such that the functions they previously accessed via purpose-specific
+  absence-related buttons they will now access via the timesheet button.
+
 #### `timesheetNotice` portlet preference (optional)
 
 + When set, adds text to the UI near the timesheet launch button.

@@ -51,6 +51,19 @@
 
     <hrs:notification/>
 
+    <sec:authorize
+      ifAllGranted="ROLE_UW_DYN_AM_PUNCH_TIME">
+      <div id="${n}dynPunchTimesheetersNotice">
+        <c:if test="${not empty dynPunchTimesheetersNotice}">
+          <div class="fl-widget hrs-notification-wrapper alert alert-info">
+            <div class="hrs-notification-content">
+              ${dynPunchTimesheetersNotice}
+            </div>
+          </div>
+        </c:if>
+      </div>
+    </sec:authorize>
+
   </div>
 
   <div>
