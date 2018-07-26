@@ -123,6 +123,18 @@ technically the underlying portlet name is `ContactInfo`.
   PHIT, such that the functions they previously accessed via purpose-specific
   absence-related buttons they will now access via the timesheet button.
 
+#### `nonDynPunchTimesheetersNotice` portlet preference (optional)
+
++ When set, adds an in-app-message near the top of Time and Absence showing to
+  employees who see the Timesheet button but who do not have
+  `ROLE_UW_DYN_AM_PUNCH_TIME`.
++ When not set, does not show.
++ For employees who do have `ROLE_UW_DYN_AM_PUNCH_TIME`, does not show.
++ For employees who do not see the Timesheet button, does not show.
++ Intended for messaging to employees for whom the MyUW UI did not change with
+  the launch of PHIT, but for whom the experience they get when they click the
+  Timesheet button may or may not have changed.
+
 #### `timesheetNotice` portlet preference (optional)
 
 + When set, adds text to the UI near the timesheet launch button.

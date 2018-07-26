@@ -75,6 +75,19 @@ public class TimeAbsenceController extends HrsControllerBase {
         return preferences.getValue("dynPunchTimesheetersNotice", null);
     }
 
+    /**
+     * Optional message shown to employees who see the timesheet button
+     * but do not have the dyn punch timesheet role. These users did not lose
+     * buttons, but their timesheet experience may (or may not) have changed
+     * with the PHIT launch.
+     */
+    @ModelAttribute("nonDynPunchTimesheetersNotice")
+    public final String nonDynPunchTimesheetersNotice(PortletRequest request) {
+        final PortletPreferences preferences = request.getPreferences();
+
+        return preferences.getValue("nonDynPunchTimesheetersNotice", null);
+    }
+
     @RequestMapping
     public String viewContactInfo(ModelMap model, PortletRequest request) {
         final String emplId = PrimaryAttributeUtils.getPrimaryId();

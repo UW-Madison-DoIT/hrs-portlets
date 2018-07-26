@@ -52,6 +52,24 @@
     <hrs:notification/>
 
     <sec:authorize
+      ifAnyGranted=
+        "ROLE_VIEW_TIME_SHEET,ROLE_VIEW_WEB_CLOCK,ROLE_VIEW_TIME_CLOCK"
+      ifNotGranted="ROLE_UW_DYN_AM_PUNCH_TIME">
+      <%-- sec:authorize attributes are ANDed, as in user must fulfill all of
+        them. So this targets users who see the timesheet button but who do not
+        have UW_DYN_AM_PUNCH_TIME --%>
+      <div id="${n}nonDynPunchTimesheetersNotice">
+        <c:if test="${not empty nonDynPunchTimesheetersNotice}">
+          <div class="fl-widget hrs-notification-wrapper alert alert-info">
+            <div class="hrs-notification-content">
+              ${nonDynPunchTimesheetersNotice}
+            </div>
+          </div>
+        </c:if>
+      </div>
+    </sec:authorize>
+
+    <sec:authorize
       ifAllGranted="ROLE_UW_DYN_AM_PUNCH_TIME">
       <div id="${n}dynPunchTimesheetersNotice">
         <c:if test="${not empty dynPunchTimesheetersNotice}">
