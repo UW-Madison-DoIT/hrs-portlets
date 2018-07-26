@@ -75,11 +75,11 @@ public class TimeAbsenceController extends HrsControllerBase {
      * their timesheet now includes those functions integrated) and so are
      * messaged in the Time and Absence UI about this change.
      */
-    @ModelAttribute("dynPunchTimesheetersNotice")
-    public final String dynPunchTimesheetersNotice(PortletRequest request) {
+    @ModelAttribute("dynPunchTimesheetNotification")
+    public final String dynPunchTimesheetNotification(PortletRequest request) {
         final PortletPreferences preferences = request.getPreferences();
 
-        return preferences.getValue("dynPunchTimesheetersNotice", null);
+        return preferences.getValue("dynPunchTimesheetNotification", null);
     }
 
     /**
@@ -88,11 +88,12 @@ public class TimeAbsenceController extends HrsControllerBase {
      * buttons, but their timesheet experience may (or may not) have changed
      * with the PHIT launch.
      */
-    @ModelAttribute("nonDynPunchTimesheetersNotice")
-    public final String nonDynPunchTimesheetersNotice(PortletRequest request) {
+    @ModelAttribute("nonDynPunchTimesheetNotification")
+    public final String nonDynPunchTimesheetNotification(
+        PortletRequest request) {
         final PortletPreferences preferences = request.getPreferences();
 
-        return preferences.getValue("nonDynPunchTimesheetersNotice", null);
+        return preferences.getValue("nonDynPunchTimesheetNotification", null);
     }
 
     @RequestMapping

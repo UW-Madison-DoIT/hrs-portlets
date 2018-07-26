@@ -58,11 +58,11 @@
       <%-- sec:authorize attributes are ANDed, as in user must fulfill all of
         them. So this targets users who see the timesheet button but who do not
         have UW_DYN_AM_PUNCH_TIME --%>
-      <div id="${n}nonDynPunchTimesheetersNotice">
-        <c:if test="${not empty nonDynPunchTimesheetersNotice}">
+      <div id="${n}nonDynPunchTimesheetNotification">
+        <c:if test="${not empty nonDynPunchTimesheetNotification}">
           <div class="fl-widget hrs-notification-wrapper alert alert-info">
             <div class="hrs-notification-content">
-              ${nonDynPunchTimesheetersNotice}
+              ${nonDynPunchTimesheetNotification}
             </div>
           </div>
         </c:if>
@@ -71,11 +71,11 @@
 
     <sec:authorize
       ifAllGranted="ROLE_UW_DYN_AM_PUNCH_TIME">
-      <div id="${n}dynPunchTimesheetersNotice">
-        <c:if test="${not empty dynPunchTimesheetersNotice}">
+      <div id="${n}dynPunchTimesheetNotification">
+        <c:if test="${not empty dynPunchTimesheetNotification">
           <div class="fl-widget hrs-notification-wrapper alert alert-info">
             <div class="hrs-notification-content">
-              ${dynPunchTimesheetersNotice}
+              ${dynPunchTimesheetNotification}
             </div>
           </div>
         </c:if>
