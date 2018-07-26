@@ -66,8 +66,8 @@
       <c:if test="${not empty prefs['editCancelAbsenceUrl']
         && not empty prefs['editCancelAbsenceUrl'][0]}">
         <div class="dl-link">
-          <a class="btn btn-primary" 
-            href="${prefs['editCancelAbsenceUrl'][0]}" 
+          <a class="btn btn-primary"
+            href="${prefs['editCancelAbsenceUrl'][0]}"
             target="_blank" rel="noopener noreferer">
             Edit/Cancel Absence
           </a>

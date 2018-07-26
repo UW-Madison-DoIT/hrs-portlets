@@ -64,7 +64,7 @@ New features
 
 **Breaking change:** change to the Roles DAO API to add two methods, supporting
 
- + Enhanced Troubleshooting portlet, now with what HRS roles are known, the general mappings from 
+ + Enhanced Troubleshooting portlet, now with what HRS roles are known, the general mappings from
    HRS roles to Portlet roles, and a link to documentation ( #115 )
 
 ### 1.12.0 : Roles troubleshooter
@@ -74,14 +74,14 @@ New features
 New features
 
 + Add `Troubleshooting` portlet ( #114 )
-+ Require secure database connections by setting `;oracle.net.encryption_client=REQUIRED;` on 
++ Require secure database connections by setting `;oracle.net.encryption_client=REQUIRED;` on
   `connectionProperties` ( 1b749187006099bea1448ac8a29e5cd69eb3f62a )
 
 ### 1.11.0 : Configurable Manager Time and Approval link labels
 
 2018-04-16
 
-Adjusts defaults for Manager Time and Approval dynamic hyperlink labels, and makes these labels 
+Adjusts defaults for Manager Time and Approval dynamic hyperlink labels, and makes these labels
 configurable via `portlet-preference`.
 
 + Title case and make configurable Manager "Approve Absence" and "Approve Time" link labels ( #111 )
@@ -93,17 +93,17 @@ configurable via `portlet-preference`.
 
 Feature changes
 
-+ Re-orders "HRS Manager Time and Approval" links to put "Approve absence" ahead of "Approve time". 
-  This is intended to better match typical manager approval workflows and a customization also made 
++ Re-orders "HRS Manager Time and Approval" links to put "Approve absence" ahead of "Approve time".
+  This is intended to better match typical manager approval workflows and a customization also made
   in the new HRS self-service Fluid approvals dashboard. ( #109 )
-+ Shortens the default label for the new manager approval dashboard link in "Manager Time and 
++ Shortens the default label for the new manager approval dashboard link in "Manager Time and
   Approval" to "Time & Absence Dashboard" so that it will not run over the 24 character limit and be
   truncated by the `list-of-links` widget type. ( #110 )
 
 Bug fixes
 
 + Fix the "Approve time" link in the new dynamic Manager Time and Approval manager links ( #107 )
-+ Fix URLs JSON to actually include the URLs (values) and not just the keys. That is, to make the 
++ Fix URLs JSON to actually include the URLs (values) and not just the keys. That is, to make the
   list-of-link representation of this links that are actual hyperlinks that link to the URLs. ( #108
   )
 
@@ -119,26 +119,26 @@ Patch release to fix a display issue on a button in the Time And Absence app.
 
 New features: ManagerLinks portlet
 
-+ `ManagerLinks` portlet, exposing a resource URL vending JSON in `list-of-links` format, 
-  representing role-filtered links available to the manager to launch into HRS self-service to 
++ `ManagerLinks` portlet, exposing a resource URL vending JSON in `list-of-links` format,
+  representing role-filtered links available to the manager to launch into HRS self-service to
   approve time and/or absences ( #97, #100, #101, #102 )
-+ Optional approvals dashboard link, with its label and URL specified via portlet preference, 
++ Optional approvals dashboard link, with its label and URL specified via portlet preference,
   predicated on new `UW_DYN_TIME_ABS_DASH_USER` HRS role ( #99, #103,  #104 )
-+ Also offers equivalent rendered view, suitable for linking from the generated `list-of-links` 
++ Also offers equivalent rendered view, suitable for linking from the generated `list-of-links`
   widget.
 
 New features: Roles portlet
 
-+ `Roles` portlet, exposing a resource URL vending JSON in `list-of-links` format, representing the 
++ `Roles` portlet, exposing a resource URL vending JSON in `list-of-links` format, representing the
   user's HRS roles as understood by (mapped to) the HRS Portlets (  #96 ).
-+ Also offers equivalent rendered view, suitable for linking from the generated `list-of-links` 
++ Also offers equivalent rendered view, suitable for linking from the generated `list-of-links`
   widget.
 
 New features:: Urls portlet
 
-+ `Urls` portlet, exposing a resource URL vending JSON in `list-of-links` format, representing the 
++ `Urls` portlet, exposing a resource URL vending JSON in `list-of-links` format, representing the
   HRS URLs as understood by the HRS Portlets
-+ Also offers equivalent rendered view, suitable for linking from the generated `list-of-links` 
++ Also offers equivalent rendered view, suitable for linking from the generated `list-of-links`
   widget.
 
 Style
@@ -165,7 +165,7 @@ Changes:
 Fixes:
 
 + Removes duplicate zero-balance vacation carryover entries in leave balances ( #87 )
-+ Changes advice about changing "Business/Office Address" to contact "your human resources office" 
++ Changes advice about changing "Business/Office Address" to contact "your human resources office"
   rather than "your Payroll Office". ( #91 )
 + Revise Benefit Statement ordering ( #93 )
 
@@ -181,14 +181,14 @@ Fixes:
 
 There are no functional or configuration changes in this release.
 
-+ Makes more conservative the HRS PUM22 changes previously made in ( #75 ) characterizing and 
++ Makes more conservative the HRS PUM22 changes previously made in ( #75 ) characterizing and
   linking the self-service UI for updating personal information in HRS. ( #85 )
 
 #### 1.6.3 : further fix new direct deposit self-service link feature
 
 2017-10-24
 
-1.6.0's new feature ( #80 ) was bugged. 1.6.1 tried to fix this, but it was still bugged. Further 
+1.6.0's new feature ( #80 ) was bugged. 1.6.1 tried to fix this, but it was still bugged. Further
 fixes with ( #82 )
 
 #### 1.6.2 : unpublished
@@ -207,20 +207,20 @@ Attempted to fix bugged ( #80 ) with ( #81 ), but it didn't work.
 
 BUGGED. (Use `1.6.3` or later instead.)
 
-This release adds one feature: support for an optional HRS role granting access to the new 
+This release adds one feature: support for an optional HRS role granting access to the new
 self-service direct deposit management UI in PeopleSoft 9.2 PUM22. ( #80 ).
 
 This is entirely backwards compatible and fails gracefully, falling back on v1.5.0 behavior:
 
-+ If the viewing employee does not have the new role (HRS role `UW_DYN_PY_DIRDEP_SS`, mapped to an 
-  hrs-portlets role of `ROLE_VIEW_DIRECT_DEPOSIT`), the UI is unchanged, continuing to link a PDF 
++ If the viewing employee does not have the new role (HRS role `UW_DYN_PY_DIRDEP_SS`, mapped to an
+  hrs-portlets role of `ROLE_VIEW_DIRECT_DEPOSIT`), the UI is unchanged, continuing to link a PDF
   form for direct deposit updating (as hardcoded in the JSP).
-+ If the new portlet-preference `directDepositSelfServiceUrl` is not set, *even if the employee has 
-  the new role*, the UI is unchanged, continuing to link a PDF form for direct deposit updating (as 
++ If the new portlet-preference `directDepositSelfServiceUrl` is not set, *even if the employee has
+  the new role*, the UI is unchanged, continuing to link a PDF form for direct deposit updating (as
   hardcoded in the JSP).
 
-If the employee has the role and the portlet-preference is set, the direct deposit link in the UI 
-uses the URL configured in the portlet preference (intention: the HRS self-service URL) rather than 
+If the employee has the role and the portlet-preference is set, the direct deposit link in the UI
+uses the URL configured in the portlet preference (intention: the HRS self-service URL) rather than
 the previously hard-coded URL to the PDF form.
 
 (The portlet preference could be configured with any URL, including with the URL to the PDF form, so
@@ -232,11 +232,11 @@ that's another way to turn off this new feature in a pinch.)
 
 New feature:
 
-+ Optionally, the benefit summary URL link in Benefit Information can be specified via the new 
-  `benefitsSummaryUrl` portlet-preference, overriding any value coming through the HRS URLs SOAP 
++ Optionally, the benefit summary URL link in Benefit Information can be specified via the new
+  `benefitsSummaryUrl` portlet-preference, overriding any value coming through the HRS URLs SOAP
   integration. ( #78 as fixed in #79 ).
 
-Backwards compatible: don't set the new preference and the portlet continues to function as in 
+Backwards compatible: don't set the new preference and the portlet continues to function as in
 `1.4.0`.
 
 ### 1.4.0 : add Edit/Cancel Absences button
@@ -244,14 +244,14 @@ Backwards compatible: don't set the new preference and the portlet continues to 
 New feature:
 
 + Adds support in Time and Absence for new optional `editCancelAbsenceUrl` portlet-preference . When
-  set, shows new Edit/Cancel Absence button to launch the URL described by that portlet-preference 
-  value. When not set, no-op. Intended to support graceful upgrade to HRS PUM22 self-service UIs. ( 
+  set, shows new Edit/Cancel Absence button to launch the URL described by that portlet-preference
+  value. When not set, no-op. Intended to support graceful upgrade to HRS PUM22 self-service UIs. (
   \#76 )
 
 Fix:
 
-+ `1.3.0` was bugged bug such that when the Personal Information self-service launch URL was 
-  configured via the new-in-that-release optional `updateMyPersonalInfoUrl` portlet-preference, the 
++ `1.3.0` was bugged bug such that when the Personal Information self-service launch URL was
+  configured via the new-in-that-release optional `updateMyPersonalInfoUrl` portlet-preference, the
   resulting UI included broken hyperlinks. This release fixes that bug. ( #77 )
 
 ### 1.3.0 : add Personal Information self-service URL portlet-preference
@@ -263,14 +263,14 @@ New feature:
 + honor optional `updateMyPersonalInfoUrl` portlet preference superseding corresponding URL from HRS
   SOAP web service ( #75 )
 
-This release adds support for overriding the URL linking to HRS self-service UI for updating 
+This release adds support for overriding the URL linking to HRS self-service UI for updating
 personal information, via a new `updateMyPersonalInfoUrl` portlet preference.
 
-+ When the preference is set, the UI reflects the new HRS PUM22 context (text, other links around) 
++ When the preference is set, the UI reflects the new HRS PUM22 context (text, other links around)
   for the link.
-+ When the preference is not set, the portlet continues to get this URL from the HRS URLs SOAP web 
++ When the preference is not set, the portlet continues to get this URL from the HRS URLs SOAP web
   service with its prior context (text, other links around) the link.
-+ This release also adds an error state for when the URL is available neither from the portlet 
++ This release also adds an error state for when the URL is available neither from the portlet
   preference nor from the HRS URLs web service. This edge case is not expected to actually happen in
   practice.
 
@@ -317,7 +317,7 @@ New features:
 New features:
 
 + Adds endpoint to retrieve HRS URLs ( #63 )
-+ Adds log statement when interpreting a null response as an empty set when retrieving and 
++ Adds log statement when interpreting a null response as an empty set when retrieving and
   translating roles ( #65 )
 
 Fixes:

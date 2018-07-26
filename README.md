@@ -27,7 +27,7 @@ Every HRS integration portlet, individually, supports this portlet preference.
 + For each value of this portlet preference, the configured portlet will render a user-facing message near the top of the portlet content.
 + When not set, this message block disappears from the UI.
 
-This is intended as a solution for 
+This is intended as a solution for
 
 + Making employees aware of known issues or service degradations (e.g., Benefit Information is omitting some dependents.)
 + Service notices about e.g. upcoming outages (e.g. This app will be unavailable on Tuesday.)
@@ -49,19 +49,19 @@ This is intended as a solution for
 #### `approveAbsenceLabel` portlet preference (optional)
 
 + Sets the label for the approve absence hyperlink.
-+ When not set, the label defaults to "Approve Absence" (as defined in 
++ When not set, the label defaults to "Approve Absence" (as defined in
   `ManagerLinksController.DEFAULT_APPROVE_ABSENCE_LABEL`).
 
 #### `approveTimeLabel` portlet preference (optional)
 
 + Sets the label for the approve time hyperlink.
-+ When not set, the label defaults to "Approve Time" (as defined in 
++ When not set, the label defaults to "Approve Time" (as defined in
   `ManagerLinksController.DEFAULT_APPROVE_TIME_LABEL`).
 
 #### `approvalsDashboardLabel` portlet preference (optional)
 
 + Sets the label for the approvals dashboard hyperlink.
-+ When not set, the label defaults to "Time/Absence Dashboard" (as defined in 
++ When not set, the label defaults to "Time/Absence Dashboard" (as defined in
   `ManagerLinksController.DEFAULT_DASHBOARD_LABEL`).
 
 #### `approvalsDashboardUrl` portlet preference (optional)
@@ -106,9 +106,9 @@ technically the underlying portlet name is `ContactInfo`.
 
 #### `leaveReportingNotice` portlet preference (optional)
 
-+ When set, adds an in-app-message near the top of Time and Absence showing to employees who see the 
++ When set, adds an in-app-message near the top of Time and Absence showing to employees who see the
   Outstanding Missing Leave Reports link.
-+ When not set, does not show. For employees who do not see the Outstanding Missing Leave Reports 
++ When not set, does not show. For employees who do not see the Outstanding Missing Leave Reports
   link, does not show.
 + Intended for messaging to employees subject to annual leave reporting requirements
 
@@ -142,17 +142,17 @@ this hour limiting policy applies to them.)
 
 ### Manager Links
 
-+ `managerListOfLinks` : JSON suitable for driving a `list-of-links` widget representing links 
++ `managerListOfLinks` : JSON suitable for driving a `list-of-links` widget representing links
   appropriate to the employee's roles for approving others' time and absences.
 
 ### Roles
 
-+ `rolesAsListOfLinks` : JSON suitable for driving a `list-of-links` widget representing the user's 
++ `rolesAsListOfLinks` : JSON suitable for driving a `list-of-links` widget representing the user's
   HRS roles. Useful for troubleshooting.
 
 ### Urls
 
-+ `hrsUrlsAsListOfLinks` : JSON suitable for driving a `list-of-links` widget representing the HRS 
++ `hrsUrlsAsListOfLinks` : JSON suitable for driving a `list-of-links` widget representing the HRS
   URLs. Useful for troubleshooting.
 
 ## Local Setup Instructions
