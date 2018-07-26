@@ -26,28 +26,30 @@
 
 <div id="${n}dl-time-absence" class="fl-widget portlet dl-time-absence hrs">
   <div>
-  <div class="dl-banner-links">
-    <c:if test="${not empty hrsUrls['Benefits Enrollment']}">
-      <div class="dl-banner-link">
-        You have a benefit enrollment opportunity. Please enroll online by clicking the
-        following link. <a target="_blank" href="${hrsUrls['Benefits Enrollment']}">Benefits Enrollment</a>
+    <div class="dl-banner-links">
+      <c:if test="${not empty hrsUrls['Benefits Enrollment']}">
+        <div class="dl-banner-link">
+          You have a benefit enrollment opportunity. Please enroll online by clicking the
+          following link.
+          <a target="_blank" href="${hrsUrls['Benefits Enrollment']}">
+            Benefits Enrollment</a>
+        </div>
+      </c:if>
+      <div class="dl-help-link">
+        <a href="${helpUrl}" target="_blank">Help</a>
       </div>
-    </c:if>
-    <div class="dl-help-link">
-      <a href="${helpUrl}" target="_blank">Help</a>
     </div>
-  </div>
 
-  <div id="${n}leaveReportingNotice" style="display: none;">
-    <%-- style changes as side effect of Outstanding Missing Leave Report statement callback. --%>
-    <c:if test="${not empty leaveReportingNotice}">
-      <div class="fl-widget hrs-notification-wrapper alert alert-info">
-        <div class="hrs-notification-content">${leaveReportingNotice}</div>
-      </div>
-    </c:if>
-  </div>
+    <div id="${n}leaveReportingNotice" style="display: none;">
+      <%-- style changes as side effect of Outstanding Missing Leave Report statement callback. --%>
+      <c:if test="${not empty leaveReportingNotice}">
+        <div class="fl-widget hrs-notification-wrapper alert alert-info">
+          <div class="hrs-notification-content">${leaveReportingNotice}</div>
+        </div>
+      </c:if>
+    </div>
 
-  <hrs:notification/>
+    <hrs:notification/>
 
   </div>
 
