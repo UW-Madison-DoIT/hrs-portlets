@@ -78,6 +78,7 @@
                       ROLE_VIEW_TIME_CLOCK and ROLE_VIEW_TIME_SHEET)
                 -->
                 <value>ROLE_TIMESHEET_BUTTON</value>
+                <value>ROLE_VIEW_TIME_ENTRY_HISTORY</value>
             </set>
         </entry>
         <entry key="UW_DYN_TL_EMPLOYEE_TIMECLOCK">

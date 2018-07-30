@@ -145,7 +145,7 @@
         <c:set var="activeTabStyle" value=""/>
       </sec:authorize>
       <li class="ui-state-default ui-corner-top ${activeTabStyle}"><a href="#${n}dl-leave-balance">Leave Balances</a></li>
-      <sec:authorize ifAnyGranted="ROLE_VIEW_WEB_CLOCK,ROLE_VIEW_TIME_CLOCK,ROLE_VIEW_TIME_SHEET">
+      <sec:authorize ifAnyGranted="ROLE_VIEW_TIME_ENTRY_HISTORY,ROLE_VIEW_TIME_CLOCK,ROLE_VIEW_TIME_SHEET">
         <li class="ui-state-default ui-corner-top"><a href="#${n}dl-time-entry">Time Entry</a></li>
       </sec:authorize>
       <li class="ui-state-default ui-corner-top"><a href="#${n}dl-absence-statements">Leave Reports</a></li>
@@ -219,7 +219,7 @@
         <hrs:pagerNavBar position="bottom" />
       </div>
     </div>
-    <sec:authorize ifAnyGranted="ROLE_VIEW_WEB_CLOCK,ROLE_VIEW_TIME_CLOCK,ROLE_VIEW_TIME_SHEET">
+    <sec:authorize ifAnyGranted="ROLE_VIEW_TIME_ENTRY_HISTORY,ROLE_VIEW_TIME_CLOCK,ROLE_VIEW_TIME_SHEET">
       <div id="${n}dl-time-entry" class="dl-time-entry ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
         <div class="fl-pager">
           <hrs:pagerNavBar position="top" showSummary="${true}" />
@@ -478,7 +478,7 @@
             }
           });
 
-        <sec:authorize ifAnyGranted="ROLE_VIEW_WEB_CLOCK,ROLE_VIEW_TIME_CLOCK,ROLE_VIEW_TIME_SHEET">
+        <sec:authorize ifAnyGranted="ROLE_VIEW_TIME_ENTRY_HISTORY,ROLE_VIEW_TIME_CLOCK,ROLE_VIEW_TIME_SHEET">
           dl.pager.init("#${n}dl-time-entry", {
             model: {
                 sortKey: "date",
