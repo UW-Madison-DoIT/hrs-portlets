@@ -68,12 +68,12 @@
         <entry key="UW_DYN_TL_WEB_CLOCK">
             <set>
                 <value>ROLE_VIEW_WEB_CLOCK</value>
-                <!-- effects
+                <!-- effect
                   In Time and Absence
                     Show the Web Clock link
                 -->
                 <value>ROLE_TIMESHEET_BUTTON</value>
-                <!-- effects:
+                <!-- effect
                   In Time and Absence
                     Displays the Timesheet button -->
                 <value>ROLE_VIEW_TIME_ENTRY_HISTORY</value>
