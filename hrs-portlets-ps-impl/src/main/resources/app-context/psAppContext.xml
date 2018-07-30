@@ -101,6 +101,7 @@
                     Show the Time Entry tab
                     Show the Timesheet link
                 -->
+                <value>ROLE_TIMESHEET_BUTTON</value>
             </set>
         </entry>
         <entry key="UW_UNV_TL Supervisor">
