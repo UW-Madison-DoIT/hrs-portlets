@@ -52,8 +52,7 @@
     <hrs:notification/>
 
     <sec:authorize
-      ifAnyGranted=
-        "ROLE_VIEW_TIME_SHEET,ROLE_VIEW_WEB_CLOCK,ROLE_VIEW_TIME_CLOCK"
+      ifAnyGranted="ROLE_TIMESHEET_BUTTON"
       ifNotGranted="ROLE_UW_DYN_AM_PUNCH_TIME">
       <%-- sec:authorize attributes are ANDed, as in user must fulfill all of
         them. So this targets users who see the timesheet button but who do not
