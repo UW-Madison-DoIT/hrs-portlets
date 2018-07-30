@@ -108,7 +108,7 @@
       </c:if>
 
     </sec:authorize>
-    <sec:authorize ifAnyGranted="ROLE_TIMESHEET_BUTTON,ROLE_VIEW_WEB_CLOCK,ROLE_VIEW_TIME_CLOCK">
+    <sec:authorize ifAnyGranted="ROLE_TIMESHEET_BUTTON,ROLE_VIEW_TIME_CLOCK">
       <div class="dl-link">
         <div style='display: inline-block;'>
           <a class="btn btn-primary" href="${hrsUrls['Timesheet']}" target="_blank">Timesheet</a>
