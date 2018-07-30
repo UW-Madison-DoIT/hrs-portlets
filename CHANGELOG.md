@@ -6,6 +6,7 @@
 
 This release refactors roles in "Time and Absence", inventing in-hrs-portlets
 roles more explicitly mapping to UI controls and functions in hrs-portlets.
+([#125][])
 
 This is a breaking change in the sense that some previous roles disappear or
 or change meaning, and new roles appear.
@@ -386,6 +387,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 
 [#122]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/122
 [#123]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/123
+[#125]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/125
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348
