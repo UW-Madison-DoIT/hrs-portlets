@@ -70,8 +70,6 @@
                 <value>ROLE_VIEW_WEB_CLOCK</value>
                 <!-- effects (superset of ROLE_VIEW_TIME_CLOCK)
                   In Time and Absence
-                    Allows rendering timeSheets.json
-                    Show the Time Entry tab
                     Show the Web Clock link
                 -->
                 <value>ROLE_TIMESHEET_BUTTON</value>
@@ -79,15 +77,17 @@
                   In Time and Absence
                     Displays the Timesheet button -->
                 <value>ROLE_VIEW_TIME_ENTRY_HISTORY</value>
+                <!-- effects:
+                  In Time and Absence
+                    Allows rendering timeSheets.json resource URL
+                    Show the Time Entry tab
+                -->
             </set>
         </entry>
         <entry key="UW_DYN_TL_EMPLOYEE_TIMECLOCK">
             <set>
                 <value>ROLE_VIEW_TIME_CLOCK</value>
                 <!-- effects (subset of ROLE_VIEW_WEB_CLOCK)
-                  Allows rendering timeSheets.json
-                  In Time and Absence
-                    Show the Time Entry tab
                 -->
                 <value>ROLE_TIMESHEET_BUTTON</value>
                 <value>ROLE_VIEW_TIME_ENTRY_HISTORY</value>
