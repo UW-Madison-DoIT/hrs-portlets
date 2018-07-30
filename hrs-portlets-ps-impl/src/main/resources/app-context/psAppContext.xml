@@ -68,7 +68,7 @@
         <entry key="UW_DYN_TL_WEB_CLOCK">
             <set>
                 <value>ROLE_VIEW_WEB_CLOCK</value>
-                <!-- effects (superset of ROLE_VIEW_TIME_CLOCK)
+                <!-- effects
                   In Time and Absence
                     Show the Web Clock link
                 -->
@@ -86,9 +86,6 @@
         </entry>
         <entry key="UW_DYN_TL_EMPLOYEE_TIMECLOCK">
             <set>
-                <value>ROLE_VIEW_TIME_CLOCK</value>
-                <!-- effects (subset of ROLE_VIEW_WEB_CLOCK)
-                -->
                 <value>ROLE_TIMESHEET_BUTTON</value>
                 <value>ROLE_VIEW_TIME_ENTRY_HISTORY</value>
             </set>
