@@ -92,6 +92,7 @@
                     Show the Timesheet link
                 -->
                 <value>ROLE_TIMESHEET_BUTTON</value>
+                <value>ROLE_VIEW_TIME_ENTRY_HISTORY</value>
             </set>
         </entry>
         <entry key="UW_DYN_TL_CL_EMPL_TIMESHEET">
