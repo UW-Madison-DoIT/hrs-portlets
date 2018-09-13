@@ -1,6 +1,59 @@
 # MyUW hrs-portlets change log
 
-### Next release
+### Next release (4.0.0)
+
+**Breaking changes**
+
+This release refactors roles in "Time and Absence", inventing in-hrs-portlets
+roles more explicitly mapping to UI controls and functions in hrs-portlets.
+([#125][])
+
+This is a breaking change in the sense that some previous roles disappear or
+or change meaning, and new roles appear.
+
+This is a non-breaking change, indeed a
+no-discernible-impact-to-HRS-or-to-employees change in the sense that the
+mapping from PeopleSoft roles to portlet roles is carefully ported forward such
+that the same PeopleSoft roles result in the same privileges and experiences in
+hrs-portlets.
+
+Invents:
+
++ `ROLE_TIMESHEET_BUTTON`, gating display of the Timesheet button
++ `ROLE_VIEW_TIME_ENTRY_HISTORY`, gating access to Time Entry history data and
+  display of this tab in Time and Absence
+
+Removes:
+
++ `ROLE_VIEW_TIME_SHEET`
++ `ROLE_VIEW_TIME_CLOCK`
+
+both of which had previously granted both access to the Timesheet button and
+access to time entry history.
+
+Changes the meaning of:
+
++ `ROLE_VIEW_WEB_CLOCK`, which now only grants the "Web Clock" link, but
+  previously had also granted access to the Timesheet button and time entry
+  history.
+
+### 3.1.0: targeted notifications and notices for PHIT
+
+New features:
+
++ In Time and Absence, a new optional `portlet-preference`
+  `dynPunchTimesheetNotification` drives a new in-HRS-app message (presented
+  just like `notification`) to employees with the new
+  `ROLE_UW_DYN_AM_PUNCH_TIME` role. ([HRSPLT-346][], [#123][])
++ In Time and Absence, a new optional `portlet-preference`
+  `nonDynPunchTimesheetNotification` drives a new in-HRS-app message (presented
+  just like `notification`) to employees who see the Timesheet button but who
+  do not have the new `ROLE_UW_DYN_AM_PUNCH_TIME` role. ([HRSPLT-346][],
+  [#123][])
++ In Time and Absence, a new optional `portlet-preference`
+  `dynPunchTimesheetNotice` drives a new message near the Timesheet button
+  (presented similarly to `timesheetNotice`) to employees with the new
+  `ROLE_UW_DYN_AM_PUNCH_TIME` role. ([HRSPLT-346][], [#123][])
 
 Changes:
 
@@ -333,5 +386,8 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [releases in the GitHub repo]: https://github.com/UW-Madison-DoIT/hrs-portlets/releases
 
 [#122]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/122
+[#123]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/123
+[#125]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/125
 
+[HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348

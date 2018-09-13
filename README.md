@@ -112,6 +112,43 @@ technically the underlying portlet name is `ContactInfo`.
   link, does not show.
 + Intended for messaging to employees subject to annual leave reporting requirements
 
+
+#### `dynPunchTimesheetNotification` portlet preference (optional)
+
++ When set, adds an in-app-message near the top of Time and Absence showing to
+  employees with `ROLE_UW_DYN_AM_PUNCH_TIME`.
++ When not set, does not show. For employees who do not have
+  `ROLE_UW_DYN_AM_PUNCH_TIME`, does not show.
++ Intended for messaging to employees for whom the UI changed with the launch of
+  PHIT, such that the functions they previously accessed via purpose-specific
+  absence-related buttons they will now access via the timesheet button.
+
+#### `nonDynPunchTimesheetNotification` portlet preference (optional)
+
++ When set, adds an in-app-message near the top of Time and Absence showing to
+  employees who see the Timesheet button but who do not have
+  `ROLE_UW_DYN_AM_PUNCH_TIME`.
++ When not set, does not show.
++ For employees who do have `ROLE_UW_DYN_AM_PUNCH_TIME`, does not show.
++ For employees who do not see the Timesheet button, does not show.
++ Intended for messaging to employees for whom the MyUW UI did not change with
+  the launch of PHIT, but for whom the experience they get when they click the
+  Timesheet button may or may not have changed.
+
+#### `dynPunchTimesheetNotice` portlet preference (optional)
+
++ When set, adds text to the UI near the timesheet launch button, shown only
+  to employees with `ROLE_UW_DYN_AM_PUNCH_TIME`.
++ When not set, does not show.
++ For employees without `ROLE_UW_DYN_AM_PUNCH_TIME`, does not show.
++ When both this preference and `timesheetNotice` are set, this text appears
+  before and separated with a horizontal rule from the text specified in
+  `timesheetNotice`.
+
+Intended for easing the transition for employees who lose the absence-specific
+buttons and instead will now access absence-related functions directly in the
+HRS self-service timesheet linked via the Timesheet button.
+
 #### `timesheetNotice` portlet preference (optional)
 
 + When set, adds text to the UI near the timesheet launch button.

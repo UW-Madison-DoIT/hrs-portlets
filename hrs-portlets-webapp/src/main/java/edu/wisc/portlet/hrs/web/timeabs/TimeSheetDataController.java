@@ -55,7 +55,7 @@ public class TimeSheetDataController {
      * @param modelMap
      * @return the most recent timesheets, limited to 80
      */
-    @Secured({"ROLE_VIEW_WEB_CLOCK", "ROLE_VIEW_TIME_CLOCK", "ROLE_VIEW_TIME_SHEET"})
+    @Secured({"ROLE_VIEW_TIME_ENTRY_HISTORY"})
     @ResourceMapping("timeSheets")
     public String getTimeSheets(ModelMap modelMap) {
         final String emplid = PrimaryAttributeUtils.getPrimaryId();

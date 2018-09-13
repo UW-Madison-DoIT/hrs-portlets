@@ -48,6 +48,13 @@ public class TimeAbsenceController extends HrsControllerBase {
         this.contactInfoDao = contactInfoDao;
     }
 
+    @ModelAttribute("dynPunchTimesheetNotice")
+    public final String dynPunchTimesheetNotice(PortletRequest request) {
+        final PortletPreferences preferences = request.getPreferences();
+
+        return preferences.getValue("dynPunchTimesheetNotice", null);
+    }
+
     @ModelAttribute("timesheetNotice")
     public final String getTimesheetNotice(PortletRequest request) {
         final PortletPreferences preferences = request.getPreferences();
@@ -60,6 +67,33 @@ public class TimeAbsenceController extends HrsControllerBase {
         final PortletPreferences preferences = request.getPreferences();
 
         return preferences.getValue("leaveReportingNotice", null);
+    }
+
+    /**
+     * Optional message shown to employees with the dyn punch timesheet role.
+     * These users lost a couple buttons related to reporting absences (since)
+     * their timesheet now includes those functions integrated) and so are
+     * messaged in the Time and Absence UI about this change.
+     */
+    @ModelAttribute("dynPunchTimesheetNotification")
+    public final String dynPunchTimesheetNotification(PortletRequest request) {
+        final PortletPreferences preferences = request.getPreferences();
+
+        return preferences.getValue("dynPunchTimesheetNotification", null);
+    }
+
+    /**
+     * Optional message shown to employees who see the timesheet button
+     * but do not have the dyn punch timesheet role. These users did not lose
+     * buttons, but their timesheet experience may (or may not) have changed
+     * with the PHIT launch.
+     */
+    @ModelAttribute("nonDynPunchTimesheetNotification")
+    public final String nonDynPunchTimesheetNotification(
+        PortletRequest request) {
+        final PortletPreferences preferences = request.getPreferences();
+
+        return preferences.getValue("nonDynPunchTimesheetNotification", null);
     }
 
     @RequestMapping

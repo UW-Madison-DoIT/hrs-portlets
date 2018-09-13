@@ -60,44 +60,40 @@
           <set>
             <value>ROLE_VIEW_ABSENCE_HISTORIES</value>
             <!-- same role as above -->
+            <value>ROLE_UW_DYN_AM_PUNCH_TIME</value>
+            <!-- pass through HRS role specifically to enable targeting
+              messaging specifically to this role -->
           </set>
         </entry>
         <entry key="UW_DYN_TL_WEB_CLOCK">
             <set>
                 <value>ROLE_VIEW_WEB_CLOCK</value>
-                <!-- effects (superset of
-                  ROLE_VIEW_TIME_CLOCK or ROLE_VIEW_TIME_SHEET)
+                <!-- effect
                   In Time and Absence
-                    Allows rendering timeSheets.json
+                    Show the Web Clock link
+                -->
+                <value>ROLE_TIMESHEET_BUTTON</value>
+                <!-- effect
+                  In Time and Absence
+                    Displays the Timesheet button -->
+                <value>ROLE_VIEW_TIME_ENTRY_HISTORY</value>
+                <!-- effects:
+                  In Time and Absence
+                    Allows rendering timeSheets.json resource URL
                     Show the Time Entry tab
-                    Show the Timesheet link
-                    Show the Web Clock link (this is the difference from
-                      ROLE_VIEW_TIME_CLOCK and ROLE_VIEW_TIME_SHEET)
                 -->
             </set>
         </entry>
         <entry key="UW_DYN_TL_EMPLOYEE_TIMECLOCK">
             <set>
-                <value>ROLE_VIEW_TIME_CLOCK</value>
-                <!-- effects (same as ROLE_VIEW_TIME_SHEET,
-                  subset of ROLE_VIEW_WEB_CLOCK)
-                  Allows rendering timeSheets.json
-                  In Time and Absence
-                    Show the Time Entry tab
-                    Show the Timesheet link
-                -->
+                <value>ROLE_TIMESHEET_BUTTON</value>
+                <value>ROLE_VIEW_TIME_ENTRY_HISTORY</value>
             </set>
         </entry>
         <entry key="UW_DYN_TL_CL_EMPL_TIMESHEET">
             <set>
-                <value>ROLE_VIEW_TIME_SHEET</value>
-                <!-- effects (same as ROLE_VIEW_TIME_CLOCK,
-                  subset of ROLE_VIEW_WEB_CLOCK)
-                  Allows rendering timeSheets.json
-                  In Time and Absence
-                    Show the Time Entry tab
-                    Show the Timesheet link
-                -->
+                <value>ROLE_TIMESHEET_BUTTON</value>
+                <value>ROLE_VIEW_TIME_ENTRY_HISTORY</value>
             </set>
         </entry>
         <entry key="UW_UNV_TL Supervisor">

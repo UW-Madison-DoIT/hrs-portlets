@@ -26,28 +26,60 @@
 
 <div id="${n}dl-time-absence" class="fl-widget portlet dl-time-absence hrs">
   <div>
-  <div class="dl-banner-links">
-    <c:if test="${not empty hrsUrls['Benefits Enrollment']}">
-      <div class="dl-banner-link">
-        You have a benefit enrollment opportunity. Please enroll online by clicking the
-        following link. <a target="_blank" href="${hrsUrls['Benefits Enrollment']}">Benefits Enrollment</a>
+    <div class="dl-banner-links">
+      <c:if test="${not empty hrsUrls['Benefits Enrollment']}">
+        <div class="dl-banner-link">
+          You have a benefit enrollment opportunity. Please enroll online by clicking the
+          following link.
+          <a target="_blank" href="${hrsUrls['Benefits Enrollment']}">
+            Benefits Enrollment</a>
+        </div>
+      </c:if>
+      <div class="dl-help-link">
+        <a href="${helpUrl}" target="_blank">Help</a>
       </div>
-    </c:if>
-    <div class="dl-help-link">
-      <a href="${helpUrl}" target="_blank">Help</a>
     </div>
-  </div>
 
-  <div id="${n}leaveReportingNotice" style="display: none;">
-    <%-- style changes as side effect of Outstanding Missing Leave Report statement callback. --%>
-    <c:if test="${not empty leaveReportingNotice}">
-      <div class="fl-widget hrs-notification-wrapper alert alert-info">
-        <div class="hrs-notification-content">${leaveReportingNotice}</div>
+    <div id="${n}leaveReportingNotice" style="display: none;">
+      <%-- style changes as side effect of Outstanding Missing Leave Report statement callback. --%>
+      <c:if test="${not empty leaveReportingNotice}">
+        <div class="fl-widget hrs-notification-wrapper alert alert-info">
+          <div class="hrs-notification-content">${leaveReportingNotice}</div>
+        </div>
+      </c:if>
+    </div>
+
+    <hrs:notification/>
+
+    <sec:authorize
+      ifAnyGranted="ROLE_TIMESHEET_BUTTON"
+      ifNotGranted="ROLE_UW_DYN_AM_PUNCH_TIME">
+      <%-- sec:authorize attributes are ANDed, as in user must fulfill all of
+        them. So this targets users who see the timesheet button but who do not
+        have UW_DYN_AM_PUNCH_TIME --%>
+      <div id="${n}nonDynPunchTimesheetNotification">
+        <c:if test="${not empty nonDynPunchTimesheetNotification}">
+          <div class="fl-widget hrs-notification-wrapper alert alert-info">
+            <div class="hrs-notification-content">
+              ${nonDynPunchTimesheetNotification}
+            </div>
+          </div>
+        </c:if>
       </div>
-    </c:if>
-  </div>
+    </sec:authorize>
 
-  <hrs:notification/>
+    <sec:authorize
+      ifAllGranted="ROLE_UW_DYN_AM_PUNCH_TIME">
+      <div id="${n}dynPunchTimesheetNotification">
+        <c:if test="${not empty dynPunchTimesheetNotification}">
+          <div class="fl-widget hrs-notification-wrapper alert alert-info">
+            <div class="hrs-notification-content">
+              ${dynPunchTimesheetNotification}
+            </div>
+          </div>
+        </c:if>
+      </div>
+    </sec:authorize>
 
   </div>
 
@@ -75,14 +107,25 @@
       </c:if>
 
     </sec:authorize>
-    <sec:authorize ifAnyGranted="ROLE_VIEW_TIME_SHEET,ROLE_VIEW_WEB_CLOCK,ROLE_VIEW_TIME_CLOCK">
+    <sec:authorize ifAnyGranted="ROLE_TIMESHEET_BUTTON">
       <div class="dl-link">
         <div style='display: inline-block;'>
           <a class="btn btn-primary" href="${hrsUrls['Timesheet']}" target="_blank">Timesheet</a>
         </div>
-        <c:if test="${not empty timesheetNotice}">
-          <div class="timesheet-notice">${timesheetNotice}</div>
-        </c:if>
+        <div class="timesheet-notice">
+          <sec:authorize
+            ifAllGranted="ROLE_UW_DYN_AM_PUNCH_TIME">
+            <c:if test="${not empty dynPunchTimesheetNotice}">
+              ${dynPunchTimesheetNotice}
+            </c:if>
+            <c:if test="${not empty timesheetNotice}">
+              <hr/>
+            </c:if>
+          </sec:authorize>
+          <c:if test="${not empty timesheetNotice}">
+            ${timesheetNotice}
+          </c:if>
+        </div>
         <br/>
       </div>
     </sec:authorize>
@@ -101,7 +144,7 @@
         <c:set var="activeTabStyle" value=""/>
       </sec:authorize>
       <li class="ui-state-default ui-corner-top ${activeTabStyle}"><a href="#${n}dl-leave-balance">Leave Balances</a></li>
-      <sec:authorize ifAnyGranted="ROLE_VIEW_WEB_CLOCK,ROLE_VIEW_TIME_CLOCK,ROLE_VIEW_TIME_SHEET">
+      <sec:authorize ifAnyGranted="ROLE_VIEW_TIME_ENTRY_HISTORY">
         <li class="ui-state-default ui-corner-top"><a href="#${n}dl-time-entry">Time Entry</a></li>
       </sec:authorize>
       <li class="ui-state-default ui-corner-top"><a href="#${n}dl-absence-statements">Leave Reports</a></li>
@@ -175,7 +218,7 @@
         <hrs:pagerNavBar position="bottom" />
       </div>
     </div>
-    <sec:authorize ifAnyGranted="ROLE_VIEW_WEB_CLOCK,ROLE_VIEW_TIME_CLOCK,ROLE_VIEW_TIME_SHEET">
+    <sec:authorize ifAnyGranted="ROLE_VIEW_TIME_ENTRY_HISTORY">
       <div id="${n}dl-time-entry" class="dl-time-entry ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
         <div class="fl-pager">
           <hrs:pagerNavBar position="top" showSummary="${true}" />
@@ -434,7 +477,7 @@
             }
           });
 
-        <sec:authorize ifAnyGranted="ROLE_VIEW_WEB_CLOCK,ROLE_VIEW_TIME_CLOCK,ROLE_VIEW_TIME_SHEET">
+        <sec:authorize ifAnyGranted="ROLE_VIEW_TIME_ENTRY_HISTORY">
           dl.pager.init("#${n}dl-time-entry", {
             model: {
                 sortKey: "date",
