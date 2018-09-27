@@ -192,6 +192,14 @@ this hour limiting policy applies to them.)
 + `hrsUrlsAsListOfLinks` : JSON suitable for driving a `list-of-links` widget representing the HRS
   URLs. Useful for troubleshooting.
 
+## Redirector
+
+The servlet path `/go` takes a request parameter `urlKey`. When this is the key to a URL known to
+HrsUrlsDao, this path redirects the user to that HRS URL. When not known, responds 404 NOT FOUND.
+This is a handy way to statically refer in widgets, notifications, etc., to the HRS URLs while
+getting the tier-appropriate, potentially changing over time implementation of that URL, rather than
+peppering implementation details of HRS deep links into content.
+
 ## Local Setup Instructions
 
 Several property files need to be configured for your local environment before the Portlet will run in your local uPortal server.
