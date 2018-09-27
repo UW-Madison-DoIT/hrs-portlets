@@ -37,6 +37,13 @@ Changes the meaning of:
   previously had also granted access to the Timesheet button and time entry
   history.
 
+New features:
+
++ As a *Servlet* in the HRSPortlets web application, adds `/go` redirector that takes a `urlKey`
+  request parameter. When this maps to a URL known to the HrsUrlsDao, redirects to that URL. When
+  this does not map to a URL known to that DAO, responds 404 not found. ([#126][])
+
+
 ### 3.1.0: targeted notifications and notices for PHIT
 
 New features:
@@ -388,6 +395,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#122]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/122
 [#123]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/123
 [#125]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/125
+[#126]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/126
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348
