@@ -29,8 +29,6 @@
             http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring/ehcache-spring-1.1.xsd"
       default-autowire="byType">
 
-  <context:component-scan base-package="edu.wisc.portlet.hrs.servlet"/>
-
     <!-- 
      | Defines message bundles (property files in the classpath) to use when resolving messages in views.
      |
