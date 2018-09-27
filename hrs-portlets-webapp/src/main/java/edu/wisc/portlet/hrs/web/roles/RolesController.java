@@ -16,10 +16,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.portlet.bind.annotation.ResourceMapping;
 
 /**
- * Exposes HRS roles as JSON suitable for rendering in a list-of-links widget.
+ * Exposes HRS roles as JSON suitable for rendering in a list-of-links widget
+ * or for switching on the presence of a particular role.
  */
 @Controller
 @RequestMapping("VIEW")
@@ -54,6 +56,27 @@ public class RolesController
 
     Map<String, Object[]> content = new HashMap<String, Object[]>();
     content.put("links", linkList.toArray());
+
+    modelMap.put("content", content);
+
+    return "contentAttrJsonView";
+  }
+
+  /**
+   * Model is "content" --> "hasRole" --> boolean .
+   * The boolean is true if the user has the requested role, false otherwise.
+   * @param modelMap
+   * @param role portlet role about which to ask whether the user has it
+   * @return String representing view
+   * @throws IOException
+   */
+  @ResourceMapping("hasRole")
+  public String roleAsBoolean(ModelMap modelMap, @RequestParam String role) throws IOException {
+    final String emplId = PrimaryAttributeUtils.getPrimaryId();
+    final Set<String> roles = this.rolesDao.getHrsRoles(emplId);
+
+    Map<String, Boolean> content = new HashMap<String, Boolean>();
+    content.put("hasRole", roles.contains(role));
 
     modelMap.put("content", content);
 
