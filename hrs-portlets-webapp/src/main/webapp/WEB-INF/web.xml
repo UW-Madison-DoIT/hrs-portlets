@@ -98,7 +98,7 @@
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>DispatcherServlet</servlet-name>
+        <servlet-name>go</servlet-name>
         <url-pattern>/go</url-pattern>
     </servlet-mapping>
     
