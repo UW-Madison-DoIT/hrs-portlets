@@ -40,6 +40,15 @@
 
     <!-- maps an HRS side role name to a portlet side role name -->
     <util:map id="hrsRolesMapping">
+
+        <!-- map a role everyone has so there's always a positive test case -->
+        <entry key="UW_EMPLOYEE_ACTIVE">
+          <set>
+            <value>ROLE_UW_EMPLOYEE_ACTIVE</value>
+          </set>
+        </entry>
+
+
         <entry key="UW_DYN_AM_EMPLOYEE">
             <set>
                 <value>ROLE_VIEW_ABSENCE_HISTORIES</value>
