@@ -39,6 +39,8 @@ Changes the meaning of:
 
 New features:
 
++ Adds `ROLE_VIEW_HRS_APPROVALS_WIDGET`, initially mapped from HRS role `UW_DYN_PY_ADDL_PAY_APP` 
+  ([#128][])
 + As a *Servlet* in the HRSPortlets web application, adds `/go` redirector that takes a `urlKey`
   request parameter. When this maps to a URL known to the HrsUrlsDao, redirects to that URL. When
   this does not map to a URL known to that DAO, responds 404 not found. ([#126][])
@@ -398,6 +400,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#125]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/125
 [#126]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/126
 [#127]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/127
+[#128]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/128
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348

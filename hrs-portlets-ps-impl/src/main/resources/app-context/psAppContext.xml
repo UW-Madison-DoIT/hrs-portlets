@@ -74,6 +74,11 @@
               messaging specifically to this role -->
           </set>
         </entry>
+        <entry key="UW_DYN_PY_ADDL_PAY_APP">
+            <set>
+                <value>ROLE_VIEW_HRS_APPROVALS_WIDGET</value>
+            </set>
+        </entry>
         <entry key="UW_DYN_TL_WEB_CLOCK">
             <set>
                 <value>ROLE_VIEW_WEB_CLOCK</value>
