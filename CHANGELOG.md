@@ -477,7 +477,7 @@ Changes the meaning of:
   that DAO, responds 404 not found. ( [#126][] )
 + Adds a JSON resource URL for asking whether the user has a specific HRS
   Portlets role. Intended for use in `switch` widget type to switch widget
-  behavior on whether user has role. ( [ #127][] )
+  behavior on whether user has role. ( [#127][] )
 + Adds a JSON resource URL for asking what portlet roles the user does and does
   not have. Intended for use in uPortal App Framework message filtering.
   Structured similarly to `enrollmentFlag` for this reason. ( [#129][] )
