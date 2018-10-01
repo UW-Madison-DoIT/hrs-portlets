@@ -184,7 +184,7 @@ this hour limiting policy applies to them.)
 
 ### Roles
 
-+ `hasRole` : JSON suitable for driving a `switch` widget switching on whether the employee has a 
++ `hasRole` : JSON suitable for driving a `switch` widget switching on whether the employee has a
   specific role specified by Portlet resource URL request parameter `role`. In uPortal 4.2, this
   translates to an HTTP request parameter of `pP_role`.
 + `rolesAsListOfLinks` : JSON suitable for driving a `list-of-links` widget representing the user's
