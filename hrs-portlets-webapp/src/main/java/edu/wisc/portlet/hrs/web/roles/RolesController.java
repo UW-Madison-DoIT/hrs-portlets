@@ -5,7 +5,9 @@ import edu.wisc.portlet.hrs.web.HrsControllerBase;
 import edu.wisc.portlet.hrs.web.listoflinks.Link;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -60,6 +62,44 @@ public class RolesController
     modelMap.put("content", content);
 
     return "contentAttrJsonView";
+  }
+
+  /**
+   * Model is "report" --> [ {"rolename", "true"}, {"anotherRoleName", "false"}, ... ]
+   * Suitable for predicating a uPortal Application Framework message on the employee having a role.
+   * @param modelMap
+   * @return
+   * @throws IOException
+   */
+  @ResourceMapping("rolesAsFlags")
+  public String rolesAsReport(ModelMap modelMap) throws IOException {
+
+    final String emplId = PrimaryAttributeUtils.getPrimaryId();
+
+    final Map<String, Set<String>> generalRoleMapping = this.rolesDao.getHrsRoleMappings();
+
+    Set<String> rolesThatPeopleMightHave = new HashSet<String>();
+
+    // collect all the mapped portlet roles
+    Collection<Set<String>> mappingValues = generalRoleMapping.values();
+    for (Set<String> portletRoles : mappingValues) {
+      rolesThatPeopleMightHave.addAll(portletRoles);
+    }
+
+    final Set<String> rolesHeldByEmployee = this.rolesDao.getHrsRoles(emplId);
+
+    List<Map<String, String>> report = new ArrayList<Map<String, String>>();
+
+    for (String portletRole : rolesThatPeopleMightHave) {
+      Map<String, String> rolesMap = new HashMap<String, String>();
+      rolesMap.put(portletRole,
+          Boolean.valueOf(rolesHeldByEmployee.contains(portletRole)).toString());
+      report.add(rolesMap);
+    }
+
+    modelMap.addAttribute("report", report);
+
+    return "jsonView";
   }
 
   /**
