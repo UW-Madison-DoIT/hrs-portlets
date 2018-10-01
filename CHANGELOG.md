@@ -46,6 +46,9 @@ New features:
   this does not map to a URL known to that DAO, responds 404 not found. ([#126][])
 + Adds a JSON resource URL for asking whether the user has a specific HRS Portlets role. Intended
   for use in `switch` widget type to switch widget behavior on whether user has role. ([ #127][])
++ Adds a JSON resource URL for asking what portlet roles the user does and does not have. Intended
+  for use in uPortal App Framework message filtering. Structured similarly to `enrollmentFlag` for 
+  this reason. ([#129][])
 
 ### 3.1.0: targeted notifications and notices for PHIT
 
@@ -401,6 +404,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#126]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/126
 [#127]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/127
 [#128]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/128
+[#129]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/129
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348
