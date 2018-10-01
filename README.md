@@ -189,6 +189,7 @@ this hour limiting policy applies to them.)
   translates to an HTTP request parameter of `pP_role`.
 + `rolesAsListOfLinks` : JSON suitable for driving a `list-of-links` widget representing the user's
   HRS roles. Useful for troubleshooting.
++ `rolesAsReport` : JSON suitable for driving uPortal App Framework message filtering.
 
 ### Urls
 
