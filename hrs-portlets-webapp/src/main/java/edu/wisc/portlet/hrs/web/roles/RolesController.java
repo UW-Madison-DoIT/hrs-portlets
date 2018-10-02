@@ -71,7 +71,7 @@ public class RolesController
    * @return
    * @throws IOException
    */
-  @ResourceMapping("rolesAsFlags")
+  @ResourceMapping("rolesAsReport")
   public String rolesAsReport(ModelMap modelMap) throws IOException {
 
     final String emplId = PrimaryAttributeUtils.getPrimaryId();
