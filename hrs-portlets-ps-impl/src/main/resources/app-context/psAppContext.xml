@@ -77,6 +77,11 @@
         <entry key="UW_DYN_PY_ADDL_PAY_APP">
             <set>
                 <value>ROLE_VIEW_HRS_APPROVALS_WIDGET</value>
+                <!-- indicates that the HRS Approvals widget is intended to
+                  be useful to the employee. Technically all employees can view
+                  the widget, it's just that it won't be useful to people
+                  without this role. In practice, MyUW targets an announcement
+                  about the widget depending on this role. -->
             </set>
         </entry>
         <entry key="UW_DYN_TL_WEB_CLOCK">
@@ -130,6 +135,8 @@
                     Show the Approve Absence link
                     Show the Approve Payable Time link
                 -->
+                <value>ROLE_VIEW_HRS_APPROVALS_WIDGET</value>
+                <!-- as above -->
             </set>
         </entry>
         <entry key="UW_UNV_TL Non Supervisor">
