@@ -39,15 +39,15 @@ Changes the meaning of:
 
 New features:
 
-+ Adds `ROLE_VIEW_HRS_APPROVALS_WIDGET`, initially mapped from HRS role `UW_DYN_PY_ADDL_PAY_APP` 
-  ([#128][])
++ Adds `ROLE_VIEW_HRS_APPROVALS_WIDGET`, initially mapped from HRS roles
+  `UW_DYN_PY_ADDL_PAY_APP` and `UW_UNV_TL Supervisor` ([#128][], [#132][])
 + As a *Servlet* in the HRSPortlets web application, adds `/go` redirector that takes a `urlKey`
   request parameter. When this maps to a URL known to the HrsUrlsDao, redirects to that URL. When
   this does not map to a URL known to that DAO, responds 404 not found. ([#126][])
 + Adds a JSON resource URL for asking whether the user has a specific HRS Portlets role. Intended
   for use in `switch` widget type to switch widget behavior on whether user has role. ([ #127][])
 + Adds a JSON resource URL for asking what portlet roles the user does and does not have. Intended
-  for use in uPortal App Framework message filtering. Structured similarly to `enrollmentFlag` for 
+  for use in uPortal App Framework message filtering. Structured similarly to `enrollmentFlag` for
   this reason. ([#129][])
 
 ### 3.1.0: targeted notifications and notices for PHIT
@@ -405,6 +405,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#127]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/127
 [#128]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/128
 [#129]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/129
+[#132]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/132
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348
