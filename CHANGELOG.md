@@ -11,7 +11,7 @@ changing the meaning of `ROLE_VIEW_WEB_CLOCK`.
 
 This release refactors roles in "Time and Absence", inventing in-hrs-portlets
 roles more explicitly mapping to UI controls and functions in hrs-portlets.
-([#125][])
+( [#125][] )
 
 This is a breaking change in the sense that some previous roles disappear or
 or change meaning, and new roles appear.
@@ -45,17 +45,17 @@ Changes the meaning of:
 New features:
 
 + Adds `ROLE_VIEW_HRS_APPROVALS_WIDGET`, initially mapped from HRS roles
-  `UW_DYN_PY_ADDL_PAY_APP` and `UW_UNV_TL Supervisor` ([#128][], [#132][])
+  `UW_DYN_PY_ADDL_PAY_APP` and `UW_UNV_TL Supervisor` ( [#128][], [#132][] )
 + As a *Servlet* in the HRSPortlets web application, adds `/go` redirector that
   takes a `urlKey` request parameter. When this maps to a URL known to the
   HrsUrlsDao, redirects to that URL. When this does not map to a URL known to
-  that DAO, responds 404 not found. ([#126][])
+  that DAO, responds 404 not found. ( [#126][] )
 + Adds a JSON resource URL for asking whether the user has a specific HRS
   Portlets role. Intended for use in `switch` widget type to switch widget
-  behavior on whether user has role. ([ #127][])
+  behavior on whether user has role. ( [ #127][] )
 + Adds a JSON resource URL for asking what portlet roles the user does and does
   not have. Intended for use in uPortal App Framework message filtering.
-  Structured similarly to `enrollmentFlag` for this reason. ([#129][])
+  Structured similarly to `enrollmentFlag` for this reason. ( [#129][] )
 
 ## HRS Portlets 3 series
 
@@ -69,22 +69,22 @@ New features:
 + In Time and Absence, a new optional `portlet-preference`
   `dynPunchTimesheetNotification` drives a new in-HRS-app message (presented
   just like `notification`) to employees with the new
-  `ROLE_UW_DYN_AM_PUNCH_TIME` role. ([HRSPLT-346][], [#123][])
+  `ROLE_UW_DYN_AM_PUNCH_TIME` role. ( [HRSPLT-346][], [#123][] )
 + In Time and Absence, a new optional `portlet-preference`
   `nonDynPunchTimesheetNotification` drives a new in-HRS-app message (presented
   just like `notification`) to employees who see the Timesheet button but who
-  do not have the new `ROLE_UW_DYN_AM_PUNCH_TIME` role. ([HRSPLT-346][],
-  [#123][])
+  do not have the new `ROLE_UW_DYN_AM_PUNCH_TIME` role. ( [HRSPLT-346][],
+  [#123][] )
 + In Time and Absence, a new optional `portlet-preference`
   `dynPunchTimesheetNotice` drives a new message near the Timesheet button
   (presented similarly to `timesheetNotice`) to employees with the new
-  `ROLE_UW_DYN_AM_PUNCH_TIME` role. ([HRSPLT-346][], [#123][])
+  `ROLE_UW_DYN_AM_PUNCH_TIME` role. ( [HRSPLT-346][], [#123][] )
 
 Changes:
 
 + In Time and Absence, the `leaveReportingNotice` when present is now ordered
   ahead of general `hrs:notifications` in-app notifications when present.
-  ([HRSPLT-348][], [#122][])
+  ( [HRSPLT-348][], [#122][] )
 
 ### 3.0.0: split `ROLE_VIEW_ABSENCE_HISTORIES`
 
