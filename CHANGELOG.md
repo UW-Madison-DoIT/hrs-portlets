@@ -7,7 +7,7 @@ changing the meaning of `ROLE_VIEW_WEB_CLOCK`.
 
 ### Next release (4.0.0)
 
-**Breaking changes**
+#### Breaking changes in 4.0.0
 
 This release refactors roles in "Time and Absence", inventing in-hrs-portlets
 roles more explicitly mapping to UI controls and functions in hrs-portlets.
@@ -42,7 +42,7 @@ Changes the meaning of:
   previously had also granted access to the Timesheet button and time entry
   history.
 
-New features:
+#### New features in 4.0.0
 
 + Adds `ROLE_VIEW_HRS_APPROVALS_WIDGET`, initially mapped from HRS roles
   `UW_DYN_PY_ADDL_PAY_APP` and `UW_UNV_TL Supervisor` ( [#128][], [#132][] )
@@ -64,7 +64,7 @@ changing the meaning of `ROLE_VIEW_ABSENCE_HISTORIES`.
 
 ### 3.1.0: targeted notifications and notices for PHIT
 
-New features:
+#### New features in 3.1.0
 
 + In Time and Absence, a new optional `portlet-preference`
   `dynPunchTimesheetNotification` drives a new in-HRS-app message (presented
@@ -80,7 +80,7 @@ New features:
   (presented similarly to `timesheetNotice`) to employees with the new
   `ROLE_UW_DYN_AM_PUNCH_TIME` role. ( [HRSPLT-346][], [#123][] )
 
-Changes:
+#### Changes in 3.1.0
 
 + In Time and Absence, the `leaveReportingNotice` when present is now ordered
   ahead of general `hrs:notifications` in-app notifications when present.
@@ -88,7 +88,7 @@ Changes:
 
 ### 3.0.0: split `ROLE_VIEW_ABSENCE_HISTORIES`
 
-BREAKING CHANGE:
+#### Breaking changes in 3.0.0
 
 The `ROLE_VIEW_ABSENCE_HISTORIES` portlet role now *only*
 grants access to view absence histories and does *not* grant access to the
@@ -99,7 +99,7 @@ Migration path: to the extent that employees ought to continue to have all the
 privileges of the prior implementation of `ROLE_VIEW_ABSENCE_HISTORIES`, also
 grant those employees `ROLE_ENTER_EDIT_CANCEL_OWN_ABSENCES`. ( #121 )
 
-New features
+#### New features in 3.0.0
 
 + Add new portlet role `ROLE_ENTER_EDIT_CANCEL_OWN_ABSENCES`, granting access to
   the "Enter absence" and "Edit/cancel absence buttons". This access is a subset
@@ -108,7 +108,7 @@ New features
   `ROLE_VIEW_ABSENCE_HISTORIES` portlet role but does *not* grant new
   `ROLE_ENTER_EDIT_CANCEL_OWN_ABSENCES` portlet role. ( #121 )
 
-Changes
+#### Changes in 3.0.0
 
 + Update role mapping for `UW_DYN_AM_EMPLOYEE` HRS role to grant the new
   `ROLE_ENTER_EDIT_CANCEL_OWN_ABSENCES` portlet role in addition to the
@@ -145,7 +145,9 @@ New features
 
 2018-05-16
 
-**Breaking change:** change to the Roles DAO API to add two methods, supporting
+#### Breaking change in 2.0.0
+
+Changes the Roles DAO API to add two methods, supporting
 
  + Enhanced Troubleshooting portlet, now with what HRS roles are known, the
    general mappings from HRS roles to Portlet roles, and a link to documentation
@@ -157,7 +159,7 @@ New features
 
 2018-05-14
 
-New features
+#### New features in 1.12.0
 
 + Add `Troubleshooting` portlet ( #114 )
 + Require secure database connections by setting
