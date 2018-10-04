@@ -5,7 +5,13 @@
 The HRS Portlets 4 major version was occasioned by the breaking change of
 changing the meaning of `ROLE_VIEW_WEB_CLOCK`.
 
-### Next release (4.0.0)
+### 4.0.1 (Unreleased)
+
+No changes yet.
+
+### 4.0.0: `ROLE_VIEW_HRS_APPROVALS_WIDGET`, role refactor and apis, redirector
+
+2018-10-04
 
 #### Breaking changes in 4.0.0
 
