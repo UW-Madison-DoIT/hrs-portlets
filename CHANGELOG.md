@@ -1,5 +1,10 @@
 # MyUW hrs-portlets change log
 
+## HRS Portlets 4 series
+
+The HRS Portlets 4 major version was occasioned by the breaking change of
+changing the meaning of `ROLE_VIEW_WEB_CLOCK`.
+
 ### Next release (4.0.0)
 
 **Breaking changes**
@@ -49,6 +54,11 @@ New features:
 + Adds a JSON resource URL for asking what portlet roles the user does and does not have. Intended
   for use in uPortal App Framework message filtering. Structured similarly to `enrollmentFlag` for
   this reason. ([#129][])
+
+## HRS Portlets 3 series
+
+The HRS Portlets 3 major version was occasioned by the breaking change of
+changing the meaning of `ROLE_VIEW_ABSENCE_HISTORIES`.
 
 ### 3.1.0: targeted notifications and notices for PHIT
 
@@ -106,6 +116,11 @@ Changes
   release, these employees regain those very same privileges via the
   `ROLE_ENTER_EDIT_CANCEL_OWN_ABSENCES` role. ( #121 )
 
+## HRS Portlets 2 series
+
+The HRS Portlets 2 major version was occasioned by the breaking change of
+adding two methods to the Roles DAO API.
+
 ### 2.1.1 : Eagerly resolve leave reporting notice div conditional
 
 2018-06-25
@@ -123,8 +138,7 @@ New features
 + Add `leaveReportingNotice` feature in Time and Absence ( #118 )
 + Style HRS roles as <em>emphasized</em> as used as sentences in Troubleshooter ( #116 )
 
-
-## 2.0.0 : Troubleshooter with more detail
+### 2.0.0 : Troubleshooter with more detail
 
 2018-05-16
 
@@ -132,6 +146,8 @@ New features
 
  + Enhanced Troubleshooting portlet, now with what HRS roles are known, the general mappings from
    HRS roles to Portlet roles, and a link to documentation ( #115 )
+
+## HRS Portlets 1 series
 
 ### 1.12.0 : Roles troubleshooter
 
@@ -173,7 +189,7 @@ Bug fixes
   list-of-link representation of this links that are actual hyperlinks that link to the URLs. ( #108
   )
 
-#### 1.9.1 : Fix display of a button in Time and Absence
+### 1.9.1 : Fix display of a button in Time and Absence
 
 2018-04-12
 
@@ -235,13 +251,13 @@ Fixes:
   rather than "your Payroll Office". ( #91 )
 + Revise Benefit Statement ordering ( #93 )
 
-#### 1.6.5 : Change spacing
+### 1.6.5 : Change spacing
 
 2017-11-03
 
 + Fixes spacing of paragraphs ( #86 )
 
-#### 1.6.4 : More conservative Personal Information presentation
+### 1.6.4 : More conservative Personal Information presentation
 
 2017-10-26
 
@@ -250,18 +266,18 @@ There are no functional or configuration changes in this release.
 + Makes more conservative the HRS PUM22 changes previously made in ( #75 ) characterizing and
   linking the self-service UI for updating personal information in HRS. ( #85 )
 
-#### 1.6.3 : further fix new direct deposit self-service link feature
+### 1.6.3 : further fix new direct deposit self-service link feature
 
 2017-10-24
 
 1.6.0's new feature ( #80 ) was bugged. 1.6.1 tried to fix this, but it was still bugged. Further
 fixes with ( #82 )
 
-#### 1.6.2 : unpublished
+### 1.6.2 : unpublished
 
 This release did not successfully publish. Its fix is documented above in 1.6.3.
 
-#### 1.6.1 : failed attempt at fixing bugged self-service direct deposit linking
+### 1.6.1 : failed attempt at fixing bugged self-service direct deposit linking
 
 2017-10-24
 
@@ -351,7 +367,7 @@ New features:
 + Add trace logging in enrollment flag parsing ( #73 )
 
 
-#### 1.1.3 : workaround fixing Leave Reports column disappearance
+### 1.1.3 : workaround fixing Leave Reports column disappearance
 
 2017-09-21
 
@@ -360,7 +376,7 @@ Fix:
 + Workaround to resolve race condition affecting display of Leave Reports column ( #71 )
 
 
-#### 1.1.2 : add enrollmentFlag to benefitSummary JSON API; rm furlough balance
+### 1.1.2 : add enrollmentFlag to benefitSummary JSON API; rm furlough balance
 
 2017-07-24
 
@@ -370,7 +386,7 @@ New features:
 + Filters furlough balance from leave balances, if furlough balance is zero ( #70 )
 + Documents `enrollmentFlag` values ( #68 )
 
-#### 1.1.1 : style a link
+### 1.1.1 : style a link
 
 2017-03-20
 
@@ -391,7 +407,7 @@ Fixes:
 + Updates year-end leave balances label to 2016 text ( #64 )
 + Fixes bug where color labels didn't appear ( #63 )
 
-#### 1.0.0.38...
+### 1.0.0.38...
 
 This and many more earlier releases exist as [releases in the GitHub repo][].
 
