@@ -34,8 +34,20 @@
   </div>
   <div id="${n}dl-tabs" class="dl-tabs ui-tabs ui-widget ui-widget-content ui-corner-all inner-nav-container">
     <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all inner-nav">
-      <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#${n}dl-earning-statements">Earning Statements</a></li>
-      <li class="ui-state-default ui-corner-top"><a href="#${n}dl-tax-statements">Tax Statements</a></li>
+      <%--
+        set initial tab selection based on optional portlet request param
+      --%>
+      <c:choose>
+        <c:when test="${requestedContent equals 'Tax Statements'}">
+          <li class="ui-state-default ui-corner-top"><a href="#${n}dl-earning-statements">Earning Statements</a></li>
+          <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#${n}dl-tax-statements">Tax Statements</a></li>
+        </c:when>
+        <c:otherwise>
+          <%-- default to Earnings Statements as default tab. --%>
+          <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#${n}dl-earning-statements">Earning Statements</a></li>
+          <li class="ui-state-default ui-corner-top"><a href="#${n}dl-tax-statements">Tax Statements</a></li>
+        </c:otherwise>
+    </c:choose>
     </ul>
     <div id="${n}dl-earning-statements" class="dl-earning-statements ui-tabs-panel ui-widget-content ui-corner-bottom">
       <div class="data-table-description-header">

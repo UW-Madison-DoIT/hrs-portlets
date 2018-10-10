@@ -100,6 +100,11 @@ public class HrsControllerBase {
         return PrimaryAttributeUtils.getPrimaryId();
     }
 
+    @ModelAttribute("requestedContent")
+    public final String requestedContent(PortletRequest request) {
+      return (request.getParameter("requestedContent"));
+    }
+
     @ResourceMapping("getHrsUrlsJson")
     public String getURLRestService(ModelMap modelMap) {
       modelMap.addAttribute("report", this.hrsUrlDao.getHrsUrls());

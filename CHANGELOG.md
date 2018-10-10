@@ -5,9 +5,23 @@
 The HRS Portlets 4 major version was occasioned by the breaking change of
 changing the meaning of `ROLE_VIEW_WEB_CLOCK`.
 
-### 4.0.1 (Unreleased)
+### 4.1.0 (Unreleased)
 
-No changes yet.
+#### New features in 4.1.0
+
++ Optionally deep link to a specific tab in Payroll Information by setting the
+  `requestedContent` *Portlet* request parameter. Specifically, setting this to
+  `Tax Statements` will select the "Tax Statements" tab, whereas omitting it or
+  any other value will continue the default behavior of initially selecting the
+  "Earning Statements" tab. Note that this is only practically useful when
+  invoking the Portlet in a way that conveys portlet request parameters. i.e.
+  the status quo naive `/web/exclusive/{fname}` in uPortal App Framework does
+  not support this feature, whereas the legacy `/portal/p/{fname}` does *if* you
+  indulge a modest abstraction violation and rely on knowledge of how uPortal
+  names *Portlet* request parameters, i.e.
+  `/portal/p/{fname}?pP_requestedContent=Tax%20Statements` . This is all by way
+  of temporizing until the HRS Portlets can be replaced by implementations that
+  are not Portlets, e.g. uPortal Application Framework applications.
 
 ### 4.0.0: `ROLE_VIEW_HRS_APPROVALS_WIDGET`, role refactor and apis, redirector
 
