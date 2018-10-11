@@ -38,7 +38,7 @@
         set initial tab selection based on optional portlet request param
       --%>
       <c:choose>
-        <c:when test="${requestedContent equals 'Tax Statements'}">
+        <c:when test="${requestedContent eq 'Tax Statements'}">
           <li class="ui-state-default ui-corner-top">
             <a href="#${n}dl-earning-statements">Earning Statements</a>
           </li>
