@@ -39,13 +39,21 @@
       --%>
       <c:choose>
         <c:when test="${requestedContent equals 'Tax Statements'}">
-          <li class="ui-state-default ui-corner-top"><a href="#${n}dl-earning-statements">Earning Statements</a></li>
-          <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#${n}dl-tax-statements">Tax Statements</a></li>
+          <li class="ui-state-default ui-corner-top">
+            <a href="#${n}dl-earning-statements">Earning Statements</a>
+          </li>
+          <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active">
+            <a href="#${n}dl-tax-statements">Tax Statements</a>
+          </li>
         </c:when>
         <c:otherwise>
           <%-- default to Earnings Statements as default tab. --%>
-          <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#${n}dl-earning-statements">Earning Statements</a></li>
-          <li class="ui-state-default ui-corner-top"><a href="#${n}dl-tax-statements">Tax Statements</a></li>
+          <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active">
+            <a href="#${n}dl-earning-statements">Earning Statements</a>
+          </li>
+          <li class="ui-state-default ui-corner-top">
+            <a href="#${n}dl-tax-statements">Tax Statements</a>
+          </li>
         </c:otherwise>
     </c:choose>
     </ul>
