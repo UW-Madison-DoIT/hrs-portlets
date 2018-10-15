@@ -33,20 +33,6 @@
       <hrs:notification/>
   </div>
 
-  <div class="dl-payroll-links">
-    <c:if test="${not empty hrsUrls['View W-2']}}"
-      <a class="btn btn-primary"
-        href="${hrsUrls['View W-2']}"
-        target="_blank" rel="noopener noreferrer">View W-2</a>
-    </c:if>
-    <c:if test="${not empty hrsUrls['W-2 Consent']}}"
-      <a class="btn btn-primary"
-        href="${hrsUrls['W-2 Consent']}"
-        target="_blank" rel="noopener noreferrer">
-        Consent to receive W-2 electronically</a>
-    </c:if>
-  </div>
-
   <div id="${n}dl-tabs" class="dl-tabs ui-tabs ui-widget ui-widget-content ui-corner-all inner-nav-container">
     <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all inner-nav">
       <%--
@@ -113,6 +99,20 @@
       </c:if>
     </div>
     <div id="${n}dl-tax-statements" class="dl-tax-statements ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+
+      <div class="dl-payroll-links">
+        <c:if test="${not empty hrsUrls['View W-2']}}"
+          <a class="btn btn-primary"
+            href="${hrsUrls['View W-2']}"
+            target="_blank" rel="noopener noreferrer">View W-2</a>
+        </c:if>
+        <c:if test="${not empty hrsUrls['W-2 Consent']}}"
+          <a class="btn btn-primary"
+            href="${hrsUrls['W-2 Consent']}"
+            target="_blank" rel="noopener noreferrer">
+            Consent to receive W-2 electronically</a>
+        </c:if>
+      </div>
 
       <div class="dl-payroll-links">
         <c:if test="${not empty hrsUrls['View 1095-C']}}"
