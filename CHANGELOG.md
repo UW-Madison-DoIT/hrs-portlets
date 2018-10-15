@@ -9,6 +9,13 @@ changing the meaning of `ROLE_VIEW_WEB_CLOCK`.
 
 (No changes yet.)
 
+### 4.1.1
+
+2018-10-15
+
++ Fix syntax error that caused the new Payroll Information links in 4.1.0 not
+  to show.
+
 ### 4.1.0 Payroll Information deep links to tabs and links into HRS
 
 2018-10-15

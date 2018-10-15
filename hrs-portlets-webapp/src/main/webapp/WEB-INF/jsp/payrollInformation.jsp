@@ -101,23 +101,23 @@
     <div id="${n}dl-tax-statements" class="dl-tax-statements ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
 
       <div class="dl-payroll-links">
-        <c:if test="${not empty hrsUrls['View W-2']}}">
+        <c:if test="${not empty hrsUrls['View W-2']}">
           <a class="btn btn-primary"
             href="${hrsUrls['View W-2']}"
             target="_blank" rel="noopener noreferrer">View W-2</a>
         </c:if>
-        <c:if test="${not empty hrsUrls['W-2 Consent']}}">
+        <c:if test="${not empty hrsUrls['W-2 Consent']}">
           <a class="btn btn-default"
             href="${hrsUrls['W-2 Consent']}"
             target="_blank" rel="noopener noreferrer">
             Consent to receive W-2 electronically</a>
         </c:if>
-        <c:if test="${not empty hrsUrls['View 1095-C']}}">
+        <c:if test="${not empty hrsUrls['View 1095-C']}">
           <a class="btn btn-primary"
             href="${hrsUrls['View 1095-C']}"
             target="_blank" rel="noopener noreferrer">View 1095-C</a>
         </c:if>
-        <c:if test="${not empty hrsUrls['1095-C Consent']}}">
+        <c:if test="${not empty hrsUrls['1095-C Consent']}">
           <a class="btn btn-default"
             href="${hrsUrls['1095-C Consent']}"
             target="_blank" rel="noopener noreferrer">
