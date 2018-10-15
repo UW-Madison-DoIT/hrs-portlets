@@ -32,6 +32,21 @@
     
       <hrs:notification/>
   </div>
+
+  <div class="dl-payroll-links">
+    <c:if test="${not empty hrsUrls['View 1095-C']}}"
+      <a class="btn btn-primary"
+        href="${hrsUrls['View 1095-C']}"
+        target="_blank" rel="noopener noreferrer">View 1095-C</a>
+    </c:if>
+    <c:if test="${not empty hrsUrls['1095-C Consent']}}"
+      <a class="btn btn-primary"
+        href="${hrsUrls['1095-C Consent']}"
+        target="_blank" rel="noopener noreferrer">
+        Consent to receive 1095-C electronically</a>
+    </c:if>
+  </div>
+
   <div id="${n}dl-tabs" class="dl-tabs ui-tabs ui-widget ui-widget-content ui-corner-all inner-nav-container">
     <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all inner-nav">
       <%--
