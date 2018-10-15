@@ -107,7 +107,7 @@
             target="_blank" rel="noopener noreferrer">View W-2</a>
         </c:if>
         <c:if test="${not empty hrsUrls['W-2 Consent']}}"
-          <a class="btn btn-primary"
+          <a class="btn btn-default"
             href="${hrsUrls['W-2 Consent']}"
             target="_blank" rel="noopener noreferrer">
             Consent to receive W-2 electronically</a>
@@ -121,7 +121,7 @@
             target="_blank" rel="noopener noreferrer">View 1095-C</a>
         </c:if>
         <c:if test="${not empty hrsUrls['1095-C Consent']}}"
-          <a class="btn btn-primary"
+          <a class="btn btn-default"
             href="${hrsUrls['1095-C Consent']}"
             target="_blank" rel="noopener noreferrer">
             Consent to receive 1095-C electronically</a>
