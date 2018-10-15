@@ -9,6 +9,9 @@ changing the meaning of `ROLE_VIEW_WEB_CLOCK`.
 
 #### New features in 4.1.0
 
++ Payroll Information shows links to `View 1095-C` and `1095-C Consent`, iff it
+  reads those URLs from the HRS URLs DAO. (No interdependency - each handled
+  individually.) ( [#137][], [HRSPLT-363][] )
 + Optionally deep link to a specific tab in Payroll Information by setting the
   `requestedContent` *Portlet* request parameter. Specifically, setting this to
   `Tax Statements` will select the "Tax Statements" tab, whereas omitting it or
@@ -468,6 +471,8 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#128]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/128
 [#129]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/129
 [#132]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/132
+[#137]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/137
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348
+[HRSPLT-363]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-363
