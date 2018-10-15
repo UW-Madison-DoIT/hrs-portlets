@@ -121,6 +121,40 @@
         </div>
         <hrs:pagerNavBar position="bottom" />
       </div>
+
+      <div class="dl-link">
+        <a class="btn btn-default"
+          href="https://uwservice.wisc.edu/docs/publications/tax-w2-explanation.pdf"
+          target="_blank" rel="noopener noreferrer">W-2 Explanation</a>
+        <span class='hidden-xs visible-xs'>|</span>
+        <a class="btn btn-default"
+          href="https://uwservice.wisc.edu/docs/publications/itx-1042s-explanation.pdf"
+          target="_blank" rel="noopener noreferrer">1042-S Explanation</a>
+        <%-- Affordable Care Act links --%>
+        <span class='hidden-xs visible-xs'>|</span>
+        <a class="btn btn-default"
+          href="https://uwservice.wisc.edu/docs/publications/tax-1095c-explanation.pdf"
+          target="_blank" rel="noopener noreferrer" >1095-C Explanation</a>
+        <span class='hidden-xs visible-xs'>|</span>
+        <a class="btn btn-default"
+          href="https://www.wisconsin.edu/ohrwd/aca/"
+          target="_blank" rel="noopener noreferrer">ACA Information</a>
+      </div>
+      <c:if test="${personalDataError or personalData.onVisa}">
+        <div class="dl-link">
+          <a class="btn btn-default"
+            href="http://www.online-tax.net/"
+            target="_blank" rel="noopener noreferrer">
+            Glacier International Tax</a>
+        </div>
+        <c:if test="${personalDataError or personalData.madisonEmpl}">
+          <div class="dl-link">
+            <a class="btn btn-default"
+              href="https://uwservice.wisc.edu/docs/publications/tax-nonresident-alien-resources.pdf" target="_blank" rel="noopener noreferrer">
+              About Nonresident Tax Preparation</a>
+          </div>
+        </c:if>
+      </c:if>
     </div>
   </div>
   
@@ -161,26 +195,6 @@
           Update your Direct Deposit</a>
       </sec:authorize>
     </div>
-    <div class="dl-link">
-      <a href="https://uwservice.wisc.edu/docs/publications/tax-w2-explanation.pdf" target="_blank" class="btn btn-default">W-2 Explanation</a>
-      <span class='hidden-xs visible-xs'>|</span>
-      <a href="https://uwservice.wisc.edu/docs/publications/itx-1042s-explanation.pdf" target="_blank" class="btn btn-default">1042-S Explanation</a>
-      <%-- Affordable Care Act links --%>
-      <span class='hidden-xs visible-xs'>|</span>
-      <a href="https://uwservice.wisc.edu/docs/publications/tax-1095c-explanation.pdf" target="_blank" class="btn btn-default">1095-C Explanation</a>
-      <span class='hidden-xs visible-xs'>|</span>
-      <a href="https://www.wisconsin.edu/ohrwd/aca/" target="_blank" class="btn btn-default">ACA Information</a>
-    </div>
-    <c:if test="${personalDataError or personalData.onVisa}">
-      <div class="dl-link">
-        <a href="http://www.online-tax.net/" target="_blank" class="btn btn-default">Glacier International Tax</a>
-      </div>
-      <c:if test="${personalDataError or personalData.madisonEmpl}">
-        <div class="dl-link">
-          <a href="https://uwservice.wisc.edu/docs/publications/tax-nonresident-alien-resources.pdf" target="_blank" class="btn btn-default">About Nonresident Tax Preparation</a>
-        </div>
-      </c:if>
-    </c:if>
   </div>
 
   <%@ include file="/WEB-INF/jsp/footer.jsp"%>
