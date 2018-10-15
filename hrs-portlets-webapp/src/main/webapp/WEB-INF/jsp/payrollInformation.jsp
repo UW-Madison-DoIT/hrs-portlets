@@ -99,9 +99,6 @@
       </c:if>
     </div>
     <div id="${n}dl-tax-statements" class="dl-tax-statements ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
-      <div class="tax-description">
-        Note: W-2 Forms will be available the last week of January
-      </div>
 
       <div class="dl-payroll-links">
         <c:if test="${not empty hrsUrls['View 1095-C']}}"
