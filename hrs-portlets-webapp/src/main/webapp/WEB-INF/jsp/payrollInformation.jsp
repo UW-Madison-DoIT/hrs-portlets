@@ -112,9 +112,6 @@
             target="_blank" rel="noopener noreferrer">
             Consent to receive W-2 electronically</a>
         </c:if>
-      </div>
-
-      <div class="dl-payroll-links">
         <c:if test="${not empty hrsUrls['View 1095-C']}}"
           <a class="btn btn-primary"
             href="${hrsUrls['View 1095-C']}"
