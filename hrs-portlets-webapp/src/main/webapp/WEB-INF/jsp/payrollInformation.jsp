@@ -29,7 +29,7 @@
           <a href="${helpUrl}" target="_blank">Help</a>
         </div>
       </div>
-    
+
       <hrs:notification/>
   </div>
   <div id="${n}dl-tabs" class="dl-tabs ui-tabs ui-widget ui-widget-content ui-corner-all inner-nav-container">
@@ -123,7 +123,7 @@
       </div>
     </div>
   </div>
-  
+
   <div class="dl-payroll-links">
     <div class="dl-link">
       <a href="https://uwservice.wisc.edu/docs/forms/pay-employee-withholding.pdf" target="_blank" class="btn btn-default">Update your W4</a>
@@ -134,8 +134,8 @@
         <c:choose>
           <c:when test="${not empty prefs['directDepositSelfServiceUrl']
             && not empty prefs['directDepositSelfServiceUrl'][0]}">
-            <a 
-              href="${prefs['directDepositSelfServiceUrl'][0]}" 
+            <a
+              href="${prefs['directDepositSelfServiceUrl'][0]}"
               target="_blank" rel="noopener noreferrer"
               class="btn btn-default">
               Update your Direct Deposit</a>
@@ -143,7 +143,7 @@
           <c:otherwise>
             <!-- even if authorized for self-service, if that URL is not set
               fall back on the PDF form. -->
-            <a 
+            <a
               href="https://uwservice.wisc.edu/docs/forms/pay-direct-deposit.pdf"
               target="_blank" rel="noopener noreferrer"
               class="btn btn-default">
@@ -152,10 +152,10 @@
         </c:choose>
       </sec:authorize>
       <sec:authorize ifNotGranted="ROLE_VIEW_DIRECT_DEPOSIT">
-        <!-- show the link to the PDF form 
+        <!-- show the link to the PDF form
         if not authorized for self-service -->
-        <a 
-          href="https://uwservice.wisc.edu/docs/forms/pay-direct-deposit.pdf" 
+        <a
+          href="https://uwservice.wisc.edu/docs/forms/pay-direct-deposit.pdf"
           target="_blank" rel="noopener noreferrer"
           class="btn btn-default">
           Update your Direct Deposit</a>
@@ -202,7 +202,7 @@
 <rs:compressJs>
 (function($, fluid, dl) {
     dl.jQuery(function() {
-        
+
         <%-- Disable Right Clicks in Safari browsers --%>
         <%-- Safari (not webkit) does not honor context header for naming downloads
              If indexOf('Constructor')>0 then we are in Safari Browser--%>
@@ -211,9 +211,9 @@
                 return false;
             });
         }
-        
+
         $(document).ready(function(){
-        
+
         var updateAmmountVisibility = function(checkbox) {
             var checked = checkbox.is(':checked');
             var ammounts = $("#${n}dl-payroll-information table.dl-table a.dl-earning-amount");
@@ -221,13 +221,13 @@
                 $.log("No ammount fields found to update, returning true");
                 return true;
             }
-            
+
             var ammountData = ammounts.data();
             if (ammountData.visibilityUpdated == checked) {
                 $.log("Earnings Toggle toggled " + checked + " matches current state, returning false");
                 return false;
             }
-            
+
             ammountData.visibilityUpdated = checked;
             $.log("Earnings Toggle toggled: " + checked + " updating " + ammounts.length + " ammount fields");
             if (checked) {
@@ -236,16 +236,16 @@
             else {
                 ammounts.hide();
             }
-            
+
             return true;
         };
-        
+
         var earningsToggle = $("#${n}dl-earnings-amount-toggle");
         $.log("Earnings Toggle: " + earningsToggle.length);
         earningsToggle.change(function() {
             updateAmmountVisibility(earningsToggle);
         });
-        
+
         //Setup the pager with no data right away, this helps avoid page flicker when the data comes back from the ajax request
         var earningStatementUrl = dl.util.templateUrl("${earningStatementPdfUrl}");
         dl.pager.init("#${n}dl-earning-statements", {
@@ -254,12 +254,12 @@
               sortDir: -1
           },
           summary: {
-              type: "fluid.pager.summary", 
+              type: "fluid.pager.summary",
               options: {
                 message: "%first-%last of %total statements"
               }
           },
-          columnDefs: [ 
+          columnDefs: [
              dl.pager.linkColDef("paid", earningStatementUrl, {sortable: true, sortValueExtractor: dl.pager.dateExtractor}),
              dl.pager.linkColDef("earned", earningStatementUrl, {sortable: true}),
              dl.pager.linkColDef("amount", earningStatementUrl, {sortable: true, sortValueExtractor: dl.pager.currencyExtractor})
@@ -276,7 +276,7 @@
               dataLoadErrorMsg: "${genericErrorMessage}"
           }
         });
-        
+
 
         var taxStatementUrl = dl.util.templateUrl("${irsStatementPdfUrl}");
         dl.pager.init("#${n}dl-tax-statements", {
@@ -285,7 +285,7 @@
               sortDir: -1
           },
           summary: {
-              type: "fluid.pager.summary", 
+              type: "fluid.pager.summary",
               options: {
                 message: "%first-%last of %total statements"
               }
@@ -300,12 +300,12 @@
               dataLoadErrorMsg: "${genericErrorMessage}"
           }
         });
-        
+
         dl.tabs("#${n}dl-tabs");
-        
+
         dl.util.clickableContainer("#${n}dl-payroll-information");
         });
-    });    
+    });
 })(dl_v1.jQuery, dl_v1.fluid, dl_v1);
 </rs:compressJs>
 </script>
