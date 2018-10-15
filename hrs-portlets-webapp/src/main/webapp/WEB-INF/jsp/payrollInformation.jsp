@@ -115,7 +115,6 @@
       </div>
 
       <div class="fl-pager">
-        <hrs:pagerNavBar position="top" showSummary="${true}" />
         <div class="fl-container-flex dl-pager-table-data fl-pager-data table-responsive">
           <table class="dl-table table" tabindex="0" aria-label="Tax Statement table">
             <thead>
