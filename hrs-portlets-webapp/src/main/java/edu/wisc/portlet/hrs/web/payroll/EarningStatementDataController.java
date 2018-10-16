@@ -19,6 +19,8 @@
 
 package edu.wisc.portlet.hrs.web.payroll;
 
+import edu.wisc.hr.dm.ernstmt.EarningStatementDateComparator;
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
@@ -81,5 +83,33 @@ public class EarningStatementDataController {
         final String emplid = PrimaryAttributeUtils.getPrimaryId();
         HrsDownloadControllerUtils.setResponseHeaderForDownload(response, "earning_statement", "PDF");
         this.earningStatementDao.getEarningStatement(emplid, docId, new PortletResourceProxyResponse(response, ignoredProxyHeaders));
+    }
+
+    @ResourceMapping("latest_earnings_statement.pdf")
+    public void latestEarningsStatement(final ResourceResponse response) {
+        final String emplid = PrimaryAttributeUtils.getPrimaryId();
+
+        // earningStatements because that's the domain model here, but N.B. term is consistently
+        // "earnings statements" or "Earnings Statements" in employee-facing content on Service
+        // Center website
+        final EarningStatements earningStatements =
+            this.earningStatementDao.getEarningStatements(emplid);
+
+        final List<EarningStatement> statements = earningStatements.getEarningStatements();
+
+        if (statements.isEmpty()) {
+            response.setProperty(ResourceResponse.HTTP_STATUS_CODE, "404");
+        } else {
+            Collections.sort(statements, new EarningStatementDateComparator());
+            Collections.reverse(statements);
+
+            EarningStatement latestStatement = statements.get(0);
+            String docId = latestStatement.getDocId();
+
+            HrsDownloadControllerUtils.setResponseHeaderForDownload(response,
+                "latest_earnings_statement", "PDF");
+            this.earningStatementDao.getEarningStatement(emplid, docId,
+                new PortletResourceProxyResponse(response, ignoredProxyHeaders));
+        }
     }
 }
