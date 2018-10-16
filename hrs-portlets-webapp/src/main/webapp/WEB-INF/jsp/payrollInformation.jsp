@@ -329,7 +329,7 @@
           },
           columnDefs: [
              dl.pager.linkColDef("year", taxStatementUrl, {sortable: true}),
-             dl.pager.linkColDef("name", taxStatementUrl, {sortable: true})
+             dl.pager.linkColDef("name", taxStatementUrl, {sortable: false})
           ],
           dataList: {
               url: "${taxStatementsUrl}",
