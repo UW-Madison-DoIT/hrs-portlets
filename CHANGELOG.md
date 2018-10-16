@@ -5,7 +5,14 @@
 The HRS Portlets 4 major version was occasioned by the breaking change of
 changing the meaning of `ROLE_VIEW_WEB_CLOCK`.
 
-### Unreleased
+### Unreleased (4.2.0)
+
+#### New features in 4.2.0
+
++ Adds Payroll Information resource URL for an employee to download their latest earnings statement.
+  ( [#142][], [HRSPLT-368][] )
+
+#### Fixes in 4.2.0
 
 + Fix Payroll Information table of tax statements to stop offering a sort UI
   control to sort on the name of the statement. Sorting by name is more
@@ -490,9 +497,11 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#132]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/132
 [#137]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/137
 [#141]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/141
+[#142]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/142
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348
 [HRSPLT-362]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-362
 [HRSPLT-363]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-363
 [HRSPLT-365]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-363
+[HRSPLT-368]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-368
