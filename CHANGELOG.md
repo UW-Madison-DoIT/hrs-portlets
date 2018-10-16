@@ -7,7 +7,10 @@ changing the meaning of `ROLE_VIEW_WEB_CLOCK`.
 
 ### Unreleased
 
-(No changes yet.)
++ Fix Payroll Information table of tax statements to stop offering a sort UI
+  control to sort on the name of the statement. Sorting by name is more
+  confusing than it is helpful. Retains sort by statement year. ( [#141][],
+  [HRSPLT-365][] )
 
 ### 4.1.1
 
@@ -486,8 +489,10 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#129]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/129
 [#132]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/132
 [#137]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/137
+[#141]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/141
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348
 [HRSPLT-362]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-362
 [HRSPLT-363]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-363
+[HRSPLT-365]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-363
