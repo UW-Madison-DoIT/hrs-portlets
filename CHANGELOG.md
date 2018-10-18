@@ -8,9 +8,15 @@ removing access to the direct deposit and W4 update forms, and with these the
 portlet-preference. (There's no harm in continuing to set this preference; it
 just no longer has any effect.)
 
-### Unreleased
+### Unreleased (5.1.0)
 
-(No changes yet.)
+#### New features in 5.1.0
+
++ Adds "View/Update Dependent Information" link in Benefit Information, as the
+  preferred link that when present replaces the legacy "View Dependent Details"
+  link. The "View/Update Dependent Information" link appears iff the
+  "Dependent/Beneficiary Info" HRS URL is present (and links to that URL). (
+  [#145][], [HRSPLT-372][] )
 
 ### 5.0.0 - remove Direct Deposit and W4 links
 
@@ -521,6 +527,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#142]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/142
 [#143]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/143
 [#144]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/144
+[#145]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/145
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348
