@@ -181,12 +181,6 @@
     </div>
   </div>
 
-  <div class="dl-payroll-links">
-    <div class="dl-link">
-      <a href="https://uwservice.wisc.edu/docs/forms/pay-employee-withholding.pdf" target="_blank" class="btn btn-default">Update your W4</a>
-    </div>
-  </div>
-
   <%@ include file="/WEB-INF/jsp/footer.jsp"%>
 
 </div>
