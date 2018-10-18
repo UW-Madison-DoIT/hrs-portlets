@@ -72,11 +72,6 @@ This is intended as a solution for
 
 ### Specific to Payroll Information
 
-#### `directDepositSelfServiceUrl` portlet preference (optional)
-
-+ When set, configures the href of the "Update your Direct Deposit" link, as experienced by employees with the role required for this access.
-+ When not set, all employees will use the hard-coded href linking to a PDF that employees without the role experience.
-
 #### `understandingEarningUrl` portlet preference (optional)
 
 + When set, configures the href of the "Understanding Your Earnings Statement" link.

@@ -145,17 +145,6 @@
                 <!-- same role as above -->
             </set>
         </entry>
-        <entry key="UW_DYN_PY_DIRDEP_SS">
-          <set>
-              <value>ROLE_VIEW_DIRECT_DEPOSIT</value>
-              <!-- effects
-                In Payroll Information
-                  Changes the href of the Update your Direct Deposit link
-                  to the value of the directDepositSelfServiceUrl
-                  portlet-preference, if set.
-              -->
-          </set>
-        </entry>
         <entry key="UW_DYN_TIME_ABS_DASH_USER">
           <set>
             <value>ROLE_VIEW_TIME_ABS_DASHBOARD</value>
