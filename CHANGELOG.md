@@ -19,6 +19,11 @@ changing the meaning of `ROLE_VIEW_WEB_CLOCK`.
   confusing than it is helpful. Retains sort by statement year. ( [#141][],
   [HRSPLT-365][] )
 
+#### Removed features
+
++ "Update your Direct Deposit" link removed from Payroll Information (
+  [#143][], [HRSPLT-370][])
+
 ### 4.1.1
 
 2018-10-15
@@ -498,6 +503,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#137]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/137
 [#141]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/141
 [#142]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/142
+[#143]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/143
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348
@@ -505,3 +511,4 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [HRSPLT-363]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-363
 [HRSPLT-365]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-363
 [HRSPLT-368]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-368
+[HRSPLT-370]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-370
