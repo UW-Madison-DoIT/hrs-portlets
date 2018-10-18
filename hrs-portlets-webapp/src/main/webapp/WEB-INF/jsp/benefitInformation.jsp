@@ -165,7 +165,20 @@
       </div>
       <div class="container-fluid row">
         <div class='col-xs-3 col-xs-offset-2'>
-            <a href="${hrsUrls['Dependent Information']}" target="_blank" class="btn btn-default">View Dependent Details</a>
+          <c:choose>
+            <!-- if the new Dependent/Beneficiary Info URL is available,
+              use it -->
+            <c:when test="${not empty hrsUrls['Dependent/Beneficiary Info']}">
+              <a href="${hrsUrls['Dependent/Beneficiary Info']}"
+                target="_blank" rel="noopener noreferer"
+                class="btn btn-default">View/Update Dependent Information</a>
+            </c:when>
+            <!-- otherwise if the old read-only information URL is available,
+              use it -->
+            <c:when test="${not empty hrsUrls['Dependent Information']}">
+                <a href="${hrsUrls['Dependent Information']}" target="_blank" class="btn btn-default">View Dependent Details</a>
+            </c:when>
+          </c:choose>
         </div>
         <div class='col-xs-3 col-xs-offset-1'>
             <a href="${hrsUrls['Dependent Coverage']}" target="_blank" class="btn btn-default">View Dependent Coverage</a>
