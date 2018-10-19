@@ -8,9 +8,15 @@ removing access to the direct deposit and W4 update forms, and with these the
 portlet-preference. (There's no harm in continuing to set this preference; it
 just no longer has any effect.)
 
-### Unreleased
+However, in HRS Portlets 5.2 the link to the W4 update form was restored to
+service.
 
-(No changes yet.)
+### Unreleased (5.2.0)
+
++ "Update your W4" link added to MyUW Payroll Information, on the "Tax
+  Statements" tab since W4 is the form for adjusting tax witholdings and so
+  employees might expect to find it in a tax context. ( [#146][],
+  [HRSPLT-375][])
 
 ### 5.1.2 - overcome artifact publication glitch
 
@@ -548,6 +554,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#143]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/143
 [#144]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/144
 [#145]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/145
+[#146]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/146
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348
@@ -557,3 +564,4 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [HRSPLT-368]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-368
 [HRSPLT-370]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-370
 [HRSPLT-371]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-371
+[HRSPLT-375]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-375
