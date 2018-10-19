@@ -147,6 +147,11 @@
 
       <div class="dl-link">
         <a class="btn btn-default"
+          href="https://uwservice.wisc.edu/docs/forms/pay-employee-withholding.pdf"
+          target="_blank" rel="noopener noreferrer">
+          Update your W4
+        </a>
+        <a class="btn btn-default"
           href="https://uwservice.wisc.edu/docs/publications/tax-w2-explanation.pdf"
           target="_blank" rel="noopener noreferrer">W-2 Explanation</a>
         <span class='hidden-xs visible-xs'>|</span>
