@@ -8,11 +8,18 @@ removing access to the direct deposit and W4 update forms, and with these the
 portlet-preference. (There's no harm in continuing to set this preference; it
 just no longer has any effect.)
 
-However, in HRS Portlets 5.2 the link to the W4 update form was restored to
-service.
+However, in HRS Portlets 5.2 the links to the W4 update form and the direct
+deposit intructions form were restored to service. (Each only appears on a
+single tab withing Payroll Information as of 5.2.)
 
 ### Unreleased (5.2.0)
 
++ "Update your Direct Deposit" link added to MyUW Payroll Information, on the
+  "Earnings Statements" tab, since this is the form for adjusting where those
+  earnings are deposited and so employees might expect to find it in an earnings
+  statements context. When the user has `ROLE_VIEW_DIRECT_DEPOSIT` and the HRS
+  URL `Direct Deposit` is present, links to that URL, otherwise links to static
+  PDF form. ( [HRSPLT-376][] )
 + "Update your W4" link added to MyUW Payroll Information, on the "Tax
   Statements" tab since W4 is the form for adjusting tax witholdings and so
   employees might expect to find it in a tax context. ( [#146][],
@@ -565,3 +572,4 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [HRSPLT-370]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-370
 [HRSPLT-371]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-371
 [HRSPLT-375]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-375
+[HRSPLT-376]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-376
