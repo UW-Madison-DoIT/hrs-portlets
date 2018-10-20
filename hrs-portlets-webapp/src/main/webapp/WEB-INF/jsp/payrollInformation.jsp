@@ -97,6 +97,42 @@
             <a href="${understandingEarningUrl}" target="_blank">Understanding Your Earnings Statement</a>
           </div>
       </c:if>
+
+      <div class="dl-link">
+        <!-- show the self-service direct deposit link if authorized-->
+        <sec:authorize ifAnyGranted="ROLE_VIEW_DIRECT_DEPOSIT">
+          <!-- Only show the self-service direct deposit link if configured. -->
+          <c:choose>
+            <c:when test="${not empty prefs['directDepositSelfServiceUrl']
+              && not empty prefs['directDepositSelfServiceUrl'][0]}">
+              <a
+                href="${prefs['directDepositSelfServiceUrl'][0]}"
+                target="_blank" rel="noopener noreferrer"
+                class="btn btn-default">
+                Update your Direct Deposit</a>
+            </c:when>
+            <c:otherwise>
+              <!-- even if authorized for self-service, if that URL is not set
+                fall back on the PDF form. -->
+              <a
+                href="https://uwservice.wisc.edu/docs/forms/pay-direct-deposit.pdf"
+                target="_blank" rel="noopener noreferrer"
+                class="btn btn-default">
+                Update your Direct Deposit</a>
+            </c:otherwise>
+          </c:choose>
+        </sec:authorize>
+        <sec:authorize ifNotGranted="ROLE_VIEW_DIRECT_DEPOSIT">
+          <!-- show the link to the PDF form
+          if not authorized for self-service -->
+          <a
+            href="https://uwservice.wisc.edu/docs/forms/pay-direct-deposit.pdf"
+            target="_blank" rel="noopener noreferrer"
+            class="btn btn-default">
+            Update your Direct Deposit</a>
+        </sec:authorize>
+      </div>
+
     </div>
     <div id="${n}dl-tax-statements" class="dl-tax-statements ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
 
