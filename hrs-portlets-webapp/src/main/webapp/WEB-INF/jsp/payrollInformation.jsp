@@ -103,10 +103,9 @@
         <sec:authorize ifAnyGranted="ROLE_VIEW_DIRECT_DEPOSIT">
           <!-- Only show the self-service direct deposit link if configured. -->
           <c:choose>
-            <c:when test="${not empty prefs['directDepositSelfServiceUrl']
-              && not empty prefs['directDepositSelfServiceUrl'][0]}">
+            <c:when test="${not empty hrsUrls['Direct Deposit']}">
               <a
-                href="${prefs['directDepositSelfServiceUrl'][0]}"
+                href="${hrsUrls['Direct Deposit']}"
                 target="_blank" rel="noopener noreferrer"
                 class="btn btn-default">
                 Update your Direct Deposit</a>
