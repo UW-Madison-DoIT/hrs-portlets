@@ -84,6 +84,18 @@
                   about the widget depending on this role. -->
             </set>
         </entry>
+        <entry key="UW_DYN_PY_DIRDEP_SS">
+          <set>
+              <value>ROLE_VIEW_DIRECT_DEPOSIT</value>
+              <!-- effects
+                In Payroll Information
+                  Changes the href of the Update your Direct Deposit link
+                  to the URL providing by the HRS URLs service for linking into
+                  self-service Direct Deposit editing, rather than linking to
+                  the static PDF form.
+              -->
+          </set>
+        </entry>
         <entry key="UW_DYN_TL_WEB_CLOCK">
             <set>
                 <value>ROLE_VIEW_WEB_CLOCK</value>
