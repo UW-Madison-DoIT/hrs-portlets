@@ -9,8 +9,10 @@ portlet-preference. (There's no harm in continuing to set this preference; it
 just no longer has any effect.)
 
 However, in HRS Portlets 5.2 the links to the W4 update form and the direct
-deposit intructions form were restored to service. (Each only appears on a
-single tab withing Payroll Information as of 5.2.)
+deposit intructions form were restored to service, with support for
+`ROLE_VIEW_DIRECT_DEPOSIT` and the `Direct Deposit` URL from the HRS URLs
+DAO. (Each of these links (tax withholdings, direct deposit) only appears on a
+single tab within Payroll Information as of 5.2.)
 
 ### Unreleased (5.2.0)
 
