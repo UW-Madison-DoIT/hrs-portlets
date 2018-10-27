@@ -19,6 +19,9 @@ it sources its URL from the HRS URLs web service.
 
 ### (Unreleased) (5.3.0?)
 
++ Prefer to link new HRS URL `Classic ESS Abs Bal` rather than display leave
+  balances directly on "Leave Balances" tab in "Time and Absence" (
+  [HRSPLT-377][] , [#148][])
 + Add new `Garnishments/Wage Assignments` link in Payroll Information -->
   Earnings Statements tab, to new HRS URL `Fluid Garnishments`, conditioned on
   that `Fluid Garnishments` URL being set and the viewing employee having
@@ -581,6 +584,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#145]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/145
 [#146]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/146
 [#147]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/147
+[#148]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/148
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348
@@ -592,5 +596,6 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [HRSPLT-371]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-371
 [HRSPLT-375]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-375
 [HRSPLT-376]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-376
+[HRSPLT-377]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-377
 [HRSPLT-378]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-378
 [HRSPLT-379]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-379
