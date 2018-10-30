@@ -37,8 +37,8 @@ public interface HrsUrlDao {
     public static String APPROVE_PAYABLE_TIME_KEY = "Approve Payable time";
 
     /**
-     * The name of the key the value of which is the deep link to HRS for an employee to view the
-     * garnishments on their own earnings.
+     * The name of the key the value of which is the deep link to HRS for an
+     * employee to view the garnishments on their own earnings.
      */
     String SELF_SERVICE_VIEW_GARNISHMENTS_KEY = "Fluid Garnishments";
 }
