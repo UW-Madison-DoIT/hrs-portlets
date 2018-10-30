@@ -23,7 +23,7 @@ import java.util.Map;
 
 /**
  * Gets a set of deep-links into the HRS system
- * 
+ *
  * @author Eric Dalquist
  * @version $Revision: 1.1 $
  */
