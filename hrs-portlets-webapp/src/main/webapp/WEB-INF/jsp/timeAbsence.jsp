@@ -190,12 +190,18 @@
     <div id="${n}dl-leave-balance" class="dl-leave-balance ui-tabs-panel ui-widget-content ui-corner-bottom ${hiddenTabStyle}">
        <c:choose>
          <c:when test="${not empty hrsUrls['Classic ESS Abs Bal']}">
-          <p>
+          <div>
             <a href="${hrsUrls['Classic ESS Abs Bal']}"
               class="btn btn-primary"
               target="_blank" rel="noopener noreferrer">
               View leave balances
             </a>
+          </div>
+          <p>
+            Leave balances are now at hrs.wisconsin.edu.  New in HRS: view
+            balances as of your most recent earnings statement and anticipated
+            balances that are not yet reflected in your earnings statement,
+            called dynamic leave balances.
           </p>
          </c:when>
          <c:otherwise>
