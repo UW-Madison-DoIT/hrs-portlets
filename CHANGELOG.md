@@ -23,9 +23,9 @@ it sources its URL from the HRS URLs web service.
   Earnings Statements tab, to new HRS URL `Fluid Garnishments`, conditioned on
   that `Fluid Garnishments` URL being set and the viewing employee having
   `ROLE_VIEW_OWN_GARNISHMENTS` ( [HRSPLT-378][] , )
-+ Map new `UW_DYN_PY_ESS_GARNISHMENTS` HRS role to new `ROLE_VIEW_OWN_GARNISHMENTS` hrs-portlets 
++ Map new `UW_DYN_PY_ESS_GARNISHMENTS` HRS role to new `ROLE_VIEW_OWN_GARNISHMENTS` hrs-portlets
   role ( [HRSPLT-379][] , )
-+ Document new `Fluid Garnishments` HRS URL as `HrsUrlDao.SELF_SERVICE_VIEW_GARNISHMENTS_KEY` ( 
++ Document new `Fluid Garnishments` HRS URL as `HrsUrlDao.SELF_SERVICE_VIEW_GARNISHMENTS_KEY` (
   [HRSPLT-378][] , )
 
 ### 5.2.0 - Re-add Direct Deposit and W4 links
