@@ -19,6 +19,8 @@ it sources its URL from the HRS URLs web service.
 
 ### (Unreleased) (5.3.0?)
 
++ Map new `UW_DYN_PY_ESS_GARNISHMENTS` HRS role to new `ROLE_VIEW_OWN_GARNISHMENTS` hrs-portlets 
+  role ( [HRSPLT-379][] , )
 + Document new `Fluid Garnishments` HRS URL as `HrsUrlDao.SELF_SERVICE_VIEW_GARNISHMENTS_KEY` ( 
   [HRSPLT-378][] , )
 
@@ -587,3 +589,4 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [HRSPLT-375]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-375
 [HRSPLT-376]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-376
 [HRSPLT-378]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-378
+[HRSPLT-379]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-379

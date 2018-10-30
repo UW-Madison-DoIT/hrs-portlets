@@ -96,6 +96,16 @@
               -->
           </set>
         </entry>
+        <entry key="UW_DYN_PY_ESS_GARNISH">
+            <set>
+                <value>ROLE_VIEW_OWN_GARNISHMENTS</value>
+                <!-- intended effect
+                  in Payroll Information
+                    On Earning Statements tab
+                      Show "Garnishments/Wage Assignments" link (not yet implemented)
+                -->
+            </set>
+        </entry>
         <entry key="UW_DYN_TL_WEB_CLOCK">
             <set>
                 <value>ROLE_VIEW_WEB_CLOCK</value>
