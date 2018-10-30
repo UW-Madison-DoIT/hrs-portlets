@@ -19,6 +19,10 @@ it sources its URL from the HRS URLs web service.
 
 ### (Unreleased) (5.3.0?)
 
++ Add new `Garnishments/Wage Assignments` link in Payroll Information -->
+  Earnings Statements tab, to new HRS URL `Fluid Garnishments`, conditioned on
+  that `Fluid Garnishments` URL being set and the viewing employee having
+  `ROLE_VIEW_OWN_GARNISHMENTS` ( [HRSPLT-378][] , )
 + Map new `UW_DYN_PY_ESS_GARNISHMENTS` HRS role to new `ROLE_VIEW_OWN_GARNISHMENTS` hrs-portlets 
   role ( [HRSPLT-379][] , )
 + Document new `Fluid Garnishments` HRS URL as `HrsUrlDao.SELF_SERVICE_VIEW_GARNISHMENTS_KEY` ( 

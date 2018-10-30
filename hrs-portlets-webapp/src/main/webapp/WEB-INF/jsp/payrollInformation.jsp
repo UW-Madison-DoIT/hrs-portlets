@@ -130,6 +130,18 @@
             class="btn btn-default">
             Update your Direct Deposit</a>
         </sec:authorize>
+
+        <!-- show the garnishments self-service link iff
+          in role indicating this is relevant, and
+          the URL is defined -->
+        <sec:authorize ifAnyGranted="ROLE_VIEW_OWN_GARNISHMENTS">
+          <c:if test="${not empty hrsUrls['Fluid Garnishments']}">
+            <a class="btn btn-default"
+              href="${hrsUrls['Fluid Garnishments']}"
+              target="_blank" rel="noopener noreferrer">
+              Garnishments/Wage Assignments</a>
+          </c:if>
+        </sec:authorize>
       </div>
 
     </div>
