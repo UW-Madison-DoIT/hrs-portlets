@@ -202,6 +202,11 @@
             balances as of your most recent earnings statement and anticipated
             balances that are not yet reflected in your earnings statement,
             called dynamic leave balances.
+            <c:if
+              test="${not empty prefs['dynamicLeaveBalancesLearnMoreUrl'] && not empty prefs['dynamicLeaveBalancesLearnMoreUrl'][0]}">
+              <a href="prefs['dynamicLeaveBalancesLearnMoreUrl'][0]">
+                  Learn more about dynamic leave balances</a>.
+            </c:if>
           </p>
          </c:when>
          <c:otherwise>

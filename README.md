@@ -168,6 +168,11 @@ this hour limiting policy applies to them.)
 + Configures the href of the "Unclassified Leave Report" link.
 + If not set, this link will still appear but will be broken.
 
+#### `dynamicLeaveBalancesLearnMoreUrl` portlet preference (optional)
+
++ Configures the href of the "Learn more about dynamic leave balances" link.
++ If not set, this link will be hidden.
+
 ## JSON resource URLs
 
 (Not a comprehensive listing.)
