@@ -192,6 +192,7 @@
          <c:when test="${not empty hrsUrls['Classic ESS Abs Bal']}">
           <p>
             <a href="${hrsUrls['Classic ESS Abs Bal']}"
+              class="btn btn-primary"
               target="_blank" rel="noopener noreferrer">
               View leave balances
             </a>
