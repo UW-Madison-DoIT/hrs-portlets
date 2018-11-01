@@ -65,7 +65,7 @@
                 -->
             </set>
         </entry>
-        <entry key="UW_DYN_AM_ESS_FLU_MONTHLY ">
+        <entry key="UW_DYN_AM_ESS_FLU_MONTHLY">
           <set>
               <value>ROLE_REDIRECT_TO_HRS_FLUID_TIME</value>
               <!-- effects
