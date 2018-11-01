@@ -65,6 +65,16 @@
                 -->
             </set>
         </entry>
+        <entry key="UW_DYN_AM_ESS_FLU_MONTHLY ">
+          <set>
+              <value>ROLE_REDIRECT_TO_HRS_FLUID_TIME</value>
+              <!-- effects
+                In Time and Absence
+                  in lieu of rendering the page MyUW Time and Absence will
+                  instead redirect the user to the HRS URL 'Fluid Time' or
+                  display an error if that URL is not defined. -->
+          </set>
+        </entry>
         <entry key="UW_DYN_AM_PUNCH_TIME">
           <set>
             <value>ROLE_VIEW_ABSENCE_HISTORIES</value>
