@@ -19,11 +19,14 @@ it sources its URL from the HRS URLs web service.
 
 ### (Unreleased) (5.4.0)
 
-+ Redirect employees with the `UW_DYN_AM_ESS_FLU_MONTHLY` HRS role from MyUW
-  Time and Absence to the new HRS self-service `Fluid Time` page. That role
-  signifies employees whose time and absence reporting needs are fully met by
-  the new `Fluid Time` UI and so for whom the best available experience is to go
-  directly to HRS `Fluid Time`. ( [HRSPLT-381][] , [#150][] )
++ Redirect employees with the new `ROLE_REDIRECT_TO_HRS_FLUID_TIME` MyUW
+  hrs-portlets role from MyUW Time and Absence to the new HRS self-service
+  `Fluid Time` page. That role signifies employees whose time and absence
+  reporting needs are fully met by the new `Fluid Time` UI and so for whom the
+  best available experience is to go directly to HRS `Fluid Time`. (
+  [HRSPLT-381][] , [#150][] )
++ Map from new HRS role `UW_DYN_AM_ESS_FLU_MONTHLY` to new MyUW hrs-portlets
+  role `ROLE_REDIRECT_TO_HRS_FLUID_TIME`. ( [HRSPLT-382][], [#150][] )
 
 ### 5.3.0 - leave balances and garnishments links
 
@@ -611,3 +614,4 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [HRSPLT-378]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-378
 [HRSPLT-379]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-379
 [HRSPLT-381]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-381
+[HRSPLT-382]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-382
