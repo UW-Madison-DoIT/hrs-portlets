@@ -41,4 +41,10 @@ public interface HrsUrlDao {
      * employee to view the garnishments on their own earnings.
      */
     String SELF_SERVICE_VIEW_GARNISHMENTS_KEY = "Fluid Garnishments";
+
+    /**
+     * The name of the key the value of which is the deep link to HRS for
+     * Fluid > Employee Self Service (Home Page) > Time
+     */
+    String SELF_SERIVCE_FLUID_TIME_KEY = "Fluid Time";
 }
