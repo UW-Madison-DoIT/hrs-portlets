@@ -33,9 +33,10 @@
     </c:when>
     <c:otherwise>
        <p>Error. Try again later or contact the Help Desk.</p>
-       <p>Technical details: you are in MyUW role ROLE_DIRECT_TO_HRS_FLUID_TIME,
-         which means MyUW should redirect you to the HRS URL named `Fluid Time`,
-         but that URL is not present in the MyUW inventory of HRS URLs.</p>
+       <p>Technical details: you are in MyUW role
+         ROLE_REDIRECT_TO_HRS_FLUID_TIME, which means MyUW should redirect you
+         to the HRS URL named `Fluid Time`, but that URL is not present in the
+         MyUW inventory of HRS URLs.</p>
     </c:otherwise>
    </c:choose>
 </sec:authorize>
