@@ -22,6 +22,28 @@
 <%@ include file="/WEB-INF/jsp/include.jsp"%>
 <%@ include file="/WEB-INF/jsp/header.jsp"%>
 
+
+<sec:authorize
+  ifAnyGranted="ROLE_REDIRECT_TO_HRS_FLUID_TIME">
+  <c:choose>
+    <c:when test="${not empty hrsUrls['Fluid Time']}">
+      <script>
+        window.location.replace("${hrsUrls['Fluid Time']}");
+      </script>
+    </c:when>
+    <c:otherwise>
+       <p>Error. Try again later or contact the Help Desk.</p>
+       <p>Technical details: you are in MyUW role ROLE_DIRECT_TO_HRS_FLUID_TIME,
+         which means MyUW should redirect you to the HRS URL named `Fluid Time`,
+         but that URL is not present in the MyUW inventory of HRS URLs.</p>
+    </c:otherwise>
+   </c:choose>
+</sec:authorize>
+
+
+<sec:authorize
+  ifNotGranted="ROLE_REDIRECT_TO_HRS_FLUID_TIME">
+
 <c:set var="showJobTitle" value="${fn:length(personalData.jobs) > 1}"/>
 
 <div id="${n}dl-time-absence" class="fl-widget portlet dl-time-absence hrs">
@@ -655,3 +677,5 @@
 })(dl_v1.jQuery, dl_v1.fluid, dl_v1);
 </rs:compressJs>
 </script>
+
+</sec:authorize>
