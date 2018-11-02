@@ -38,11 +38,11 @@ it sources its URL from the HRS URLs web service.
 + Add new `Garnishments/Wage Assignments` link in Payroll Information -->
   Earnings Statements tab, to new HRS URL `Fluid Garnishments`, conditioned on
   that `Fluid Garnishments` URL being set and the viewing employee having
-  `ROLE_VIEW_OWN_GARNISHMENTS` ( [HRSPLT-378][] , )
+  `ROLE_VIEW_OWN_GARNISHMENTS` ( [HRSPLT-378][] , [#149][] )
 + Map new `UW_DYN_PY_ESS_GARNISHMENTS` HRS role to new
-  `ROLE_VIEW_OWN_GARNISHMENTS` hrs-portlets role ( [HRSPLT-379][] , )
+  `ROLE_VIEW_OWN_GARNISHMENTS` hrs-portlets role ( [HRSPLT-379][] , [#149][] )
 + Document new `Fluid Garnishments` HRS URL as
-  `HrsUrlDao.SELF_SERVICE_VIEW_GARNISHMENTS_KEY` ( [HRSPLT-378][] , )
+  `HrsUrlDao.SELF_SERVICE_VIEW_GARNISHMENTS_KEY` ( [HRSPLT-378][] , [#149][] )
 
 ### 5.2.0 - Re-add Direct Deposit and W4 links
 
@@ -598,6 +598,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#146]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/146
 [#147]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/147
 [#148]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/148
+[#149]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/149
 [#150]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/150
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
