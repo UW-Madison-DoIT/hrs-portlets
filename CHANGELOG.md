@@ -604,7 +604,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348
 [HRSPLT-362]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-362
 [HRSPLT-363]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-363
-[HRSPLT-365]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-363
+[HRSPLT-365]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-365
 [HRSPLT-368]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-368
 [HRSPLT-370]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-370
 [HRSPLT-371]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-371
