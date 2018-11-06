@@ -183,10 +183,12 @@
       || empty employeeRoles['ROLE_LINK_TO_CLASSIC_ESS_ABS_BAL']">
         <li class="ui-state-default ui-corner-top ${activeTabStyle}">
           <a href="#${n}dl-leave-balance">Leave Balances</a></li>
+          <c:set var="activeTabStyle" value=""/>
       </c:if>
 
       <sec:authorize ifAnyGranted="ROLE_VIEW_TIME_ENTRY_HISTORY">
-        <li class="ui-state-default ui-corner-top"><a href="#${n}dl-time-entry">Time Entry</a></li>
+        <li class="ui-state-default ui-corner-top ${activeTabStyle}"><a href="#${n}dl-time-entry">Time Entry</a></li>
+        <c:set var="activeTabStyle" value=""/>
       </sec:authorize>
       <li class="ui-state-default ui-corner-top"><a href="#${n}dl-absence-statements">Leave Reports</a></li>
     </ul>
