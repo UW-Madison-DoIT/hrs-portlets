@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<wsdl:definitions name="CI_UW_PY_GET_ERNST_LS_CI.1"
+  targetNamespace="http://xmlns.oracle.com/Enterprise/HCM/services/CI_UW_PY_GET_ERNST_LS_CI.1"
+  xmlns:M1074393.V1="http://xmlns.oracle.com/Enterprise/Tools/schemas/M1074393.V1"
+  xmlns:M158320.V1="http://xmlns.oracle.com/Enterprise/Tools/schemas/M158320.V1"
+  xmlns:M566597.V1="http://xmlns.oracle.com/Enterprise/Tools/schemas/M566597.V1"
+  xmlns:M713512.V1="http://xmlns.oracle.com/Enterprise/Tools/schemas/M713512.V1"
+  xmlns:M871049.V1="http://xmlns.oracle.com/Enterprise/Tools/schemas/M871049.V1"
+  xmlns:M926074.V1="http://xmlns.oracle.com/Enterprise/Tools/schemas/M926074.V1"
+  xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"
+  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+  xmlns:tns="http://xmlns.oracle.com/Enterprise/HCM/services/CI_UW_PY_GET_ERNST_LS_CI.1"
+  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+  xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy">
+  <wsp:UsagePolicy wsdl:Required="true"/>
+  <plnk:partnerLinkType name="CI_UW_PY_GET_ERNST_LS_CI_PartnerLinkType">
+    <plnk:role name="CI_UW_PY_GET_ERNST_LS_CI_Provider">
+      <plnk:portType name="tns:CI_UW_PY_GET_ERNST_LS_CI_PortType"/>
+    </plnk:role>
+  </plnk:partnerLinkType>
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import
+        namespace="http://xmlns.oracle.com/Enterprise/Tools/schemas/M926074.V1"
+        schemaLocation="M926074.V1.xsd"/>
+      <xsd:import
+        namespace="http://xmlns.oracle.com/Enterprise/Tools/schemas/M1074393.V1"
+        schemaLocation="M1074393.V1.xsd"/>
+      <xsd:import
+        namespace="http://xmlns.oracle.com/Enterprise/Tools/schemas/M158320.V1"
+        schemaLocation="M158320.V1.xsd"/>
+      <xsd:import
+        namespace="http://xmlns.oracle.com/Enterprise/Tools/schemas/M713512.V1"
+        schemaLocation="M713512.V1.xsd"/>
+      <xsd:import
+        namespace="http://xmlns.oracle.com/Enterprise/Tools/schemas/M871049.V1"
+        schemaLocation="M871049.V1.xsd"/>
+      <xsd:import
+        namespace="http://xmlns.oracle.com/Enterprise/Tools/schemas/M566597.V1"
+        schemaLocation="M566597.V1.xsd"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="M926074.V1">
+    <wsdl:documentation>M926074</wsdl:documentation>
+    <wsdl:part element="M926074.V1:Find__CompIntfc__UW_PY_GET_ERNST_LS_CI"
+      name="parameter"/>
+  </wsdl:message>
+  <wsdl:message name="M1074393.V1">
+    <wsdl:documentation>M1074393</wsdl:documentation>
+    <wsdl:part
+      element="M1074393.V1:Find__CompIntfc__UW_PY_GET_ERNST_LS_CIResponse"
+      name="parameter"/>
+  </wsdl:message>
+  <wsdl:message name="M158320.V1">
+    <wsdl:documentation>M158320</wsdl:documentation>
+    <wsdl:part element="M158320.V1:CIFault" name="parameter"/>
+  </wsdl:message>
+  <wsdl:message name="M713512.V1">
+    <wsdl:documentation>M713512</wsdl:documentation>
+    <wsdl:part element="M713512.V1:Get__CompIntfc__UW_PY_GET_ERNST_LS_CI"
+      name="parameter"/>
+  </wsdl:message>
+  <wsdl:message name="M871049.V1">
+    <wsdl:documentation>M871049</wsdl:documentation>
+    <wsdl:part
+      element="M871049.V1:Get__CompIntfc__UW_PY_GET_ERNST_LS_CIResponse"
+      name="parameter"/>
+  </wsdl:message>
+  <wsdl:message name="M566597.V1">
+    <wsdl:documentation>M566597</wsdl:documentation>
+    <wsdl:part element="M566597.V1:CIFault" name="parameter"/>
+  </wsdl:message>
+  <wsdl:portType name="CI_UW_PY_GET_ERNST_LS_CI_PortType">
+    <wsdl:operation name="CI_UW_PY_GET_ERNST_LS_CI_F">
+      <wsdl:documentation>CI_UW_PY_GET_ERNST_LS_CI_F</wsdl:documentation>
+      <wsdl:input message="tns:M926074.V1" name="M926074.V1"/>
+      <wsdl:output message="tns:M1074393.V1" name="M1074393.V1"/>
+      <wsdl:fault message="tns:M158320.V1" name="M158320.V1"/>
+    </wsdl:operation>
+    <wsdl:operation name="CI_UW_PY_GET_ERNST_LS_CI_G">
+      <wsdl:documentation>CI_UW_PY_GET_ERNST_LS_CI_G</wsdl:documentation>
+      <wsdl:input message="tns:M713512.V1" name="M713512.V1"/>
+      <wsdl:output message="tns:M871049.V1" name="M871049.V1"/>
+      <wsdl:fault message="tns:M566597.V1" name="M566597.V1"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CI_UW_PY_GET_ERNST_LS_CI_Binding"
+    type="tns:CI_UW_PY_GET_ERNST_LS_CI_PortType">
+    <soap:binding style="document"
+      transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="CI_UW_PY_GET_ERNST_LS_CI_F">
+      <soap:operation soapAction="CI_UW_PY_GET_ERNST_LS_CI_F.V1"
+        style="document"/>
+      <wsp:Policy wsu:Id="UsernameTokenSecurityPolicyPasswordOptional"
+        xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+        <wsp:ExactlyOne>
+          <wsp:All>
+            <wsse:SecurityToken wsp:Usage="wsp:Required"
+              xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+              <wsse:TokenType>wsse:UserNameToken</wsse:TokenType>
+              <Claims>
+                <SubjectName MatchType="wsse:Exact"/>
+                <UsePassword wsp:Usage="wsp:Optional"/>
+              </Claims>
+            </wsse:SecurityToken>
+          </wsp:All>
+        </wsp:ExactlyOne>
+      </wsp:Policy>
+      <wsdl:input name="M926074.V1">
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+          use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="M1074393.V1">
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+          use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="M158320.V1">
+        <soap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+          name="M158320.V1" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CI_UW_PY_GET_ERNST_LS_CI_G">
+      <soap:operation soapAction="CI_UW_PY_GET_ERNST_LS_CI_G.V1"
+        style="document"/>
+      <wsp:Policy wsu:Id="UsernameTokenSecurityPolicyPasswordOptional"
+        xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+        <wsp:ExactlyOne>
+          <wsp:All>
+            <wsse:SecurityToken wsp:Usage="wsp:Required"
+              xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+              <wsse:TokenType>wsse:UserNameToken</wsse:TokenType>
+              <Claims>
+                <SubjectName MatchType="wsse:Exact"/>
+                <UsePassword wsp:Usage="wsp:Optional"/>
+              </Claims>
+            </wsse:SecurityToken>
+          </wsp:All>
+        </wsp:ExactlyOne>
+      </wsp:Policy>
+      <wsdl:input name="M713512.V1">
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+          use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="M871049.V1">
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+          use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="M566597.V1">
+        <soap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+          name="M566597.V1" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CI_UW_PY_GET_ERNST_LS_CI">
+    <wsdl:documentation>CI_UW_PY_GET_ERNST_LS_CI</wsdl:documentation>
+    <wsdl:port binding="tns:CI_UW_PY_GET_ERNST_LS_CI_Binding"
+      name="CI_UW_PY_GET_ERNST_LS_CI_Port">
+      <soap:address
+        location="https://dev2.hrstest.ps.wisconsin.edu:7002/PSIGW/PeopleSoftServiceListeningConnector/HRS"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
