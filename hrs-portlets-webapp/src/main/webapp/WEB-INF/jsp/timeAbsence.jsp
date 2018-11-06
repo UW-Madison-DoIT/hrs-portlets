@@ -196,7 +196,11 @@
 
     <c:set var="hiddenTabStyle" value=""/>
     <sec:authorize ifAllGranted="ROLE_VIEW_ABSENCE_HISTORIES">
+
+      <!-- style subsequent panels as hidden
+        because this was the default active tab-->
       <c:set var="hiddenTabStyle" value="ui-tabs-hide"/>
+
       <div id="${n}dl-absence" class="dl-absence ui-tabs-panel ui-widget-content ui-corner-bottom">
         <div class="fl-pager">
           <hrs:pagerNavBar position="top" showSummary="${true}" />
@@ -248,6 +252,11 @@
     <c:if test="empty hrsUrls['Classic ESS Abs Bal']
       || empty employeeRoles['ROLE_LINK_TO_CLASSIC_ESS_ABS_BAL']">
     <div id="${n}dl-leave-balance" class="dl-leave-balance ui-tabs-panel ui-widget-content ui-corner-bottom ${hiddenTabStyle}">
+
+      <!-- style subsequent panels as hidden
+        if this was the default active tab-->
+      <c:set var="hiddenTabStyle" value="ui-tabs-hide"/>
+
       <div class="balance-header">
         <span>Leave balances are also available on your current Earnings Statement.</span>
       </div>
@@ -279,8 +288,14 @@
       </div>
     </div>
     </c:if>
+
     <sec:authorize ifAnyGranted="ROLE_VIEW_TIME_ENTRY_HISTORY">
-      <div id="${n}dl-time-entry" class="dl-time-entry ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+      <div id="${n}dl-time-entry" class="dl-time-entry ui-tabs-panel ui-widget-content ui-corner-bottom ${hiddenTabStyle}">
+
+      <!-- style subsequent panels as hidden
+        if this was the default active tab-->
+        <c:set var="hiddenTabStyle" value="ui-tabs-hide"/>
+
         <div class="fl-pager">
           <hrs:pagerNavBar position="top" showSummary="${true}" />
           <div class="fl-container-flex dl-pager-table-data fl-pager-data table-responsive">
@@ -320,7 +335,13 @@
         </div>
       </div>
     </sec:authorize>
-    <div id="${n}dl-absence-statements" class="dl-absence-statements ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+
+    <div id="${n}dl-absence-statements" class="dl-absence-statements ui-tabs-panel ui-widget-content ui-corner-bottom ${hiddenTabStyle}">
+
+      <!-- style subsequent panels as hidden
+        if this was the default active tab -->
+        <c:set var="hiddenTabStyle" value="ui-tabs-hide"/>
+
       <div id="${n}dl-leave-statements">
       	<p class="padded-paragraph">
           <a id="${n}oustandingMissingLeaveReports" style="display: none;" target="_blank" ng-href="#" class="btn btn-default">My Unsubmitted Reports</a>
