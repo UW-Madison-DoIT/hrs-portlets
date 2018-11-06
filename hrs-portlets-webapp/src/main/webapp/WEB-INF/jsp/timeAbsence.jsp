@@ -258,7 +258,7 @@
       <c:set var="hiddenTabStyle" value="ui-tabs-hide"/>
 
       <div class="balance-header">
-        <span>Leave balances are also available on your current Earnings Statement.</span>
+        <span>These Leave balances are as of your most recent Earnings Statement.</span>
       </div>
       <div class="fl-pager">
         <hrs:pagerNavBar position="top" showSummary="${true}" />
