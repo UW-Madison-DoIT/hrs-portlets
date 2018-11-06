@@ -244,28 +244,6 @@
     <c:if test="empty hrsUrls['Classic ESS Abs Bal']
       || empty employeeRoles['ROLE_LINK_TO_CLASSIC_ESS_ABS_BAL']">
     <div id="${n}dl-leave-balance" class="dl-leave-balance ui-tabs-panel ui-widget-content ui-corner-bottom ${hiddenTabStyle}">
-       <c:choose>
-         <c:when test="${not empty hrsUrls['Classic ESS Abs Bal']}">
-          <div>
-            <a href="${hrsUrls['Classic ESS Abs Bal']}"
-              class="btn btn-primary"
-              target="_blank" rel="noopener noreferrer">
-              View leave balances
-            </a>
-          </div>
-          <p>
-            Leave balances are now at hrs.wisconsin.edu.  New in HRS: view
-            balances as of your most recent earnings statement and anticipated
-            balances that are not yet reflected in your earnings statement,
-            called dynamic leave balances.
-            <c:if
-              test="${not empty prefs['dynamicLeaveBalancesLearnMoreUrl'] && not empty prefs['dynamicLeaveBalancesLearnMoreUrl'][0]}">
-              <a href="prefs['dynamicLeaveBalancesLearnMoreUrl'][0]">
-                  Learn more about dynamic leave balances</a>.
-            </c:if>
-          </p>
-         </c:when>
-         <c:otherwise>
             <div class="balance-header">
                 <span>Leave balances are also available on your current Earnings Statement.</span>
               </div>
@@ -295,8 +273,6 @@
                 </div>
                 <hrs:pagerNavBar position="bottom" />
               </div>
-         </c:otherwise>
-       </c:choose>
     </div>
     </c:if>
     <sec:authorize ifAnyGranted="ROLE_VIEW_TIME_ENTRY_HISTORY">
