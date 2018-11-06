@@ -244,35 +244,35 @@
     <c:if test="empty hrsUrls['Classic ESS Abs Bal']
       || empty employeeRoles['ROLE_LINK_TO_CLASSIC_ESS_ABS_BAL']">
     <div id="${n}dl-leave-balance" class="dl-leave-balance ui-tabs-panel ui-widget-content ui-corner-bottom ${hiddenTabStyle}">
-            <div class="balance-header">
-                <span>Leave balances are also available on your current Earnings Statement.</span>
-              </div>
-              <div class="fl-pager">
-                <hrs:pagerNavBar position="top" showSummary="${true}" />
-                <div class="fl-container-flex dl-pager-table-data fl-pager-data table-responsive">
-                  <table class="dl-table table" tabindex="0" aria-label="Leave balance detail table">
-                    <thead>
-                      <tr rsf:id="header:">
-                        <th scope="col" class="flc-pager-sort-header" rsf:id="entitlement"><a href="javascript:;">Entitlement</a></th>
-                        <th scope="col" class="flc-pager-sort-header" rsf:id="balance"><a href="javascript:;">Balance</a></th>
-                        <c:if test="${showJobTitle}">
-                          <th scope="col" class="flc-pager-sort-header" rsf:id="title"><a href="javascript:;">Job Title</a></th>
-                        </c:if>
-                      </tr>
-                    </thead>
-                    <tbody>
-                        <tr rsf:id="row:">
-                          <td headers="entitlement" class="dl-data-text"><span rsf:id="entitlement"></span></td>
-                          <td headers="balance" class="dl-data-number"><span rsf:id="balance"></span></td>
-                          <c:if test="${showJobTitle}">
-                            <td headers="title" class="dl-data-text"><span rsf:id="title"></span></td>
-                          </c:if>
-                        </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <hrs:pagerNavBar position="bottom" />
-              </div>
+      <div class="balance-header">
+        <span>Leave balances are also available on your current Earnings Statement.</span>
+      </div>
+      <div class="fl-pager">
+        <hrs:pagerNavBar position="top" showSummary="${true}" />
+        <div class="fl-container-flex dl-pager-table-data fl-pager-data table-responsive">
+          <table class="dl-table table" tabindex="0" aria-label="Leave balance detail table">
+            <thead>
+              <tr rsf:id="header:">
+                <th scope="col" class="flc-pager-sort-header" rsf:id="entitlement"><a href="javascript:;">Entitlement</a></th>
+                <th scope="col" class="flc-pager-sort-header" rsf:id="balance"><a href="javascript:;">Balance</a></th>
+                <c:if test="${showJobTitle}">
+                  <th scope="col" class="flc-pager-sort-header" rsf:id="title"><a href="javascript:;">Job Title</a></th>
+                </c:if>
+              </tr>
+            </thead>
+            <tbody>
+              <tr rsf:id="row:">
+                <td headers="entitlement" class="dl-data-text"><span rsf:id="entitlement"></span></td>
+                <td headers="balance" class="dl-data-number"><span rsf:id="balance"></span></td>
+                <c:if test="${showJobTitle}">
+                  <td headers="title" class="dl-data-text"><span rsf:id="title"></span></td>
+                </c:if>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hrs:pagerNavBar position="bottom" />
+      </div>
     </div>
     </c:if>
     <sec:authorize ifAnyGranted="ROLE_VIEW_TIME_ENTRY_HISTORY">
