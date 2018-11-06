@@ -178,7 +178,13 @@
         <li class="ui-state-default ui-corner-top ${activeTabStyle}"><a href="#${n}dl-absence">Absence</a></li>
         <c:set var="activeTabStyle" value=""/>
       </sec:authorize>
-      <li class="ui-state-default ui-corner-top ${activeTabStyle}"><a href="#${n}dl-leave-balance">Leave Balances</a></li>
+
+      <c:if test="empty hrsUrls['Classic ESS Abs Bal']
+      || empty employeeRoles['ROLE_LINK_TO_CLASSIC_ESS_ABS_BAL']">
+        <li class="ui-state-default ui-corner-top ${activeTabStyle}">
+          <a href="#${n}dl-leave-balance">Leave Balances</a></li>
+      </c:if>
+
       <sec:authorize ifAnyGranted="ROLE_VIEW_TIME_ENTRY_HISTORY">
         <li class="ui-state-default ui-corner-top"><a href="#${n}dl-time-entry">Time Entry</a></li>
       </sec:authorize>
@@ -222,6 +228,21 @@
         </div>
       </div>
     </sec:authorize>
+
+
+    <%-- There are two reasons the Leave Balances tab will be included in an
+      employee experience of Time and Absence. Either reason will do.
+      1. The HRS URL `Classic ESS Abs Bal` is not defined, and so Time and Absence would not know how to link the employee to the new implementation of leave balances anyway. OR
+      2. The employee lacks ROLE_LINK_TO_CLASSIC_ESS_ABS_BAL
+
+      This is the identical logic (`test`) of that above for deciding whether to
+      include the Leave Balances tab label among the tab label list items.
+
+      This is the opposite logic of that above to decide whether to include the
+      `View Leave Balances` button.
+    --%>
+    <c:if test="empty hrsUrls['Classic ESS Abs Bal']
+      || empty employeeRoles['ROLE_LINK_TO_CLASSIC_ESS_ABS_BAL']">
     <div id="${n}dl-leave-balance" class="dl-leave-balance ui-tabs-panel ui-widget-content ui-corner-bottom ${hiddenTabStyle}">
        <c:choose>
          <c:when test="${not empty hrsUrls['Classic ESS Abs Bal']}">
@@ -277,6 +298,7 @@
          </c:otherwise>
        </c:choose>
     </div>
+    </c:if>
     <sec:authorize ifAnyGranted="ROLE_VIEW_TIME_ENTRY_HISTORY">
       <div id="${n}dl-time-entry" class="dl-time-entry ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
         <div class="fl-pager">
