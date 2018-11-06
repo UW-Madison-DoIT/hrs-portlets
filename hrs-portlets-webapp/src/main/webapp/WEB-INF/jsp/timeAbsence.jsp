@@ -179,8 +179,8 @@
         <c:set var="activeTabStyle" value=""/>
       </sec:authorize>
 
-      <c:if test="empty hrsUrls['Classic ESS Abs Bal']
-      || empty employeeRoles['ROLE_LINK_TO_CLASSIC_ESS_ABS_BAL']">
+      <c:if test="${empty hrsUrls['Classic ESS Abs Bal']
+      || empty employeeRoles['ROLE_LINK_TO_CLASSIC_ESS_ABS_BAL']}">
         <li class="ui-state-default ui-corner-top ${activeTabStyle}">
           <a href="#${n}dl-leave-balance">Leave Balances</a></li>
           <c:set var="activeTabStyle" value=""/>
@@ -249,8 +249,8 @@
       This is the opposite logic of that above to decide whether to include the
       `View Leave Balances` button.
     --%>
-    <c:if test="empty hrsUrls['Classic ESS Abs Bal']
-      || empty employeeRoles['ROLE_LINK_TO_CLASSIC_ESS_ABS_BAL']">
+    <c:if test="${empty hrsUrls['Classic ESS Abs Bal']
+      || empty employeeRoles['ROLE_LINK_TO_CLASSIC_ESS_ABS_BAL']}">
     <div id="${n}dl-leave-balance" class="dl-leave-balance ui-tabs-panel ui-widget-content ui-corner-bottom ${hiddenTabStyle}">
 
       <!-- style subsequent panels as hidden
