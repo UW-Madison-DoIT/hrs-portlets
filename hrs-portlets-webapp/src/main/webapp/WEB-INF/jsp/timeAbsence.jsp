@@ -193,6 +193,7 @@
       <li class="ui-state-default ui-corner-top ${activeTabStyle}"><a href="#${n}dl-absence-statements">Leave Reports</a></li>
       <c:set var="activeTabStyle" value=""/>
     </ul>
+
     <c:set var="hiddenTabStyle" value=""/>
     <sec:authorize ifAllGranted="ROLE_VIEW_ABSENCE_HISTORIES">
       <c:set var="hiddenTabStyle" value="ui-tabs-hide"/>
