@@ -63,6 +63,14 @@
                     Show the Enter Absence link
                     Show the Edit Cancel Absence link, if link is configured
                 -->
+                <value>ROLE_LINK_TO_CLASSIC_ESS_ABS_BAL</value>
+                <!--
+                  In Time and Absence
+                    Prefer to show a link to `Classic ESS Abs Bal`
+                      instead of the  `Leave Balances` tab and its table of
+                      leave balances as of the most recent earnings statement,
+                      iff `Classic ESS Abs Bal` is set.
+                -->
             </set>
         </entry>
         <entry key="UW_DYN_AM_ESS_FLU_MONTHLY">
