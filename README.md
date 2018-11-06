@@ -77,6 +77,15 @@ This is intended as a solution for
 + When set, configures the href of the "Understanding Your Earnings Statement" link.
 + When not set, the link does not display.
 
+#### `timeAndAbsenceFName` portlet preference (optional)
+
++ When set, allows "Payroll Information" to include a hyperlink to the
+  corresponding "Time and Absence" to ease employee navigating to check on leave
+  balances, since leave balances will no longer be available in earnings
+  statements starting in 2019. When not set, the supporting text that explains
+  that leave balances are only available in Time and Absence and no longer on
+  earnings statements themselves does not include a convenient hyperlink.
+
 ### Specific to Personal Information
 
 While branded as "Personal Information" as published in MyUW,

@@ -23,6 +23,11 @@ it sources its URL from the HRS URLs web service.
 
 #### New features in 5.5.0
 
++ Add supporting text in Payroll Information cueing visiting Time and Absence to
+  view leave balances, since leave balances will no longer be available on
+  earnings statements starting in 2019. If the optional `portlet-preference`
+  `timeAndAbsenceFName` is set, this supporting text includes a hyperlink easing
+  employee navigation to Time and Absence. ( [HRSPLT-386][] )
 + Predicate the preference for the link to `Classic ESS Abs Bal` introduced in
   hrs-portlets 5.3.0 upon the employee holding a newly invented hrs-portlets
   role `ROLE_LINK_TO_CLASSIC_ESS_ABS_BAL`. If the employee does not hold this
@@ -663,3 +668,4 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [HRSPLT-381]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-381
 [HRSPLT-382]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-382
 [HRSPLT-384]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-384
+[HRSPLT-386]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-386
