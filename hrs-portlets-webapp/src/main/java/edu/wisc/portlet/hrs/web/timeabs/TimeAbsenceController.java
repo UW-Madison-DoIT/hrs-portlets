@@ -109,7 +109,8 @@ public class TimeAbsenceController extends HrsControllerBase {
 
     /**
      * Map from names of hrs-portlets roles held by the employee to the Boolean
-     * True indicating the employee holds the role. Useful for including roles * in conditional logic that considers things other than roles as well, so,
+     * True indicating the employee holds the role. Useful for including roles
+     * in conditional logic that considers things other than roles as well, so,
      * more flexible than the sec authorize JSP tag.
      *
      * MAP DOES NOT CONTAIN ROLES NOT HELD BY EMPLOYEES. So it is important to
