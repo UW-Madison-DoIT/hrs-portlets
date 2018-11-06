@@ -30,7 +30,7 @@ it sources its URL from the HRS URLs web service.
   This is moot for employees also holding `ROLE_REDIRECT_TO_HRS_FLUID_TIME`
   iff the `Fluid Time` HRS URL is set, since they'll be redirected to HRS
   self-service `Fluid Time` anyway. ( [HRSPLT-384][], [#152][] )
-+ New buttion "View Leave Balances" in Time and Absence, implementing that link
++ New button "View Leave Balances" in Time and Absence, implementing that link
   to `Classic ESS Abs Bal`, and predicated on that URL being defined. This
   replaces the button and supporting text that had been included in the Leave
   Balances tab when `Classic ESS Abs Bal` was defined, as of 5.3.0. (
