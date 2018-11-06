@@ -19,6 +19,10 @@
 
 package edu.wisc.portlet.hrs.web.timeabs;
 
+import edu.wisc.hr.dao.roles.HrsRolesDao;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 import javax.portlet.PortletPreferences;
 import javax.portlet.PortletRequest;
 
@@ -43,9 +47,16 @@ import edu.wisc.portlet.hrs.web.HrsControllerBase;
 public class TimeAbsenceController extends HrsControllerBase {
     private ContactInfoDao contactInfoDao;
 
+    private HrsRolesDao rolesDao;
+
     @Autowired
     public void setContactInfoDao(ContactInfoDao contactInfoDao) {
         this.contactInfoDao = contactInfoDao;
+    }
+
+    @Autowired
+    public void setRolesDao(HrsRolesDao hrsRolesDao) {
+      this.rolesDao = hrsRolesDao;
     }
 
     @ModelAttribute("dynPunchTimesheetNotice")
@@ -94,6 +105,29 @@ public class TimeAbsenceController extends HrsControllerBase {
         final PortletPreferences preferences = request.getPreferences();
 
         return preferences.getValue("nonDynPunchTimesheetNotification", null);
+    }
+
+    /**
+     * Map from names of hrs-portlets roles held by the employee to the Boolean
+     * True indicating the employee holds the role. Useful for including roles * in conditional logic that considers things other than roles as well, so,
+     * more flexible than the sec authorize JSP tag.
+     *
+     * MAP DOES NOT CONTAIN ROLES NOT HELD BY EMPLOYEES. So it is important to
+     * check for the presence of a key, not just the value for a key.
+     */
+    @ModelAttribute("employeeRoles")
+    public final Map<String, Boolean> getEmployeeRoles(){
+
+      Map<String, Boolean> employeeRoles = new HashMap<String, Boolean>();
+
+      final String emplid  = PrimaryAttributeUtils.getPrimaryId();
+      Set<String> rolesHeldByEmployee = this.rolesDao.getHrsRoles(emplid);
+
+      for (String roleHeldByEmployee : rolesHeldByEmployee) {
+        employeeRoles.put(roleHeldByEmployee, Boolean.TRUE);
+      }
+
+      return employeeRoles;
     }
 
     @RequestMapping
