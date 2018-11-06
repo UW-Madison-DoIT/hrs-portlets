@@ -119,6 +119,15 @@
       </div>
     </sec:authorize>
 
+    <sec:authorize ifAnyGranted="ROLE_LINK_TO_CLASSIC_ESS_ABS_BAL">
+      <c:if test="${not empty hrsUrls['Classic ESS Abs Bal']}">
+        <div class="dl-link">
+          <a class="btn btn-primary" href="${hrsUrls['Classic ESS Abs Bal']}"
+            target="_blank" rel="noopener noreferrer">
+            View Leave Balances</a>
+        </div>
+      </c:if>
+    </sec:authorize>
 
     <sec:authorize ifAnyGranted="ROLE_ENTER_EDIT_CANCEL_OWN_ABSENCES">
       <c:if test="${not empty prefs['editCancelAbsenceUrl']
