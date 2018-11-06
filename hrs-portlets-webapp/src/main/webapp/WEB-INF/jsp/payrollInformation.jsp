@@ -66,7 +66,18 @@
         <div class="data-table-description"
           style="color:black;">
           2019 and after Earnings Statements will no longer have leave balances.
-          Navigate to Time and Absence to view leave balances.
+          <c:choose>
+            <c:when test="${not empty prefs['timeAndAbsenceFName']
+              && not empty prefs['timeAndAbsenceFName'][0]}">
+              <a href="/web/exclusive/${prefs['timeAndAbsenceFName'][0]}"
+                style="color:blue; text-decoration:underline;">
+                Navigate to Time and Absence</a>
+                to view leave balances.
+            </c:when>
+            <c:otherwise>
+              Navigate to Time and Absence to view leave balances.
+            </c:otherwise>
+          </c:choose>
         </div>
         <div class="data-table-details">
           <form action="#">
