@@ -117,7 +117,10 @@
       <div class="dl-link">
         <a class="btn btn-primary" href="${hrsUrls['Request Absence']}" target="_blank">Enter Absence</a>
       </div>
+    </sec:authorize>
 
+
+    <sec:authorize ifAnyGranted="ROLE_ENTER_EDIT_CANCEL_OWN_ABSENCES">
       <c:if test="${not empty prefs['editCancelAbsenceUrl']
         && not empty prefs['editCancelAbsenceUrl'][0]}">
         <div class="dl-link">
