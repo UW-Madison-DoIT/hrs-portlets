@@ -259,7 +259,8 @@
 
       <div class="balance-header">
         <c:choose>
-          <c:when test="${prefs['payrollInformationFName'] && prefs['payrollInformationFName'][0]}">
+          <c:when test="${not empty prefs['payrollInformationFName']
+            && not empty prefs['payrollInformationFName'][0]}">
             <span>These leave balances are as of your most recent Earnings Statement in
               <a href="/web/exclusive/${prefs['payrollInformationFName'][0]}">
                 Payroll Information</a>.</span>
