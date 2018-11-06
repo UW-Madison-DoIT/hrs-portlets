@@ -21,6 +21,37 @@ it sources its URL from the HRS URLs web service.
 
 (No changes yet)
 
+#### New features in 5.5.0
+
++ Predicate the preference for the link to `Classic ESS Abs Bal` introduced in
+  hrs-portlets 5.3.0 upon the employee holding a newly invented hrs-portlets
+  role `ROLE_LINK_TO_CLASSIC_ESS_ABS_BAL`. If the employee does not hold this
+  role, show the status quo leave balances table.
+  This is moot for employees also holding `ROLE_REDIRECT_TO_HRS_FLUID_TIME`
+  iff the `Fluid Time` HRS URL is set, since they'll be redirected to HRS
+  self-service `Fluid Time` anyway. ( [HRSPLT-384][] )
++ New buttion "View Leave Balances" in Time and Absence, implementing that link
+  to `Classic ESS Abs Bal`, and predicated on that URL being defined. This
+  replaces the button and supporting text that had been included in the Leave
+  Balances tab when `Classic ESS Abs Bal` was defined, as of 5.3.0. (
+  [HRSPLT-384][] )
++ Map from HRS role `UW_DYN_AM_Employee` to newly invented hrs-portlets role
+  `ROLE_LINK_TO_CLASSIC_ESS_ABS_BAL`. That is, the HRS role `UW_DYN_AM_EMPLOYEE`
+  is required to see the new link to `Classic ESS Abs Bal`. Employees lacking
+  this role continue to see leave balances as of their most recent earnings
+  statement directly included in the "Leave Balances" tab in "Time and Absence".
+  ( [HRSPLT-384][] )
+
+#### Removed features in 5.5.0
+
++ Employees with new `ROLE_LINK_TO_CLASSIC_ESS_ABS_BAL` will no longer see the
+  Leave Balances tab in Time and Absence, so long as that role was actualized by
+  the URL for that link being set so the button rendered. ( [HRSPLT-384][] )
++ The portlet-preference `dynamicLeaveBalancesLearnMoreUrl` introduced in 5.3.0
+  to optionally define a supporting link for learning more about dynamic leave
+  balances no longer has any effect, since the explanatory text it had been
+  supporting has been removed from the UI. ( [HRSPLT-384][] )
+
 ### 5.4.0 - redirect UW_DYN_AM_ESS_FLU_MONTHLY to Fluid Time
 
 2018-11-02
