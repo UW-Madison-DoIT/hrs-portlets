@@ -190,4 +190,21 @@
         </jaxb:schemaBindings>
     </jaxb:bindings>
 
+    <!-- CI_UW_PY_GET_ERNST_LS_CI.1.wsdl -->
+    <jaxb:bindings schemaLocation="../resources/xsd/hrs/CI_UW_PY_GET_ERNST_LS_CI__REQ.xsd">
+        <jaxb:schemaBindings>
+            <jaxb:package name="edu.wisc.hrs.xdm.ernstmt.req" />
+        </jaxb:schemaBindings>
+    </jaxb:bindings>
+    <jaxb:bindings schemaLocation="../resources/xsd/hrs/CI_UW_PY_GET_ERNST_LS_CI__RES.xsd">
+        <jaxb:schemaBindings>
+            <jaxb:package name="edu.wisc.hrs.xdm.ernstmt.res" />
+        </jaxb:schemaBindings>
+    </jaxb:bindings>
+    <jaxb:bindings schemaLocation="../resources/xsd/hrs/CI_UW_PY_GET_ERNST_LS_CI__ERR.xsd">
+        <jaxb:schemaBindings>
+            <jaxb:package name="edu.wisc.hrs.xdm.ernstmt.fault" />
+        </jaxb:schemaBindings>
+    </jaxb:bindings>
+
 </jaxb:bindings>
