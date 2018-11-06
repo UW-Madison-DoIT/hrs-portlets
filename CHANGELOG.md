@@ -41,6 +41,13 @@ it sources its URL from the HRS URLs web service.
   this role continue to see leave balances as of their most recent earnings
   statement directly included in the "Leave Balances" tab in "Time and Absence".
   ( [HRSPLT-384][], [#152][] )
++ Adjusted supporting text on Leave Balances tab to no longer set expectation
+  as to whether earnings statements include leave balances, while continuting to
+  clarify as of when the leave balances shown in the table are current.
+  Enhanced with optional link to the corresponding Payroll Information iff a new
+  `portlet-preference` `payrollInformationFName` is set. ( [HRSPLT-384][],
+  [#152][] )
+
 
 #### Removed features in 5.5.0
 
