@@ -260,12 +260,12 @@
       <div class="balance-header">
         <c:choose>
           <c:when test="${prefs['payrollInformationFName'] && prefs['payrollInformationFName'][0]}">
-            <span>These Leave balances are as of your most recent Earnings Statement in
+            <span>These leave balances are as of your most recent Earnings Statement in
               <a href="/web/exclusive/${prefs['payrollInformationFName'][0]}">
                 Payroll Information</a>.</span>
           </c:when>
           <c:otherwise>
-            <span>These Leave balances are as of your most recent Earnings Statement.</span>
+            <span>These leave balances are as of your most recent Earnings Statement.</span>
           </c:otherwise>
         </c:choose>
 
