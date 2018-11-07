@@ -45,61 +45,71 @@ import edu.wisc.hr.dm.ernstmt.EarningStatements;
  */
 @Repository("restEarningStatementDao")
 public class RestEarningStatementDao implements EarningStatementDao {
-    protected final Logger logger = LoggerFactory.getLogger(getClass());
-    
-    private ExtendedRestOperations restOperations;
-    private String statementsUrl;
-    private String statementUrl;
-    
-    @Autowired
-    public void setRestTemplate(ExtendedRestOperations restOperations) {
-        this.restOperations = restOperations;
+
+  protected final Logger logger = LoggerFactory.getLogger(getClass());
+
+  private ExtendedRestOperations restOperations;
+  private String statementsUrl;
+  private String statementUrl;
+
+  @Autowired
+  public void setRestTemplate(ExtendedRestOperations restOperations) {
+    this.restOperations = restOperations;
+  }
+
+  public void setStatementsUrl(String statementsUrl) {
+    this.statementsUrl = statementsUrl;
+  }
+
+  public void setStatementUrl(String statementUrl) {
+    this.statementUrl = statementUrl;
+  }
+
+  @Cacheable(cacheName = "earningStatement", exceptionCacheName = "cypressUnknownExceptionCache")
+  @Override
+  public EarningStatements getEarningStatements(String emplid) {
+    final HttpHeaders httpHeaders = new HttpHeaders();
+    httpHeaders.set("HRID", emplid);
+
+    final XmlEarningStatements xmlEarningStatements =
+        this.restOperations
+            .getForObject(this.statementsUrl, XmlEarningStatements.class,
+                httpHeaders, emplid);
+
+    return this.mapEarningStatements(xmlEarningStatements);
+  }
+
+  @Override
+  public void getEarningStatement(String emplid, String docId,
+      ProxyResponse proxyResponse) {
+    final HttpHeaders httpHeaders = new HttpHeaders();
+    httpHeaders.set("HRID", emplid);
+    this.restOperations
+        .proxyRequest(proxyResponse, this.statementUrl, HttpMethod.GET,
+            httpHeaders, docId);
+  }
+
+  protected EarningStatements mapEarningStatements(
+      XmlEarningStatements xmlEarningStatements) {
+    final List<XmlEarningStatement> xmlEarningStatementList = xmlEarningStatements
+        .getEarningStatements();
+
+    final EarningStatements earningStatements = new EarningStatements();
+    final List<EarningStatement> earningStatementsList = earningStatements
+        .getEarningStatements();
+
+    for (final XmlEarningStatement input : xmlEarningStatementList) {
+      final EarningStatement earningStatement = new EarningStatement();
+
+      earningStatement.setAmount(input.getAmount());
+      earningStatement.setDocId(input.getDocId());
+      earningStatement.setEarned(input.getEarned());
+      earningStatement.setFullTitle(input.getFullTitle());
+      earningStatement.setPaid(input.getPaid());
+
+      earningStatementsList.add(earningStatement);
     }
 
-    public void setStatementsUrl(String statementsUrl) {
-        this.statementsUrl = statementsUrl;
-    }
-    public void setStatementUrl(String statementUrl) {
-        this.statementUrl = statementUrl;
-    }
-    
-    @Cacheable(cacheName="earningStatement", exceptionCacheName="cypressUnknownExceptionCache")
-    @Override
-    public EarningStatements getEarningStatements(String emplid) {
-        final HttpHeaders httpHeaders = new HttpHeaders();
-        httpHeaders.set("HRID", emplid);
-        
-        final XmlEarningStatements xmlEarningStatements = 
-                this.restOperations.getForObject(this.statementsUrl, XmlEarningStatements.class, httpHeaders, emplid);
-        
-        return this.mapEarningStatements(xmlEarningStatements);
-    }
-    
-    @Override
-    public void getEarningStatement(String emplid, String docId, ProxyResponse proxyResponse) {
-        final HttpHeaders httpHeaders = new HttpHeaders();
-        httpHeaders.set("HRID", emplid);
-        this.restOperations.proxyRequest(proxyResponse, this.statementUrl, HttpMethod.GET, httpHeaders, docId);
-    }
-    
-    protected EarningStatements mapEarningStatements(XmlEarningStatements xmlEarningStatements) {
-        final List<XmlEarningStatement> xmlEarningStatementList = xmlEarningStatements.getEarningStatements();
-        
-        final EarningStatements earningStatements = new EarningStatements();
-        final List<EarningStatement> earningStatementsList = earningStatements.getEarningStatements();
-        
-        for (final XmlEarningStatement input : xmlEarningStatementList) {
-            final EarningStatement earningStatement = new EarningStatement();
-            
-            earningStatement.setAmount(input.getAmount());
-            earningStatement.setDocId(input.getDocId());
-            earningStatement.setEarned(input.getEarned());
-            earningStatement.setFullTitle(input.getFullTitle());
-            earningStatement.setPaid(input.getPaid());
-            
-            earningStatementsList.add(earningStatement);
-        }
-        
-        return earningStatements;
-    }
+    return earningStatements;
+  }
 }
