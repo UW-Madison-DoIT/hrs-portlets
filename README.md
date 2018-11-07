@@ -222,7 +222,7 @@ The `Payroll Information` portlet supports an optional `requestedContent`
 *HTTP* request parameter) specifying which content within the portlet (tab) to
 initially select. The parameter value `Tax Statements` selects, well, tax
 statements. Omitting it or any other value accepts the default behavior of
-initially selecting the "Earning Statements" tab.
+initially selecting the "Earnings Statements" tab.
 
 If this goes well it will be feasible to extend this feature to other HRS
 Portlets as the need arises.

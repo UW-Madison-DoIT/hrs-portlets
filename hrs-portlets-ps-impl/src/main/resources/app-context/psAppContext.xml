@@ -119,7 +119,7 @@
                 <value>ROLE_VIEW_OWN_GARNISHMENTS</value>
                 <!-- effect
                   in Payroll Information
-                    On Earning Statements tab
+                    On Earnings Statements tab
                       Show "Garnishments/Wage Assignments" link
                 -->
             </set>

@@ -41,7 +41,7 @@
       <c:choose>
         <c:when test="${requestedContent eq 'Tax Statements'}">
           <li class="ui-state-default ui-corner-top">
-            <a href="#${n}dl-earning-statements">Earning Statements</a>
+            <a href="#${n}dl-earning-statements">Earnings Statements</a>
           </li>
           <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active">
             <a href="#${n}dl-tax-statements">Tax Statements</a>
@@ -50,7 +50,7 @@
         <c:otherwise>
           <%-- default to Earnings Statements as default tab. --%>
           <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active">
-            <a href="#${n}dl-earning-statements">Earning Statements</a>
+            <a href="#${n}dl-earning-statements">Earnings Statements</a>
           </li>
           <li class="ui-state-default ui-corner-top">
             <a href="#${n}dl-tax-statements">Tax Statements</a>
@@ -90,7 +90,7 @@
       <div class="fl-pager">
         <hrs:pagerNavBar position="top" showSummary="${true}"/>
         <div class="fl-container-flex dl-pager-table-data fl-pager-data table-responsive">
-          <table class="dl-table table" tabindex="0" aria-label="Earning Statements detail table">
+          <table class="dl-table table" tabindex="0" aria-label="Earnings Statements detail table">
             <thead>
               <tr rsf:id="header:">
                 <th scope="col" class="flc-pager-sort-header dl-col-25p" rsf:id="paid"><a href="javascript:;">Paid</a></th>

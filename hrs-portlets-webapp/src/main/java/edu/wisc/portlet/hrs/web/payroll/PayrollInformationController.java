@@ -50,7 +50,7 @@ public class PayrollInformationController extends HrsControllerBase {
     }
     
     /**
-     * Gets the URL to a page describing your earning statement
+     * Gets the URL to a page describing your earnings statement
      * @param request the request
      * @return the value of the portlet preference
      */
