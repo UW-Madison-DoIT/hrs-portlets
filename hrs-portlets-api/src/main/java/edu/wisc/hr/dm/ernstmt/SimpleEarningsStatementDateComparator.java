@@ -13,12 +13,12 @@ public class SimpleEarningsStatementDateComparator
           "Cannot compare null earnings statement by date.");
     }
 
-    if (null == o1.getDateOfCheck() || null == o2.getDateOfCheck()) {
+    if (null == o1.getIsoDateOfCheck() || null == o2.getIsoDateOfCheck()) {
       throw new NullPointerException(
           "Cannot compare by date earnings statements with null date of check.");
     }
 
-    return o1.getDateOfCheck().compareTo(o2.getDateOfCheck());
+    return o1.getIsoDateOfCheck().compareTo(o2.getIsoDateOfCheck());
   }
 
   @Override

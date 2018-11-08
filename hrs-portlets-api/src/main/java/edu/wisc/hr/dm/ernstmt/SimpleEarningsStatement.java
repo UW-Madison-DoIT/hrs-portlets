@@ -11,12 +11,31 @@ package edu.wisc.hr.dm.ernstmt;
 public class SimpleEarningsStatement {
 
   /**
-   * ISO representation of date check was cut, e.g. `2018-11-06`
+   * ISO representation of date check was cut, e.g. `2018-08-06`,
+   * or `unknown` if date unknown. Never null.
    */
-  private String dateOfCheck;
+  private String isoDateOfCheck = "unknown";
+
+  public String getUsDateOfCheck() {
+    return usDateOfCheck;
+  }
+
+  public void setUsDateOfCheck(String usDateOfCheck) {
+    this.usDateOfCheck = usDateOfCheck;
+  }
 
   /**
-   * Decimal representation of net pay in dollars, e.g. `1234.56`
+   * Display representation of date check was cut, e.g. `08/06/2018`.
+   * Included because the front end currently assumes this format, including in
+   * front-end sorting.
+   *
+   * Or `unknown` if date unknown. Never null.
+   */
+  private String usDateOfCheck = "unknown";
+
+  /**
+   * Decimal representation of net pay in dollars, with currency symbol,
+   * e.g. `$1234.56`
    */
   private String amountNetPay;
 
@@ -38,12 +57,12 @@ public class SimpleEarningsStatement {
    */
   private String url;
 
-  public String getDateOfCheck() {
-    return dateOfCheck;
+  public String getIsoDateOfCheck() {
+    return isoDateOfCheck;
   }
 
-  public void setDateOfCheck(String dateOfCheck) {
-    this.dateOfCheck = dateOfCheck;
+  public void setIsoDateOfCheck(String isoDateOfCheck) {
+    this.isoDateOfCheck = isoDateOfCheck;
   }
 
   public String getAmountNetPay() {
