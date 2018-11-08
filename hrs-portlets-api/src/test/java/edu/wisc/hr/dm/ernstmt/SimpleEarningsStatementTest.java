@@ -6,7 +6,7 @@ import org.joda.time.LocalDate;
 import org.junit.Test;
 
 public class SimpleEarningsStatementTest {
-  
+
   @Test
   public void exposesCheckDateThreeWays() {
     LocalDate date = LocalDate.parse("2018-11-08");
