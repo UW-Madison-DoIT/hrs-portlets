@@ -27,7 +27,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.ws.client.core.WebServiceOperations;
 
 @Repository("soapEarningStatementDao")
-public class SoapEarningStatementDao
+public class SoapEarningsStatementDao
   extends BaseHrsSoapDao
   implements SimpleEarningsStatementDao {
 
