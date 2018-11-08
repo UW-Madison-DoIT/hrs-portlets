@@ -1,6 +1,9 @@
 package edu.wisc.portlet.hrs.web.troubleshoot;
 
+import edu.wisc.hr.dao.ernstmt.EarningStatementDao;
+import edu.wisc.hr.dao.ernstmt.SimpleEarningsStatementDao;
 import edu.wisc.hr.dao.roles.HrsRolesDao;
+import edu.wisc.hr.dm.ernstmt.SimpleEarningsStatement;
 import edu.wisc.portlet.hrs.web.HrsControllerBase;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -20,6 +23,8 @@ public class TroubleshootingController
     extends HrsControllerBase {
 
   private HrsRolesDao rolesDao;
+
+  private SimpleEarningsStatementDao earningsStatementsDao;
 
   public HrsRolesDao getRolesDao() {
     return rolesDao;
@@ -50,6 +55,11 @@ public class TroubleshootingController
       Collections.sort(sortedRawRoles);
 
       modelMap.put("rawRoles", sortedRawRoles);
+
+      List<SimpleEarningsStatement> earningsStatements =
+          earningsStatementsDao.statementsForEmployee(queriedEmplId);
+
+      modelMap.put("earningsStatements", earningsStatements);
 
     }
 
