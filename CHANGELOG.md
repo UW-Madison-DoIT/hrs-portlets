@@ -24,6 +24,9 @@ Fixes:
 + Consistently refer to earnings statements as "earnings" statements, not
   "earning" statements. ( [HRSPLT-391][] )
 + Sort roles in troubleshooter ( [HRSPLT-390][] )
++ Remove `@version` annotations in code that had been populated with stale
+  metadata from the previous, no-longer-in-use versioning system (SVN). (
+  [#155][] )
 
 ### 5.5.0 - ROLE_LINK_TO_CLASSIC_ESS_ABS_BAL, timeAndAbsenceFName
 
@@ -659,6 +662,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#150]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/150
 [#152]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/152
 [#153]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/153
+[#155]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/155
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348
