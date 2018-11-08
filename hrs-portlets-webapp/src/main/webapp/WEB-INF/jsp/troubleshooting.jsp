@@ -92,8 +92,11 @@
     </a>
   </p>
 
+  <c:if test="${not empty queriedEmplId}">
   <h2>Earnings statements</h2>
 
+  <c:choose>
+  <c:when test="${empty earningsStatementsError}">
   <table>
     <tr>
       <th>Check date</th>
@@ -111,6 +114,12 @@
     </c:forEach>
 
   </table>
+  <c:when>
+  <c:otherwise>
+  <p>Error querying earnings statements: ${earningsStatementsError}.</p>
+  <c:otherwis>
+  </c:choose>
+  </c:if>
 
   <%@ include file="/WEB-INF/jsp/footer.jsp"%>
 

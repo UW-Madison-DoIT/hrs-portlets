@@ -56,10 +56,15 @@ public class TroubleshootingController
 
       modelMap.put("rawRoles", sortedRawRoles);
 
-      List<SimpleEarningsStatement> earningsStatements =
-          earningsStatementsDao.statementsForEmployee(queriedEmplId);
+      List<SimpleEarningsStatement> earningsStatements = new ArrayList<SimpleEarningsStatement>();
 
-      modelMap.put("earningsStatements", earningsStatements);
+      try {
+        modelMap.put("earningsStatements",
+            earningsStatementsDao.statementsForEmployee(queriedEmplId));
+      } catch (Exception e) {
+        logger.warn("Failed to get earnings statements for emplid " + queriedEmplId, e);
+        modelMap.put("earningsStatementsError", e.getMessage());
+      }
 
     }
 
