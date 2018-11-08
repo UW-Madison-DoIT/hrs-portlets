@@ -217,6 +217,12 @@
         <property name="destinationProvider" ref="benefitSummaryDestinationProvider" />
     </bean>
 
+  <bean id="earningsStatementsDestinationProvider"
+    class="org.jasig.springframework.ws.client.support.destination.FailSafeWsdl11DestinationProvider" />
+  <bean id="earningsStatementsWebServiceTemplate" parent="baseHrsWebServiceTemplate">
+    <property name="destinationProvider" ref="earningsStatementsDestinationProvider" />
+  </bean>
+
     <bean id="managerAbsenceDestinationProvider" class="org.jasig.springframework.ws.client.support.destination.FailSafeWsdl11DestinationProvider" />
     <bean id="managerAbsenceWebServiceTemplate" parent="baseHrsWebServiceTemplate">
         <property name="destinationProvider" ref="managerAbsenceDestinationProvider" />
