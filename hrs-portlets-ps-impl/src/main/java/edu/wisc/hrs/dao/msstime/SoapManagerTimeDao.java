@@ -42,7 +42,6 @@ import edu.wisc.hrs.xdm.msstime.res.UwTlEmpDtlVwTypeShape;
 /**
  * Spring {@link WebServiceOperations} backed implementation of {@link BaseHrsSoapDao}.
  * 
- * @version $Id: SoapManagerTimeDao.java,v 1.2 2011/12/07 21:38:12 dalquist Exp $
  */
 @Repository("soapManagerTimeDao")
 public class SoapManagerTimeDao extends BaseHrsSoapDao implements ManagerTimeDao {

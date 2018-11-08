@@ -23,7 +23,6 @@ package edu.wisc.hr.dao.bnsemail;
  * Used to notify a user that their email address has been changed
  * 
  * @author Eric Dalquist
- * @version $Revision: 1.1 $
  */
 public interface BusinessEmailUpdateNotifier {
 

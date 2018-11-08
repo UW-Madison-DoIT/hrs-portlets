@@ -25,7 +25,6 @@ import edu.wisc.hr.dm.tlpayable.TimeSheet;
 
 /**
  * @author Eric Dalquist
- * @version $Revision: 1.1 $
  */
 public interface TimeSheetDao {
     public List<TimeSheet> getTimeSheets(String emplId);

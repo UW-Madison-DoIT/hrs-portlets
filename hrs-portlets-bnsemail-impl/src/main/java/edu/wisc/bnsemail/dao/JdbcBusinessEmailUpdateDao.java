@@ -38,7 +38,6 @@ import edu.wisc.hr.dm.person.PersonInformation;
 
 /**
  * @author Eric Dalquist
- * @version $Revision: 1.2 $
  */
 @Repository
 public class JdbcBusinessEmailUpdateDao implements BusinessEmailUpdateDao {

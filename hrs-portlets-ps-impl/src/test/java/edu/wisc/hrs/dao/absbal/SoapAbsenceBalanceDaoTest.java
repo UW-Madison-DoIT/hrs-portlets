@@ -47,7 +47,6 @@ import edu.wisc.hrs.xdm.absbal.res.GetCompIntfcUWPORTAL1ABSBALResponse;
 
 /**
  * 
- * @version $Id: SoapAbsenceBalanceDaoTest.java,v 1.2 2012/08/14 21:18:04 dalquist Exp $
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "/mockPeopleSoftTestContext.xml")

@@ -48,7 +48,6 @@ import edu.wisc.hrs.xdm.absbal.res.UwGpAbsBalVwTypeShape;
 /**
  * Spring {@link WebServiceOperations} backed implementation of {@link BaseHrsSoapDao}.
  * 
- * @version $Id: SoapAbsenceBalanceDao.java,v 1.3 2012/08/14 21:18:04 dalquist Exp $
  */
 @Repository("soapAbsenceBalanceDao")
 public class SoapAbsenceBalanceDao extends BaseHrsSoapDao implements AbsenceBalanceDao {

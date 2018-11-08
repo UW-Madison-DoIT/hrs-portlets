@@ -25,7 +25,6 @@ import edu.wisc.hr.dm.msstime.ManagedTime;
 
 /**
  * @author Eric Dalquist
- * @version $Revision: 1.1 $
  */
 public interface ManagerTimeDao {
     public List<ManagedTime> getManagedTimes(String emplId);

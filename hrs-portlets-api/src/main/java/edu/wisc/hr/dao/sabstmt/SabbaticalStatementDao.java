@@ -25,7 +25,6 @@ import edu.wisc.hr.dm.sabstmt.SabbaticalReports;
 
 /**
  * @author Eric Dalquist
- * @version $Revision: 1.1 $
  */
 public interface SabbaticalStatementDao {
     /**

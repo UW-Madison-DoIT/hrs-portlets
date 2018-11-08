@@ -42,7 +42,6 @@ import edu.wisc.hrs.xdm.mssabs.res.UwAmMssAbsVwTypeShape;
 /**
  * Spring {@link WebServiceOperations} backed implementation of {@link BaseHrsSoapDao}.
  * 
- * @version $Id: SoapManagerAbsenceDao.java,v 1.2 2011/12/07 21:38:13 dalquist Exp $
  */
 @Repository("soapManagerAbsenceDao")
 public class SoapManagerAbsenceDao extends BaseHrsSoapDao implements ManagerAbsenceDao {

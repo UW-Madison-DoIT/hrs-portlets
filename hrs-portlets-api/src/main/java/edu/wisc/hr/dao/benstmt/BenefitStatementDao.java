@@ -25,7 +25,6 @@ import edu.wisc.hr.dm.benstmt.BenefitStatements;
 
 /**
  * @author Eric Dalquist
- * @version $Revision: 1.1 $
  */
 public interface BenefitStatementDao {
     /**

@@ -48,7 +48,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
  * @author Eric Dalquist
- * @version $Revision: 1.1 $
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "/mockCypressTestContext.xml")

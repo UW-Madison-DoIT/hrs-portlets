@@ -26,7 +26,6 @@ import edu.wisc.hr.dm.levstmt.SummarizedLeaveStatement;
 
 /**
  * @author Eric Dalquist
- * @version $Revision: 1.1 $
  */
 public interface LeaveStatementDao {
     /**

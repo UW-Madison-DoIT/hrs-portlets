@@ -38,7 +38,6 @@ import edu.wisc.hr.dao.url.HrsUrlDao;
  * Common functions and dependencies for HRS controllers
  *
  * @author Eric Dalquist
- * @version $Revision: 1.2 $
  */
 public class HrsControllerBase {
     protected final Logger logger = LoggerFactory.getLogger(getClass());

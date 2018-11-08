@@ -48,7 +48,6 @@ import edu.wisc.hrs.xdm.tlpaybl.res.UwTlPayablVwTypeShape;
 /**
  * Spring {@link WebServiceOperations} backed implementation of {@link BaseHrsSoapDao}.
  * 
- * @version $Id: SoapTimeLeavePayableDao.java,v 1.3 2012/08/14 21:18:04 dalquist Exp $
  */
 @Repository("soapTimeLeavePayableDao")
 public class SoapTimeLeavePayableDao extends BaseHrsSoapDao implements TimeSheetDao {

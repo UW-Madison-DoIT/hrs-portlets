@@ -42,7 +42,6 @@ import edu.wisc.hr.dm.sabstmt.SabbaticalReports;
 
 /**
  * @author Eric Dalquist
- * @version $Revision: 1.2 $
  */
 @Repository("restSabbaticalStatementDao")
 public class RestSabbaticalStatementDao implements SabbaticalStatementDao {

@@ -25,7 +25,6 @@ import edu.wisc.hr.dm.person.PersonInformation;
  * Get Contact Information for a specific user
  * 
  * @author Eric Dalquist
- * @version $Revision: 1.1 $
  */
 public interface ContactInfoDao {
 

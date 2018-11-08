@@ -23,7 +23,6 @@ import edu.wisc.hr.dm.bnsumm.BenefitSummary;
 
 /**
  * @author Eric Dalquist
- * @version $Revision: 1.1 $
  */
 public interface BenefitSummaryDao {
     public BenefitSummary getBenefitSummary(String emplId);

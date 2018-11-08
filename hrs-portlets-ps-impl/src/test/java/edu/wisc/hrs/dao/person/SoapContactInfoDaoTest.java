@@ -48,7 +48,6 @@ import edu.wisc.hrs.xdm.person.res.GetCompIntfcUWPORTAL1PERSONResponse;
 
 /**
  * 
- * @version $Id: SoapContactInfoDaoTest.java,v 1.2 2012/08/14 21:18:04 dalquist Exp $
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "/mockPeopleSoftTestContext.xml")

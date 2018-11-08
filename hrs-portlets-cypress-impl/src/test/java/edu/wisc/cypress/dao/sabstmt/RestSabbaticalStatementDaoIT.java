@@ -36,7 +36,6 @@ import edu.wisc.hr.dm.sabstmt.SabbaticalReports;
 
 /**
  * 
- * @version $Id: RestSabbaticalStatementDaoIT.java,v 1.1 2011/12/04 06:11:04 dalquist Exp $
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "/integrationCypressTestContext.xml")

@@ -36,7 +36,6 @@ msnhremail.UPDATE_FROM_PORTAL(p_email_i IN msn_hr_email.email_address%TYPE
                                              )
 
  * @author Eric Dalquist
- * @version $Revision: 1.2 $
  */
 public class UpdatePreferredEmailProcedure extends StoredProcedure {
 

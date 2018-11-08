@@ -25,7 +25,6 @@ import edu.wisc.hr.dm.bnsemail.PreferredEmail;
  * Interface for getting and updating the current buisness contact email info for a user.
  * 
  * @author Eric Dalquist
- * @version $Revision: 1.1 $
  */
 public interface BusinessEmailUpdateDao {
 

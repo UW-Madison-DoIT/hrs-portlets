@@ -25,7 +25,6 @@ import java.util.Map;
  * Gets a set of deep-links into the HRS system
  *
  * @author Eric Dalquist
- * @version $Revision: 1.1 $
  */
 public interface HrsUrlDao {
     public Map<String, String> getHrsUrls();

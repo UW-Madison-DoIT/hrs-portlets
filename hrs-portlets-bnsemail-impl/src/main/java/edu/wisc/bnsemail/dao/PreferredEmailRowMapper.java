@@ -27,7 +27,6 @@ import edu.wisc.hr.dm.bnsemail.PreferredEmail;
 
 /**
  * @author Eric Dalquist
- * @version $Revision: 1.1 $
  */
 final class PreferredEmailRowMapper implements RowMapper {
     public static final PreferredEmailRowMapper INTANCE = new PreferredEmailRowMapper();

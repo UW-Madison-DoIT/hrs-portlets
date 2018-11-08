@@ -42,7 +42,6 @@ import org.springframework.ws.client.core.WebServiceOperations;
 /**
  * Spring {@link WebServiceOperations} backed implementation of {@link BaseHrsSoapDao}.
  *
- * @version $Id: SoapHrsRolesDao.java,v 1.3 2012/04/20 17:08:50 dalquist Exp $
  */
 @Repository("soapHrsRolesDao")
 public class SoapHrsRolesDao extends BaseHrsSoapDao implements HrsRolesDao {

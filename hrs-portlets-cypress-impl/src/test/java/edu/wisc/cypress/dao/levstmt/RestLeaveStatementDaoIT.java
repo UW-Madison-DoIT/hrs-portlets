@@ -33,7 +33,6 @@ import edu.wisc.hr.dm.levstmt.SummarizedLeaveStatement;
 
 /**
  * 
- * @version $Id: RestLeaveStatementDaoIT.java,v 1.1 2011/12/04 06:11:03 dalquist Exp $
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "/integrationCypressTestContext.xml")

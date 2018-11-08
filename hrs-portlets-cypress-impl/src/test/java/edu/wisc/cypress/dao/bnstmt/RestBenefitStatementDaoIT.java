@@ -37,7 +37,6 @@ import edu.wisc.hr.dm.benstmt.BenefitStatements;
 
 /**
  * @author Eric Dalquist
- * @version $Revision: 1.1 $
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "/integrationCypressTestContext.xml")

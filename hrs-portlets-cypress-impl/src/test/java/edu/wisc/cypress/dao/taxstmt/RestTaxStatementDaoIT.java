@@ -35,7 +35,6 @@ import edu.wisc.hr.dm.taxstmt.TaxStatements;
 
 /**
  * 
- * @version $Id: RestTaxStatementDaoIT.java,v 1.1 2011/12/04 06:11:05 dalquist Exp $
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "/integrationCypressTestContext.xml")

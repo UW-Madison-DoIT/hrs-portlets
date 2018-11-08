@@ -26,7 +26,6 @@ import org.springframework.util.ReflectionUtils;
  * Utilities for parsing the PeopleSoft data model
  * 
  * @author Eric Dalquist
- * @version $Revision: 1.2 $
  */
 public class HrsUtils {
     /**

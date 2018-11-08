@@ -36,7 +36,6 @@ import org.springframework.ws.transport.WebServiceMessageSender;
  * Base class for SOAP dao tests (integration and mock)
  * 
  * @author Eric Dalquist
- * @version $Revision: 1.1 $
  */
 public class BaseSoapDaoTest {
     protected WebServiceMessageSender getWebServiceMessageSender() {

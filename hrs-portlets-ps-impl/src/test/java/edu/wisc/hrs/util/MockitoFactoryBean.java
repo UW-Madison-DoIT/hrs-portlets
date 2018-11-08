@@ -28,7 +28,6 @@ import org.springframework.beans.factory.config.AbstractFactoryBean;
  * Factory for creating Mocktio objects as beans.
  * 
  * @author Eric Dalquist
- * @version $Revision: 1.1 $
  */
 public class MockitoFactoryBean<T> extends AbstractFactoryBean<T> {
     private final Class<? extends T> type;

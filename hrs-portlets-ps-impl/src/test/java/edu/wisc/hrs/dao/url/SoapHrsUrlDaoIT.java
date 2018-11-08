@@ -33,7 +33,6 @@ import edu.wisc.hrs.dao.BaseSoapDaoTest;
 
 /**
  * 
- * @version $Id: SoapHrsUrlDaoIT.java,v 1.1 2011/12/07 21:38:11 dalquist Exp $
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "/integrationPeopleSoftTestContext.xml")

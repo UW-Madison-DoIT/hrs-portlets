@@ -25,7 +25,6 @@ import edu.wisc.hr.dm.absbal.AbsenceBalance;
 
 /**
  * @author Eric Dalquist
- * @version $Revision: 1.1 $
  */
 public interface AbsenceBalanceDao {
     public List<AbsenceBalance> getAbsenceBalance(String emplId);

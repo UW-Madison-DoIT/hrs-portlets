@@ -51,7 +51,6 @@ import org.jasig.springframework.ws.client.core.SetSoapActionCallback;
  * Base class for HRS Web Services. Provides common invocation and error handling logic
  * 
  * @author Eric Dalquist
- * @version $Revision: 1.2 $
  */
 public abstract class BaseHrsSoapDao {
     protected final Logger logger = LoggerFactory.getLogger(this.getClass());

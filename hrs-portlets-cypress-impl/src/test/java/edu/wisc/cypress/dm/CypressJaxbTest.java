@@ -42,7 +42,6 @@ import edu.wisc.cypress.xdm.taxstmt.XmlTaxStatements;
 
 /**
  * @author Eric Dalquist
- * @version $Revision: 1.1 $
  */
 public class CypressJaxbTest {
     @Test

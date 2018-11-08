@@ -47,7 +47,6 @@ import edu.wisc.hrs.xdm.abshis.res.UwGpAbsHisVwTypeShape;
 /**
  * Spring {@link WebServiceOperations} backed implementation of {@link BaseHrsSoapDao}.
  * 
- * @version $Id: SoapAbsenceHistoryDao.java,v 1.3 2012/08/14 21:18:04 dalquist Exp $
  */
 @Repository("soapAbsenceHistoryDao")
 public class SoapAbsenceHistoryDao extends BaseHrsSoapDao implements AbsenceHistoryDao {

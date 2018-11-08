@@ -44,7 +44,6 @@ import edu.wisc.hrs.xdm.roles.res.GetCompIntfcUWPORTAL1ROLESResponse;
 
 /**
  * 
- * @version $Id: SoapHrsRolesDaoTest.java,v 1.1 2011/12/04 06:11:02 dalquist Exp $
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "/mockPeopleSoftTestContext.xml")

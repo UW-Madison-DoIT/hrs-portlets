@@ -45,7 +45,6 @@ import edu.wisc.hrs.xdm.msstime.res.GetCompIntfcUWPORTAL1MSSTIMEResponse;
 
 /**
  * 
- * @version $Id: SoapManagerTimeDaoTest.java,v 1.1 2011/12/04 06:11:04 dalquist Exp $
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "/mockPeopleSoftTestContext.xml")

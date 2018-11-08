@@ -43,7 +43,6 @@ import edu.wisc.hrs.xdm.bnsumm.res.UwBnDpndntVwTypeShape;
 /**
  * Spring {@link WebServiceOperations} backed implementation of {@link BaseHrsSoapDao}.
  * 
- * @version $Id: SoapBenefitSummaryDao.java,v 1.2 2011/12/07 21:38:13 dalquist Exp $
  */
 @Repository("soapBenefitSummaryDao")
 public class SoapBenefitSummaryDao extends BaseHrsSoapDao implements BenefitSummaryDao {

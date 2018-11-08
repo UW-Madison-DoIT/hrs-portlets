@@ -30,7 +30,6 @@ import edu.wisc.hr.dao.bnsemail.BusinessEmailUpdateNotifier;
 
 /**
  * @author Eric Dalquist
- * @version $Revision: 1.1 $
  */
 @Ignore
 @RunWith(SpringJUnit4ClassRunner.class)

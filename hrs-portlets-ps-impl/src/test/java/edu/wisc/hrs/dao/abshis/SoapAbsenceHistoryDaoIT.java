@@ -35,7 +35,6 @@ import edu.wisc.hrs.dao.BaseSoapDaoTest;
 
 /**
  * 
- * @version $Id: SoapAbsenceHistoryDaoIT.java,v 1.1 2011/12/04 06:11:03 dalquist Exp $
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "/integrationPeopleSoftTestContext.xml")

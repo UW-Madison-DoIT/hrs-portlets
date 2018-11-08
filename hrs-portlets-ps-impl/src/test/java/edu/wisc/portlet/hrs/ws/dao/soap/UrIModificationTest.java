@@ -27,7 +27,6 @@ import org.junit.Test;
 
 /**
  * @author Eric Dalquist
- * @version $Revision: 1.1 $
  */
 public class UrIModificationTest {
     @Test

@@ -25,7 +25,6 @@ import edu.wisc.hr.dm.abshis.AbsenceHistory;
 
 /**
  * @author Eric Dalquist
- * @version $Revision: 1.1 $
  */
 public interface AbsenceHistoryDao {
     public List<AbsenceHistory> getAbsenceHistory(String emplId);

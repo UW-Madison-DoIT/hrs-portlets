@@ -45,7 +45,6 @@ import edu.wisc.hr.dm.levstmt.SummarizedLeaveStatement;
 
 /**
  * @author Eric Dalquist
- * @version $Revision: 1.2 $
  */
 @Repository("restLeaveStatementDao")
 public class RestLeaveStatementDao implements LeaveStatementDao {

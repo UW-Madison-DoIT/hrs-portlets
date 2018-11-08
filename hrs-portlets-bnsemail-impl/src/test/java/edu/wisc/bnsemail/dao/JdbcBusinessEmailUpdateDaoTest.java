@@ -35,7 +35,6 @@ import edu.wisc.hr.dm.bnsemail.PreferredEmail;
 
 /**
  * @author Eric Dalquist
- * @version $Revision: 1.1 $
  */
 @Ignore
 @RunWith(SpringJUnit4ClassRunner.class)

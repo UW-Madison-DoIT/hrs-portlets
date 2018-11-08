@@ -43,7 +43,6 @@ import edu.wisc.hr.dm.benstmt.BenefitStatements;
 
 /**
  * @author Eric Dalquist
- * @version $Revision: 1.2 $
  */
 @Repository("restBenefitStatementDao")
 public class RestBenefitStatementDao implements BenefitStatementDao {

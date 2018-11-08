@@ -40,7 +40,6 @@ import edu.wisc.hrs.xdm.url.res.InstallationTypeShape;
 /**
  * Spring {@link WebServiceOperations} backed implementation of {@link BaseHrsSoapDao}.
  * 
- * @version $Id: SoapHrsUrlDao.java,v 1.1 2011/12/07 21:38:11 dalquist Exp $
  */
 @Repository("soapHrsUrlDao")
 public class SoapHrsUrlDao extends BaseHrsSoapDao implements HrsUrlDao {

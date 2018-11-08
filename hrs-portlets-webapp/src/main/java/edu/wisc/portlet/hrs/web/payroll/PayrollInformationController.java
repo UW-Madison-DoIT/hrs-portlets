@@ -37,7 +37,6 @@ import edu.wisc.portlet.hrs.web.HrsControllerBase;
 
 /**
  * @author Eric Dalquist
- * @version $Revision: 1.2 $
  */
 @Controller
 @RequestMapping("VIEW")

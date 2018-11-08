@@ -47,7 +47,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
  * 
- * @version $Id: RestBenefitStatementDaoTest.java,v 1.1 2011/12/04 06:11:05 dalquist Exp $
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "/mockCypressTestContext.xml")

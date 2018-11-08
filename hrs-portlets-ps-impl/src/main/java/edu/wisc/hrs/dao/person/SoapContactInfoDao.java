@@ -49,7 +49,6 @@ import edu.wisc.hrs.xdm.person.res.UwHrSecDptVwTypeShape;
  * 
  * Requires a Spring {@link WebServiceOperations} be set.
  * 
- * @version $Id: SoapContactInfoDao.java,v 1.4 2012/08/14 21:18:04 dalquist Exp $
  */
 @Repository("soapContactInfoDao")
 public class SoapContactInfoDao extends BaseHrsSoapDao implements ContactInfoDao {

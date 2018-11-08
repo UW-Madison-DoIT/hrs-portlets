@@ -25,7 +25,6 @@ import edu.wisc.hr.dm.mssabs.ManagedAbsence;
 
 /**
  * @author Eric Dalquist
- * @version $Revision: 1.1 $
  */
 public interface ManagerAbsenceDao {
     public List<ManagedAbsence> getManagedAbsences(String emplId);
