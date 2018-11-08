@@ -93,9 +93,7 @@ public class SoapEarningsStatementDao
 
       final CHECKDTTypeShape checkDate = soapEarningsStatement.getCHECKDT();
       final DateMidnight checkDateMidnight = checkDate.getValue();
-
-      final String isoCheckDate = checkDateMidnight.toLocalDate().toString();
-      simpleEarningsStatement.setIsoDateOfCheck(isoCheckDate);
+      simpleEarningsStatement.setDateOfCheck(checkDateMidnight.toLocalDate());
 
       final NETPAYTypeShape soapNetPay = soapEarningsStatement.getNETPAY();
       simpleEarningsStatement.setAmountNetPay( "$" + soapNetPay.getValue().toString());
