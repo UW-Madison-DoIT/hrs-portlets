@@ -26,7 +26,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 import org.springframework.ws.client.core.WebServiceOperations;
 
-@Repository("soapEarningStatementDao")
+@Repository("soapEarningsStatementDao")
 public class SoapEarningsStatementDao
   extends BaseHrsSoapDao
   implements SimpleEarningsStatementDao {
@@ -47,7 +47,7 @@ public class SoapEarningsStatementDao
 
   @Autowired
   public void setWebServiceOperations(
-      @Qualifier("earningsStatementsWebServiceTemplate")
+      @Qualifier("earningsStatementWebServiceTemplate")
           WebServiceOperations webServiceOperations) {
     this.webServiceOperations = webServiceOperations;
   }
