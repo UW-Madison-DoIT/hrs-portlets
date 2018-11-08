@@ -265,6 +265,9 @@
                 <value>edu.wisc.hrs.xdm.bnsumm.fault</value>
                 <value>edu.wisc.hrs.xdm.bnsumm.req</value>
                 <value>edu.wisc.hrs.xdm.bnsumm.res</value>
+                <value>edu.wisc.hrs.xdm.ernstmt.fault</value>
+                <value>edu.wisc.hrs.xdm.ernstmt.req</value>
+                <value>edu.wisc.hrs.xdm.ernstmt.res</value>
                 <value>edu.wisc.hrs.xdm.mssabs.fault</value>
                 <value>edu.wisc.hrs.xdm.mssabs.req</value>
                 <value>edu.wisc.hrs.xdm.mssabs.res</value>
