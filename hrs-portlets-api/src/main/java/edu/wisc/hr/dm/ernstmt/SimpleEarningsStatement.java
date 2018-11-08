@@ -39,18 +39,18 @@ public class SimpleEarningsStatement {
    */
   private String amountNetPay;
 
-  /**
-   * ISO representation of begin date of earnings period for which this is a
-   * statement. e.g. `2018-10-10`
-   */
-  private String dateEarnedStart;
+  public String getEarnedPeriodLabel() {
+    return earnedPeriodLabel;
+  }
 
+  public void setEarnedPeriodLabel(String earnedPeriodLabel) {
+    this.earnedPeriodLabel = earnedPeriodLabel;
+  }
 
   /**
-   * ISO representation of end date of earnings period for which this is a
-   * statement. e.g. `2018-10-24`.
+   * Description of the period during which the earnings were earned.
    */
-  private String dateEarnedEnd;
+  private String earnedPeriodLabel;
 
   /**
    * The URL at which an authorized user would access the statement.
@@ -71,22 +71,6 @@ public class SimpleEarningsStatement {
 
   public void setAmountNetPay(String amountNetPay) {
     this.amountNetPay = amountNetPay;
-  }
-
-  public String getDateEarnedStart() {
-    return dateEarnedStart;
-  }
-
-  public void setDateEarnedStart(String dateEarnedStart) {
-    this.dateEarnedStart = dateEarnedStart;
-  }
-
-  public String getDateEarnedEnd() {
-    return dateEarnedEnd;
-  }
-
-  public void setDateEarnedEnd(String dateEarnedEnd) {
-    this.dateEarnedEnd = dateEarnedEnd;
   }
 
   public String getUrl() {
