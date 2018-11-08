@@ -30,6 +30,17 @@ public interface HrsUrlDao {
     public Map<String, String> getHrsUrls();
 
     /**
+     * The key the value of which is the deep link to a specific earnings statement.
+     * While earnings statements are canonically `earnings` statements, this key is nonetheless
+     * sic `Earning Statement`.
+     *
+     * Optionally append ?paycheck_nbr={integer} to specify which earnings statement.
+     *
+     * Omitting the parameter gets the latest earnings statement.
+     */
+    public static String EARNINGS_STATEMENT_KEY = "Earning Statement";
+
+    /**
      * The name of the key the value of which is the deep link into HRS to approve payable time.
      * NB: Approve and Payable are capitalized; time isn't
      */
