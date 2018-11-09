@@ -69,7 +69,7 @@ public class SoapEarningsStatementDao
           "Cannot query earnings statements for null emplid.");
     }
 
-    EMPLIDTypeShape emplidInTypeShape = HrsUtils.createValue(EMPLIDTypeShape.class, emplid);
+    final EMPLIDTypeShape emplidInTypeShape = HrsUtils.createValue(EMPLIDTypeShape.class, emplid);
 
     final GetCompIntfcUWPYGETERNSTLSCI request = new GetCompIntfcUWPYGETERNSTLSCI();
     request.setEMPLID(emplidInTypeShape);
@@ -82,9 +82,9 @@ public class SoapEarningsStatementDao
   protected List<SimpleEarningsStatement> convertSoapResponseToDataTransferObjects(
       final GetCompIntfcUWPYGETERNSTLSCIResponse response) {
 
-    List<UWPYERNSTLSPCComplexTypeShape> soapEarningsStatements = response.getUWPYERNSTLSPCS();
+    final List<UWPYERNSTLSPCComplexTypeShape> soapEarningsStatements = response.getUWPYERNSTLSPCS();
 
-    List<SimpleEarningsStatement> simpleEarningsStatements =
+    final List<SimpleEarningsStatement> simpleEarningsStatements =
         new ArrayList<SimpleEarningsStatement>();
 
     for( final UWPYERNSTLSPCComplexTypeShape soapEarningsStatement : soapEarningsStatements) {
