@@ -19,6 +19,14 @@ it sources its URL from the HRS URLs web service.
 
 ### (Unreleased)
 
+### 5.6.0 HRS Earnings Statements in Troubleshooter
+
+2018-11-08
+
+New feature:
+
++ Implements getting earnings statements from HRS, but just Troubleshooter-deep.
+
 Fixes:
 
 + Consistently refer to earnings statements as "earnings" statements, not
