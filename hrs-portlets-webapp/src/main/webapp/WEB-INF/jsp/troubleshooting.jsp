@@ -122,7 +122,7 @@
 
       <c:otherwise>
         <p>Error querying earnings statements: ${earningsStatementsError}.</p>
-      <c:otherwise>
+      </c:otherwise>
     </c:choose>
 
   </c:if>
