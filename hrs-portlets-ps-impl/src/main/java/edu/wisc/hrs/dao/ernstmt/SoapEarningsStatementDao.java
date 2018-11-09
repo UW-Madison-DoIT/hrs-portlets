@@ -96,13 +96,13 @@ public class SoapEarningsStatementDao
       simpleEarningsStatement.setDateOfCheck(checkDateMidnight.toLocalDate());
 
       final NETPAYTypeShape soapNetPay = soapEarningsStatement.getNETPAY();
-      simpleEarningsStatement.setAmountNetPay( "$" + soapNetPay.getValue().toString());
+      simpleEarningsStatement.setAmount( "$" + soapNetPay.getValue().toString());
 
       final PAYBEGINDTTypeShape soapPayPeriodBeginDate = soapEarningsStatement.getPAYBEGINDT();
       final PAYENDDTTypeShape soapPayPeriodEndDate = soapEarningsStatement.getPAYENDDT();
       final EarningsPeriod earningsPeriod =
           new EarningsPeriod(soapPayPeriodBeginDate.getValue(), soapPayPeriodEndDate.getValue());
-      simpleEarningsStatement.setEarnedPeriodLabel(earningsPeriod.toString());
+      simpleEarningsStatement.setEarned(earningsPeriod.toString());
 
       final String baseUrl = this.hrsUrlDao.getHrsUrls().get(HrsUrlDao.EARNINGS_STATEMENT_KEY);
       final PAYCHECKNBRTypeShape soapPaycheckNumber = soapEarningsStatement.getPAYCHECKNBR();

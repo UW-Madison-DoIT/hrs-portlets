@@ -19,6 +19,12 @@ it sources its URL from the HRS URLs web service.
 
 ### (Unreleased)
 
+Changed:
+
++ Changed `SimpleEarningsStatement` property names to match those in legacy
+  Cypress-specific `EarningStatement` and so to require less change in the front
+  end to integrate with the new JSON.
+
 ### 5.7.1 Fix EarningStatementDataController
 
 2018-11-09

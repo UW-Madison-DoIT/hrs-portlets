@@ -33,8 +33,11 @@ public class SimpleEarningsStatement {
    * front-end sorting.
    *
    * Or `unknown` if date unknown. Never null.
+   *
+   * Named `paid` because that is what the front end expected this property to be named in the
+   * predecessor `EarningStatement` data model.
    */
-  public String getUsDateOfCheck() {
+  public String getPaid() {
     if (null == dateOfCheck) {
       return "unknown";
     } else {
@@ -45,21 +48,28 @@ public class SimpleEarningsStatement {
   /**
    * Decimal representation of net pay in dollars, with currency symbol,
    * e.g. `$1234.56`
+   *
+   * Named `amount` because that was the name in the predecessor data model and so the front end
+   * expects it.
    */
-  private String amountNetPay;
-
-  public String getEarnedPeriodLabel() {
-    return earnedPeriodLabel;
-  }
-
-  public void setEarnedPeriodLabel(String earnedPeriodLabel) {
-    this.earnedPeriodLabel = earnedPeriodLabel;
-  }
+  private String amount;
 
   /**
    * Description of the period during which the earnings were earned.
+   *
+   * Named `earned` because that was the name in the predecessor data model so the front end expects
+   * this.
    */
-  private String earnedPeriodLabel;
+  public String getEarned() {
+    return earned;
+  }
+
+  public void setEarned(String earned) {
+    this.earned = earned;
+  }
+
+
+  private String earned;
 
   /**
    * The URL at which an authorized user would access the statement.
@@ -79,12 +89,12 @@ public class SimpleEarningsStatement {
     }
   }
 
-  public String getAmountNetPay() {
-    return amountNetPay;
+  public String getAmount() {
+    return amount;
   }
 
-  public void setAmountNetPay(String amountNetPay) {
-    this.amountNetPay = amountNetPay;
+  public void setAmount(String amount) {
+    this.amount = amount;
   }
 
   public String getUrl() {

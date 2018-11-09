@@ -16,7 +16,7 @@ public class SimpleEarningsStatementTest {
 
     assertEquals(date, statement.getDateOfCheck());
     assertEquals("2018-11-08", statement.getIsoDateOfCheck());
-    assertEquals("11/08/2018", statement.getUsDateOfCheck());
+    assertEquals("11/08/2018", statement.getPaid());
 
   }
 
@@ -27,7 +27,7 @@ public class SimpleEarningsStatementTest {
 
   @Test
   public void usCheckDateDefaultsToUnknown() {
-    assertEquals("unknown", new SimpleEarningsStatement().getUsDateOfCheck());
+    assertEquals("unknown", new SimpleEarningsStatement().getPaid());
   }
 
 }
