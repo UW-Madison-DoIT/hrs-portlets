@@ -93,32 +93,37 @@
   </p>
 
   <c:if test="${not empty queriedEmplId}">
-  <h2>Earnings statements</h2>
+    <h2>Earnings statements</h2>
 
-  <c:choose>
-  <c:when test="${empty earningsStatementsError}">
-  <table>
-    <tr>
-      <th>Check date</th>
-      <th>Earned</th>
-      <th>Amount</th>
-    </tr>
+    <c:choose>
+      <c:when test="${empty earningsStatementsError}">
+        <table>
+          <tr>
+            <th>Check date</th>
+            <th>Earned</th>
+            <th>Amount</th>
+          </tr>
 
-    <c:forEach var="earningsStatement" items="${earningsStatements}">
-    <tr>
-      <td><a href="${earningsStatement.url}"
-        target="_blank" rel="noopener noreferrer">${earningsStatement.isoDateOfCheck}</a></td>
-      <td>${earningsStatement.earnedPeriodLabel}</td>
-      <td>${earningsStatement.amountNetPay}</td>
-    </tr>
-    </c:forEach>
+          <c:forEach var="earningsStatement" items="${earningsStatements}">
+            <tr>
+              <td>
+                <a href="${earningsStatement.url}"
+                  target="_blank" rel="noopener noreferrer">
+                  ${earningsStatement.isoDateOfCheck}
+                </a>
+              </td>
+              <td>${earningsStatement.earnedPeriodLabel}</td>
+              <td>${earningsStatement.amountNetPay}</td>
+            </tr>
+          </c:forEach>
 
-  </table>
-  </c:when>
-  <c:otherwise>
-  <p>Error querying earnings statements: ${earningsStatementsError}.</p>
-  <c:otherwise>
-  </c:choose>
+         </table>
+      </c:when>
+
+      <c:otherwise>
+        <p>Error querying earnings statements: ${earningsStatementsError}.</p>
+      <c:otherwise>
+    </c:choose>
 
   </c:if>
 
