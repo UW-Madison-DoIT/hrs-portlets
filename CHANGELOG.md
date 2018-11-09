@@ -19,8 +19,17 @@ it sources its URL from the HRS URLs web service.
 
 ### (Unreleased)
 
+### 5.8.0
+
+2018-11-09
+
 Changed:
 
++ Radically changed earnings statements table implementation to render server-side rather than
+  client-side and thereby get out from under Fluid and DataList complexity. There is JSON available
+  for this data so a future modern-libraries client-side UI is possible. In the meantime, moving
+  this table generation server-side eases current changes to support HRS earnings statements and
+  their per-statement URLs.
 + Changed `SimpleEarningsStatement` property names to match those in legacy
   Cypress-specific `EarningStatement` and so to require less change in the front
   end to integrate with the new JSON.
