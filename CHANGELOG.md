@@ -19,7 +19,15 @@ it sources its URL from the HRS URLs web service.
 
 ### (Unreleased)
 
-Fixes:
+### 5.7.0 JSON resource URL for new HRS-sourced earnings statements
+
+2018-11-09
+
+New feature:
+
++ Adds JSON resource URL exposing the new HRS-sourced earnings statements.
+
+Fix:
 
 + Added audit logging to HRS integration troubleshooter. ( [HRSPLT-394][] )
 

@@ -19,7 +19,9 @@
 
 package edu.wisc.portlet.hrs.web.payroll;
 
+import edu.wisc.hr.dao.ernstmt.SimpleEarningsStatementDao;
 import edu.wisc.hr.dm.ernstmt.EarningStatementDateComparator;
+import edu.wisc.hr.dm.ernstmt.SimpleEarningsStatement;
 import java.math.BigInteger;
 import java.util.Collections;
 import java.util.List;
@@ -51,7 +53,14 @@ import org.jasig.springframework.security.portlet.authentication.PrimaryAttribut
 @Controller
 @RequestMapping("VIEW")
 public class EarningStatementDataController {
-    private EarningStatementDao earningStatementDao;
+
+  /**
+   * Legacy Cypress-specific DAO.
+   */
+  private EarningStatementDao earningStatementDao;
+
+  private SimpleEarningsStatementDao earningsStatementsDao;
+
     private Set<String> ignoredProxyHeaders;
     
     @Resource(name="ignoredProxyHeaders")
@@ -64,6 +73,20 @@ public class EarningStatementDataController {
         this.earningStatementDao = earningStatementDao;
     }
 
+    @Autowired
+    public void setEarningsStatementsDao(SimpleEarningsStatementDao simpleEarningsStatementDao) {
+      this.earningsStatementsDao = earningsStatementsDao;
+    }
+
+    /**
+     * Legacy, Cypress-only earnings statements.
+     *
+     * NB The term is canonically "earnings statements", not "earning statements", the key and
+     * method name here notwithstanding.
+     *
+     * @param modelMap
+     * @return
+     */
     @ResourceMapping("earningStatements")
     public String getEarningStatements(ModelMap modelMap) {
         final String emplid = PrimaryAttributeUtils.getPrimaryId();
@@ -74,6 +97,26 @@ public class EarningStatementDataController {
         
         return "reportAttrJsonView";
     }
+
+    /**
+     * JSON representing the employee's earnings statements.
+     *
+     * @param modelMap
+     * @return "reportAttrJsonView" indicating the view to turn the modelMap into JSON
+     */
+    @ResourceMapping("earningsStatements")
+    public String earningsStatements(ModelMap modelMap) {
+
+      final String emplid = PrimaryAttributeUtils.getPrimaryId();
+
+      final List<SimpleEarningsStatement> earningsStatements =
+          this.earningsStatementsDao.statementsForEmployee(emplid);
+
+      modelMap.addAttribute("report", earningsStatements);
+
+      return "reportAttrJsonView";
+    }
+
     //Server
     //
     @ResourceMapping("earning_statement.pdf")
