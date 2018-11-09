@@ -24,6 +24,16 @@ public class TroubleshootingController
 
   private HrsRolesDao rolesDao;
 
+  public SimpleEarningsStatementDao getEarningsStatementsDao() {
+    return earningsStatementsDao;
+  }
+
+  @Autowired
+  public void setEarningsStatementsDao(
+      SimpleEarningsStatementDao earningsStatementsDao) {
+    this.earningsStatementsDao = earningsStatementsDao;
+  }
+
   private SimpleEarningsStatementDao earningsStatementsDao;
 
   public HrsRolesDao getRolesDao() {
