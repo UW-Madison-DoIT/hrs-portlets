@@ -97,27 +97,39 @@
 
     <c:choose>
       <c:when test="${empty earningsStatementsError}">
-        <table>
-          <tr>
-            <th>Check date</th>
-            <th>Earned</th>
-            <th>Amount</th>
-          </tr>
 
-          <c:forEach var="earningsStatement" items="${earningsStatements}">
-            <tr>
-              <td>
-                <a href="${earningsStatement.url}"
-                  target="_blank" rel="noopener noreferrer">
-                  ${earningsStatement.isoDateOfCheck}
-                </a>
-              </td>
-              <td>${earningsStatement.earnedPeriodLabel}</td>
-              <td>${earningsStatement.amountNetPay}</td>
-            </tr>
-          </c:forEach>
+        <c:choose>
+          <c:when test="${empty earningsStatements}">
+            <p>Found no earnings statements for emplid ${queriedEmplId}.</p>
+          </c:when>
 
-         </table>
+          <c:otherwise>
+            <table>
+              <tr>
+                <th>Check date</th>
+                <th>Earned</th>
+                <th>Amount</th>
+              </tr>
+
+              <c:forEach var="earningsStatement" items="${earningsStatements}">
+                <tr>
+                  <td>
+                    <a href="${earningsStatement.url}"
+                      target="_blank" rel="noopener noreferrer">
+                      ${earningsStatement.isoDateOfCheck}
+                    </a>
+                  </td>
+                  <td>${earningsStatement.earnedPeriodLabel}</td>
+                  <td>${earningsStatement.amountNetPay}</td>
+                </tr>
+               </c:forEach>
+
+            </table>
+
+          </c:otherwise>
+
+        </c:choose>
+
       </c:when>
 
       <c:otherwise>
