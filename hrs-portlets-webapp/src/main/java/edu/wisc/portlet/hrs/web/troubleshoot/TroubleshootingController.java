@@ -49,6 +49,10 @@ public class TroubleshootingController
   public String renderView(ModelMap modelMap, @RequestParam(required = false) String queriedEmplId) {
 
     if (null != queriedEmplId) {
+
+      this.logger.warn(
+          "AUDIT LOG: TROUBLESHOOTER: Queried about emplid " + queriedEmplId);
+
       modelMap.put("queriedEmplId", queriedEmplId);
 
       final Set<String> roles = this.rolesDao.getHrsRoles(queriedEmplId);

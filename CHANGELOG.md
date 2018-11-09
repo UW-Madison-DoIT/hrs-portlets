@@ -19,6 +19,10 @@ it sources its URL from the HRS URLs web service.
 
 ### (Unreleased)
 
+Fixes:
+
++ Added audit logging to HRS integration troubleshooter. ( [HRSPLT-394][] )
+
 ### 5.6.0 HRS Earnings Statements in Troubleshooter
 
 2018-11-08
@@ -691,3 +695,4 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [HRSPLT-386]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-386
 [HRSPLT-390]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-390
 [HRSPLT-391]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-391
+[HRSPLT-394]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-394

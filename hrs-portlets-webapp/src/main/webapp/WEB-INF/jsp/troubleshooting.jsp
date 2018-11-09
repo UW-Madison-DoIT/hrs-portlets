@@ -27,6 +27,7 @@
   <portlet:renderURL var="personLookupUrl"></portlet:renderURL>
   <form class="user-email-search" action="${personLookupUrl}" method="post">
     <fieldset>
+      <legend>Queries using this tool are audit logged.</legend>
       <div>
         <label for="queriedEmplId">HR EmplID: </label><input type="text" name="queriedEmplId" />
       </div>
