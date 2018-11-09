@@ -114,7 +114,7 @@
     </c:forEach>
 
   </table>
-  <c:when>
+  </c:when>
   <c:otherwise>
   <p>Error querying earnings statements: ${earningsStatementsError}.</p>
   <c:otherwise>
