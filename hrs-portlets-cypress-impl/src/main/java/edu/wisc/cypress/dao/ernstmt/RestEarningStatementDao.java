@@ -19,8 +19,9 @@
 
 package edu.wisc.cypress.dao.ernstmt;
 
-
-
+import edu.wisc.hr.dao.ernstmt.SimpleEarningsStatementDao;
+import edu.wisc.hr.dm.ernstmt.SimpleEarningsStatement;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -44,7 +45,8 @@ import edu.wisc.hr.dm.ernstmt.EarningStatements;
  * @author Eric Dalquist
  */
 @Repository("restEarningStatementDao")
-public class RestEarningStatementDao implements EarningStatementDao {
+public class RestEarningStatementDao
+    implements EarningStatementDao, SimpleEarningsStatementDao {
 
   protected final Logger logger = LoggerFactory.getLogger(getClass());
 
@@ -111,5 +113,39 @@ public class RestEarningStatementDao implements EarningStatementDao {
     }
 
     return earningStatements;
+  }
+
+
+  @Override
+  public List<SimpleEarningsStatement> statementsForEmployee(String emplid) {
+
+    /*
+     * Converts from legacy list of Cypress-specific earning statements to
+     * modern list of SimpleEarningsStatement .
+     */
+
+    if (null == emplid) {
+      throw new NullPointerException(
+        "Cannot query statements for null emplid.");
+    }
+
+    EarningStatements cypressSpecificEarningStatements =
+      this.getEarningStatements(emplid);
+
+    List<EarningStatement> cypressSpecificEarningStatementsList =
+      cypressSpecificEarningStatements.getEarningStatements();
+
+    List<SimpleEarningsStatement> simpleEarningsStatements =
+      new ArrayList<SimpleEarningsStatement>();
+
+    for (EarningStatement cypressSpecificEarningStatement :
+        cypressSpecificEarningStatementsList) {
+
+      SimpleEarningsStatement statement = new SimpleEarningsStatement();
+      
+
+    }
+
+    return simpleEarningsStatements;
   }
 }
