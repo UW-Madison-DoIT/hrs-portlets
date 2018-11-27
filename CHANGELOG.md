@@ -19,6 +19,11 @@ it sources its URL from the HRS URLs web service.
 
 ### (Unreleased)
 
++ Fix Payroll Information earnings statements table to stop trying to open
+  earnings statements via `javascript:window.open({url})` and instead use a more
+  typical `<a href="{url}" target="_blank" rel="noopener noreferrer">`
+  ( [HRSPLT-398][], [#160][])
+
 ### 5.8.5 fix troubleshooter
 
 2018-11-09
@@ -755,6 +760,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#152]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/152
 [#153]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/153
 [#155]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/155
+[#160]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/160
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348
@@ -776,3 +782,4 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [HRSPLT-390]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-390
 [HRSPLT-391]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-391
 [HRSPLT-394]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-394
+[HRSPLT-398]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-398
