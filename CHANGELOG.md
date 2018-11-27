@@ -17,12 +17,22 @@ single tab within Payroll Information as of 5.2.) Support for
 direct deposit button either uses its hard coded URL linking to the PDF form or
 it sources its URL from the HRS URLs web service.
 
-### (Unreleased)
+### (Unreleased) (5.9.0?)
+
+Features in 5.9.0:
+
++ Limit initial earnings statement table render to at most 10 earnings
+  statements. Add a toggle control, modeled on the existing toggle for showing
+  earnings amounts, to show the truncated table rows. ( [HRSPLT-399][],
+  [#161][] )
+
+Fixes in 5.9.0:
 
 + Fix Payroll Information earnings statements table to stop trying to open
   earnings statements via `javascript:window.open({url})` and instead use a more
   typical `<a href="{url}" target="_blank" rel="noopener noreferrer">`
   ( [HRSPLT-398][], [#160][])
+
 
 ### 5.8.5 fix troubleshooter
 
@@ -761,6 +771,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#153]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/153
 [#155]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/155
 [#160]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/160
+[#161]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/160
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348
@@ -783,3 +794,4 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [HRSPLT-391]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-391
 [HRSPLT-394]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-394
 [HRSPLT-398]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-398
+[HRSPLT-399]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-399

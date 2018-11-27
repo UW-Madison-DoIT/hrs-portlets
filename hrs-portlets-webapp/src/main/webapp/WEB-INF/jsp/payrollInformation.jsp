@@ -110,7 +110,9 @@
               </tr>
             </thead>
             <tbody>
-              <c:forEach var="earningsStatement" items="${earningsStatements}">
+              <%-- always show the first up-to-10 statements --%>
+              <c:forEach var="earningsStatement"
+                items="${earningsStatements}" end="9">
                 <tr>
                   <td headers="paid" class="dl-data-text">
                     <a href="${earningsStatement.url}"
@@ -133,10 +135,41 @@
                   </td>
                 </tr>
               </c:forEach>
+              <%-- initially hide any statements past 10 --%>
+              <c:forEach var="earningsStatement"
+              items="${earningsStatements}" begin="10">
+              <tr class="earnings-statement-beyond-ten" style="display:none">
+                <td headers="paid" class="dl-data-text">
+                  <a href="javascript:window.open('${earningsStatement.url}');">
+                    ${earningsStatement.paid}
+                  </a>
+                </td>
+                <td headers="earned" class="dl-data-text">
+                  <a href="javascript:window.open('${earningsStatement.url}');">
+                    ${earningsStatement.earned}
+                  </a>
+                </td>
+                <td headers="amount" class="dl-data-number">
+                  <a class="dl-earning-amount"
+                    href="javascript:window.open('${earningsStatement.url}');">
+                    ${earningsStatement.amount}
+                  </a>
+                </td>
+              </tr>
+
+            </c:forEach>
             </tbody>
           </table>
+          <div>
+            <form action="#">
+              <label for="${n}dl-show-all-earnings-statements-toggle">
+                Show all ${fn:length(earningsStatements)} Earnings Statements</label>
+              <input type="checkbox"
+                id="${n}dl-show-all-earnings-statements-toggle"
+                name="dl-show-all-earnings-statements-toggle" />
+            </form>
+            </div>
         </div>
-
       </div>
       <c:if test="${not empty understandingEarningUrl}">
           <div class="dl-link">
@@ -340,6 +373,40 @@
         $.log("Earnings Toggle: " + earningsToggle.length);
         earningsToggle.change(function() {
             updateAmmountVisibility(earningsToggle);
+        });
+
+        var updateShowAllEarningsStatements = function(checkbox) {
+            var checked = checkbox.is(':checked');
+            var surplusEarningsStatements = $("#${n}dl-payroll-information table.dl-table tr.earnings-statement-beyond-ten");
+            if (surplusEarningsStatements.length == 0) {
+                $.log("No additional earnings statements to show or hide");
+                return true;
+            }
+
+            var surplusEarningsStatementsData =
+              surplusEarningsStatements.data();
+
+            if (surplusEarningsStatementsData.visibilityUpdated == checked) {
+                $.log("Show all earnings statements toggled " + checked + " matches current state, returning false");
+                return false;
+            }
+
+            surplusEarningsStatementsData.visibilityUpdated = checked;
+            $.log("Show all earnings statements toggled: " + checked + " updating " + surplusEarningsStatements.length + " table rows");
+            if (checked) {
+              surplusEarningsStatements.show();
+            }
+            else {
+              surplusEarningsStatements.hide();
+            }
+
+            return true;
+        };
+
+        var showAllEarningsStatementsToggle =
+          $("#$dl-show-all-earnings-statements-toggle");
+        showAllEarningsStatementsToggle.change(function() {
+          updateShowAllEarningsStatements(showAllEarningsStatementsToggle);
         });
 
         var taxStatementUrl = dl.util.templateUrl("${irsStatementPdfUrl}");
