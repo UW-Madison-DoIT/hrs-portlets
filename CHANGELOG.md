@@ -24,7 +24,7 @@ Features in 5.9.0:
 + Limit initial earnings statement table render to at most 10 earnings
   statements. Add a toggle control, modeled on the existing toggle for showing
   earnings amounts, to show the truncated table rows. ( [HRSPLT-399][],
-  [#161][] )
+  [#161][], [#162][] )
 
 Fixes in 5.9.0:
 
@@ -772,6 +772,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#155]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/155
 [#160]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/160
 [#161]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/160
+[#162]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/162
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348
