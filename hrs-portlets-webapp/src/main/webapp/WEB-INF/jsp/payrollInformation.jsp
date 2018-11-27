@@ -113,18 +113,21 @@
               <c:forEach var="earningsStatement" items="${earningsStatements}">
                 <tr>
                   <td headers="paid" class="dl-data-text">
-                    <a href="javascript:window.open('${earningsStatement.url}');">
+                    <a href="${earningsStatement.url}"
+                      target="_blank" rel="noopener noreferrer">
                       ${earningsStatement.paid}
                     </a>
                   </td>
                   <td headers="earned" class="dl-data-text">
-                    <a href="javascript:window.open('${earningsStatement.url}');">
+                    <a href="${earningsStatement.url}"
+                      target="_blank" rel="noopener noreferrer">
                       ${earningsStatement.earned}
                     </a>
                   </td>
                   <td headers="amount" class="dl-data-number">
                     <a class="dl-earning-amount"
-                      href="javascript:window.open('${earningsStatement.url}');">
+                      href="${earningsStatement.url}"
+                      target="_blank" rel="noopener noreferrer">
                       ${earningsStatement.amount}
                     </a>
                   </td>
