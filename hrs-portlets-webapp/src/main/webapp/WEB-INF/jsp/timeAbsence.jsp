@@ -539,7 +539,8 @@
           });
         </sec:authorize>
 
-
+      <c:if test="${empty hrsUrls['Classic ESS Abs Bal']
+      || empty employeeRoles['ROLE_LINK_TO_CLASSIC_ESS_ABS_BAL']}">
         dl.pager.init("#${n}dl-leave-balance", {
             model: {
                 sortKey: "entitlement",
@@ -569,6 +570,7 @@
               }
             }
           });
+      </c:if>
 
         <sec:authorize ifAnyGranted="ROLE_VIEW_TIME_ENTRY_HISTORY">
           dl.pager.init("#${n}dl-time-entry", {
