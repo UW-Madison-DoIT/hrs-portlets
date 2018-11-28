@@ -28,6 +28,8 @@ Features in 5.9.0:
 
 Fixes in 5.9.0:
 
++ Fix Time and Absence to correctly render in cases where it omits the Leave
+  Balances tab. Had been broken since 5.5.0. ( [HRSPLT-400][], [#163][] )
 + Fix Payroll Information earnings statements table to stop trying to open
   earnings statements via `javascript:window.open({url})` and instead use a more
   typical `<a href="{url}" target="_blank" rel="noopener noreferrer">`
@@ -773,6 +775,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#160]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/160
 [#161]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/160
 [#162]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/162
+[#163]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/163
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348
@@ -796,3 +799,4 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [HRSPLT-394]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-394
 [HRSPLT-398]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-398
 [HRSPLT-399]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-399
+[HRSPLT-400]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-400
