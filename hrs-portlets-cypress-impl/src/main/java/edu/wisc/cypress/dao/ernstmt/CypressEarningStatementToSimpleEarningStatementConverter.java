@@ -1,5 +1,6 @@
 package edu.wisc.cypress.dao.ernstmt;
 
+import edu.wisc.hr.dm.ernstmt.EarningStatement;
 import edu.wisc.hr.dm.ernstmt.SimpleEarningsStatement;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -26,11 +27,11 @@ public class CypressEarningStatementToSimpleEarningStatementConverter {
     try {
       String mmddyyyyPaid = cypressEarningStatement.getPaid();
 
-      SimpleDateFormat mmddyyyyFormat = new SimpleDateFormat("mm/dd/yyyy");
+      SimpleDateFormat mmddyyyyFormat = new SimpleDateFormat("MM/dd/yyyy");
 
       Date datePaid = mmddyyyyFormat.parse(mmddyyyyPaid);
 
-      convertedStatement.setDateOfCheck(LocalDate.fromDateFields(datePaid));
+      convertedStatement.setDateOfCheck(new LocalDate(datePaid));
 
     } catch (Exception e) {
       // leave the statement dateless
