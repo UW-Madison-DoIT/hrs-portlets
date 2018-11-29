@@ -91,15 +91,17 @@
       </div>
       <div class="fl-pager">
 
+       <c:if test="${earningsStatementsError}">
+        <p>Error loading
+          <c:if test="${not empty earningsStatements}">some of </c:if>
+          your earnings statements. Try again later or contact the Help Desk.</p>
+        <c:if test="${not empty earningsStatements}">
+          <p>MyUW successfully loaded others of your earnings statements, shown below.</p>
+        </c:if>
+       </c:if>
 
-        <c:choose>
-        <c:when test="${earningsStatementsError}">
-        <p>Error loading your earnings statements. Try again later or contact the Help Desk.</p>
-        </c:when>
-        <c:when test="${empty earningsStatements}">
-        <p>You have no earnings statements.</p>
-        </c:when>
-        <c:otherwise>
+       <c:choose>
+        <c:when test="${not empty earningsStatements}">
         <div class="fl-container-flex dl-pager-table-data fl-pager-data table-responsive">
           <table class="dl-table table" tabindex="0" aria-label="Earnings Statements detail table">
             <thead>
@@ -181,6 +183,11 @@
             <a href="${understandingEarningUrl}" target="_blank">Understanding Your Earnings Statement</a>
           </div>
       </c:if>
+      </c:when>
+
+      <c:when test="${empty earningsStatements && !earningsStatementsError}">
+        <p>You have no earnings statements.</p>
+      </c:when>
 
       </c:otherwise>
       </c:choose>
