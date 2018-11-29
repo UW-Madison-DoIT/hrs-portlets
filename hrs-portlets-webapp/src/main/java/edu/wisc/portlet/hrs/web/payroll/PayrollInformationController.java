@@ -20,7 +20,9 @@
 package edu.wisc.portlet.hrs.web.payroll;
 
 import edu.wisc.hr.dao.ernstmt.SimpleEarningsStatementDao;
+import edu.wisc.hr.dm.ernstmt.RetrievedEarningsStatements;
 import edu.wisc.hr.dm.ernstmt.SimpleEarningsStatement;
+import edu.wisc.hr.service.ernstmt.EarningsStatementService;
 import java.util.List;
 import javax.portlet.PortletPreferences;
 import javax.portlet.PortletRequest;
@@ -45,7 +47,7 @@ import edu.wisc.portlet.hrs.web.HrsControllerBase;
 @RequestMapping("VIEW")
 public class PayrollInformationController extends HrsControllerBase {
     private ContactInfoDao contactInfoDao;
-    private SimpleEarningsStatementDao earningsStatementDao;
+    private EarningsStatementService earningsStatementService;
 
     @Autowired
     public void setContactInfoDao(ContactInfoDao contactInfoDao) {
@@ -53,8 +55,8 @@ public class PayrollInformationController extends HrsControllerBase {
     }
 
     @Autowired
-    public void setEarningsStatementDao(SimpleEarningsStatementDao simpleEarningsStatementDao) {
-        this.earningsStatementDao = simpleEarningsStatementDao;
+    public void setEarningsStatementService(EarningsStatementService service) {
+        this.earningsStatementService = service;
     }
     
     /**
@@ -81,13 +83,11 @@ public class PayrollInformationController extends HrsControllerBase {
             model.addAttribute("personalDataError", true);
         }
 
-        try {
-            model.addAttribute("earningsStatements",
-                this.earningsStatementDao.statementsForEmployee(emplId));
-        } catch (Exception e) {
-            logger.warn("Exception getting earnings statements for " + emplId, e);
-            model.addAttribute("earningsStatementsError", true);
-        }
+        final RetrievedEarningsStatements statements =
+            this.earningsStatementService.statementsForEmplid(emplId);
+
+        model.addAttribute("earningsStatements", statements.getStatements());
+        model.addAttribute("earningsStatementsError", statements.isErrored());
         
         return "payrollInformation";
     }
