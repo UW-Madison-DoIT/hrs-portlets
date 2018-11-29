@@ -3,7 +3,9 @@ package edu.wisc.portlet.hrs.web.troubleshoot;
 import edu.wisc.hr.dao.ernstmt.EarningStatementDao;
 import edu.wisc.hr.dao.ernstmt.SimpleEarningsStatementDao;
 import edu.wisc.hr.dao.roles.HrsRolesDao;
+import edu.wisc.hr.dm.ernstmt.RetrievedEarningsStatements;
 import edu.wisc.hr.dm.ernstmt.SimpleEarningsStatement;
+import edu.wisc.hr.service.ernstmt.EarningsStatementService;
 import edu.wisc.portlet.hrs.web.HrsControllerBase;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -24,17 +26,13 @@ public class TroubleshootingController
 
   private HrsRolesDao rolesDao;
 
-  public SimpleEarningsStatementDao getEarningsStatementsDao() {
-    return earningsStatementsDao;
-  }
+  private EarningsStatementService earningsStatementService;
 
   @Autowired
-  public void setEarningsStatementsDao(
-      SimpleEarningsStatementDao earningsStatementsDao) {
-    this.earningsStatementsDao = earningsStatementsDao;
+  public void setEarningsStatementService(
+      EarningsStatementService earningsStatementService) {
+    this.earningsStatementService = earningsStatementService;
   }
-
-  private SimpleEarningsStatementDao earningsStatementsDao;
 
   public HrsRolesDao getRolesDao() {
     return rolesDao;
@@ -72,13 +70,17 @@ public class TroubleshootingController
 
       List<SimpleEarningsStatement> earningsStatements = new ArrayList<SimpleEarningsStatement>();
 
-      try {
-        modelMap.put("earningsStatements",
-            earningsStatementsDao.statementsForEmployee(queriedEmplId));
-      } catch (Exception e) {
-        logger.warn("Failed to get earnings statements for emplid " + queriedEmplId, e);
-        modelMap.put("earningsStatementsError", e.getMessage());
+      RetrievedEarningsStatements retrievedEarningsStatements =
+          this.earningsStatementService.statementsForEmplid(queriedEmplId);
+
+      modelMap.put("earningsStatements",
+          retrievedEarningsStatements.getStatements());
+
+      if (retrievedEarningsStatements.isErrored()) {
+        Exception firstError = retrievedEarningsStatements.getErrors().get(0);
+        modelMap.put("earningsStatementsError", firstError.getMessage());
       }
+
 
     }
 
