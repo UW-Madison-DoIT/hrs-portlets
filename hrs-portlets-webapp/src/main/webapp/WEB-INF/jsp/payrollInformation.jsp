@@ -189,7 +189,6 @@
         <p>You have no earnings statements.</p>
       </c:when>
 
-      </c:otherwise>
       </c:choose>
 
       <div class="dl-link">
