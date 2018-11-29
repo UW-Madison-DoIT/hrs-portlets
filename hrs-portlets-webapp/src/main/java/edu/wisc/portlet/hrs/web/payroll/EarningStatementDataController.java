@@ -59,7 +59,7 @@ public class EarningStatementDataController {
    */
   private EarningStatementDao earningStatementDao;
 
-  private SimpleEarningsStatementDao earningsStatementDao;
+
 
     private Set<String> ignoredProxyHeaders;
     
@@ -71,11 +71,6 @@ public class EarningStatementDataController {
     @Autowired
     public void setEarningStatementDao(EarningStatementDao earningStatementDao) {
         this.earningStatementDao = earningStatementDao;
-    }
-
-    @Autowired
-    public void setEarningsStatementDao(SimpleEarningsStatementDao simpleEarningsStatementDao) {
-      this.earningsStatementDao = simpleEarningsStatementDao;
     }
 
     /**
