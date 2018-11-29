@@ -93,25 +93,6 @@ public class EarningStatementDataController {
         return "reportAttrJsonView";
     }
 
-    /**
-     * JSON representing the employee's earnings statements.
-     *
-     * @param modelMap
-     * @return "reportAttrJsonView" indicating the view to turn the modelMap into JSON
-     */
-    @ResourceMapping("earningsStatements")
-    public String earningsStatements(ModelMap modelMap) {
-
-      final String emplid = PrimaryAttributeUtils.getPrimaryId();
-
-      final List<SimpleEarningsStatement> earningsStatements =
-          this.earningsStatementDao.statementsForEmployee(emplid);
-
-      modelMap.addAttribute("report", earningsStatements);
-
-      return "reportAttrJsonView";
-    }
-
     //Server
     //
     @ResourceMapping("earning_statement.pdf")
