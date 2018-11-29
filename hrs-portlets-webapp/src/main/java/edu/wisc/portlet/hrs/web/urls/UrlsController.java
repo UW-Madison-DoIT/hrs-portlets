@@ -3,6 +3,7 @@ package edu.wisc.portlet.hrs.web.urls;
 import edu.wisc.portlet.hrs.web.HrsControllerBase;
 import edu.wisc.portlet.hrs.web.listoflinks.Link;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -43,9 +44,13 @@ public class UrlsController
   protected List<Link> hrsUrlsAsLinks() {
     Map<String, String> hrsUrls = this.getHrsUrls();
 
+    List<String> urlKeys = new ArrayList(hrsUrls.keySet());
+
+    Collections.sort(urlKeys);
+
     List<Link> linkList = new ArrayList<Link>();
 
-    for (String urlName : hrsUrls.keySet()) {
+    for (String urlName : urlKeys) {
       final Link link = new Link();
       link.setTitle(urlName);
       link.setHref(hrsUrls.get(urlName));
