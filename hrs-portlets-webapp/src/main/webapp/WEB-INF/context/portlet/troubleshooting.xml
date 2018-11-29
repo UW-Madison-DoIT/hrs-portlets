@@ -34,6 +34,16 @@
   <aop:config proxy-target-class="true" />
   <security:global-method-security secured-annotations="enabled" pre-post-annotations="enabled" proxy-target-class="true"/>
   <context:component-scan base-package="edu.wisc.portlet.hrs.web.troubleshoot"/>
+
+  <bean class="edu.wisc.hr.service.ernstmt.MergingEarningsStatementService">
+    <property name="daos">
+      <list>
+        <ref bean="restEarningStatementDao"/>
+        <ref bean="soapEarningsStatementDao"/>
+      </list>
+    </property>
+  </bean>
+
   <bean class="org.springframework.web.portlet.mvc.annotation.DefaultAnnotationHandlerMapping">
     <property name="interceptors" ref="defaultPortletInterceptors" />
   </bean>
