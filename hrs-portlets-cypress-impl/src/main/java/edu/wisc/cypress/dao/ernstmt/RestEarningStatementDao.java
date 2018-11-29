@@ -54,6 +54,10 @@ public class RestEarningStatementDao
   private String statementsUrl;
   private String statementUrl;
 
+  // TODO: rather than hard coding Madison value, get correct fname
+  private CypressEarningStatementToSimpleEarningStatementConverter converter =
+      new CypressEarningStatementToSimpleEarningStatementConverter("earnings-statement");
+
   @Autowired
   public void setRestTemplate(ExtendedRestOperations restOperations) {
     this.restOperations = restOperations;
@@ -129,20 +133,21 @@ public class RestEarningStatementDao
         "Cannot query statements for null emplid.");
     }
 
-    EarningStatements cypressSpecificEarningStatements =
+    final EarningStatements cypressSpecificEarningStatements =
       this.getEarningStatements(emplid);
 
-    List<EarningStatement> cypressSpecificEarningStatementsList =
+    final List<EarningStatement> cypressSpecificEarningStatementsList =
       cypressSpecificEarningStatements.getEarningStatements();
 
-    List<SimpleEarningsStatement> simpleEarningsStatements =
+    final List<SimpleEarningsStatement> simpleEarningsStatements =
       new ArrayList<SimpleEarningsStatement>();
 
-    for (EarningStatement cypressSpecificEarningStatement :
+    for (final EarningStatement cypressSpecificEarningStatement :
         cypressSpecificEarningStatementsList) {
 
-      SimpleEarningsStatement statement = new SimpleEarningsStatement();
-      
+      final SimpleEarningsStatement statement =
+          this.converter.convertToSimpleEarningsStatement(cypressSpecificEarningStatement);
+      simpleEarningsStatements.add(statement);
 
     }
 
