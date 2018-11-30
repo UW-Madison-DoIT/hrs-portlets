@@ -1,23 +1,19 @@
 # MyUW hrs-portlets change log
 
-## HRS Portlets 5 series
+## HRS Portlets 6 series
 
-The HRS Portlets 5 major version was occasioned by the breaking change of
-removing access to the direct deposit and W4 update forms, and with these the
-`ROLE_VIEW_DIRECT_DEPOSIT` role and the `directDepositSelfServiceUrl`
-portlet-preference. (There's no harm in continuing to set this preference; it
-just no longer has any effect.)
+The v6 major version was occasioned by introducing dependency on a new
+publication of Payroll Information as fname `earnings-statement-for-all`.
 
-However, in HRS Portlets 5.2 the links to the W4 update form and the direct
-deposit intructions form were restored to service, with support for
-`ROLE_VIEW_DIRECT_DEPOSIT` and the `Direct Deposit` URL from the HRS URLs
-DAO. (Each of these links (tax withholdings, direct deposit) only appears on a
-single tab within Payroll Information as of 5.2.) Support for
-`directDepositSelfServiceUrl` `portlet-preference` was *not* restored; the
-direct deposit button either uses its hard coded URL linking to the PDF form or
-it sources its URL from the HRS URLs web service.
+### (Unreleased) (6.0.0?)
 
-### (Unreleased) (5.9.0?)
+Breaking change in 6.0.0
+
++ Introduces dependency on `earnings-statement-for-all` as a
+  works-for-both-Madison-and-System-employees `fname` for a Payroll Information
+  that can render Cypress earnings statement PDFs. This makes feasible the
+  converter from the old Cypress statement model to the new universal statement
+  model (which includes the URL of the statement as part of the domain model).
 
 Features in 5.9.0:
 
@@ -42,6 +38,23 @@ Fixes in 5.9.0:
 + Fix URLs troubleshooter to sort the URLs alphabetically by URL key. This makes
   the tool more usable for confidently checking whether a particular key is
   present. ( [HRSPLT-401][], [#164][])
+
+## HRS Portlets 5 series
+
+The HRS Portlets 5 major version was occasioned by the breaking change of
+removing access to the direct deposit and W4 update forms, and with these the
+`ROLE_VIEW_DIRECT_DEPOSIT` role and the `directDepositSelfServiceUrl`
+portlet-preference. (There's no harm in continuing to set this preference; it
+just no longer has any effect.)
+
+However, in HRS Portlets 5.2 the links to the W4 update form and the direct
+deposit intructions form were restored to service, with support for
+`ROLE_VIEW_DIRECT_DEPOSIT` and the `Direct Deposit` URL from the HRS URLs
+DAO. (Each of these links (tax withholdings, direct deposit) only appears on a
+single tab within Payroll Information as of 5.2.) Support for
+`directDepositSelfServiceUrl` `portlet-preference` was *not* restored; the
+direct deposit button either uses its hard coded URL linking to the PDF form or
+it sources its URL from the HRS URLs web service.
 
 ### 5.8.5 fix troubleshooter
 
