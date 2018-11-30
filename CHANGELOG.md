@@ -5,6 +5,10 @@
 The v6 major version was occasioned by introducing dependency on a new
 publication of Payroll Information as fname `earnings-statement-for-all`.
 
+### 6.0.2 fix show all earnings statements toggle
+
++ Fix reference to the show all earnings statements toggle ( [HRSPLT-399][],  )
+
 ### 6.0.1 fix earnings statements sort
 
 2018-11-30
