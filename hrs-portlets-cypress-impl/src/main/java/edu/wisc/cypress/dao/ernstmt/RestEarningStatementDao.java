@@ -54,9 +54,15 @@ public class RestEarningStatementDao
   private String statementsUrl;
   private String statementUrl;
 
-  // TODO: rather than hard coding Madison value, get correct fname
+  // TODO: rather than hard coding fname, somehow get the fname of the
+  // relevant Payroll Information fname
   private CypressEarningStatementToSimpleEarningStatementConverter converter =
-      new CypressEarningStatementToSimpleEarningStatementConverter("earnings-statement");
+      new CypressEarningStatementToSimpleEarningStatementConverter("earnings-statement-for-all");
+      // Depends upon a publication of Payroll Information as fname
+      // `earnings-statement-for-all` as the statically addressable server of
+      // Cypress earnings statement PDFs. i.e., a copy-and-paste of
+      // `earnings-statement` entity except with SUBSCRIBE granted to both
+      // Madison and System employees.
 
   @Autowired
   public void setRestTemplate(ExtendedRestOperations restOperations) {
