@@ -416,7 +416,7 @@
         };
 
           var showAllEarningsStatementsToggle =
-            $("#$dl-show-all-earnings-statements-toggle");
+            $("#${n}dl-show-all-earnings-statements-toggle");
           showAllEarningsStatementsToggle.change(function() {
             updateShowAllEarningsStatements(showAllEarningsStatementsToggle);
           });
