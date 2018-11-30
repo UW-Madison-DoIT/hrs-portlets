@@ -21,10 +21,15 @@ it sources its URL from the HRS URLs web service.
 
 Features in 5.9.0:
 
++ Include legacy Cypress earnings statements in new Payroll Information
+  earnings statements table.
 + Limit initial earnings statement table render to at most 10 earnings
   statements. Add a toggle control, modeled on the existing toggle for showing
   earnings amounts, to show the truncated table rows. ( [HRSPLT-399][],
   [#161][], [#162][] )
++ Support the case where one or the other source of earnings statements (HRS,
+  Cypress) succeeds and the other source fails, both acknowledging the error and
+  listing those statements that MyUW did successfully retrieve.
 
 Fixes in 5.9.0:
 
