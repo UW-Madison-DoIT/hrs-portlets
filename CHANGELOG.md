@@ -7,7 +7,8 @@ publication of Payroll Information as fname `earnings-statement-for-all`.
 
 ### 6.0.2 fix show all earnings statements toggle
 
-+ Fix reference to the show all earnings statements toggle ( [HRSPLT-399][],  )
++ Fix reference to the show all earnings statements toggle ( [HRSPLT-399][],
+  [#166][] )
 
 ### 6.0.1 fix earnings statements sort
 
@@ -811,6 +812,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#162]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/162
 [#163]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/163
 [#164]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/164
+[#166]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/166
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348
