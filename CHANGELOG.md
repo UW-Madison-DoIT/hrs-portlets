@@ -5,6 +5,18 @@
 The v6 major version was occasioned by introducing dependency on a new
 publication of Payroll Information as fname `earnings-statement-for-all`.
 
+### 6.0.2 predicate HRS earnings statements on URL
+
+2018-12-03
+
++ Only query for HRS earnings statements when the HRS URL "Earning Statement"
+  (sic) is set. This allows promoting a hrs-portlets version that supports HRS
+  earnings statements in advance of HRS supporting earnings statements, without
+  showing errors to employees (that is, differentiating the
+  HRS-earnings-statements-should-be-working-but-are-broken case from the
+  HRS-earnings-statements-are-not-yet-expected-to-be-working case). (
+  [HRSPLT-402][],  )
+
 ### 6.0.1 fix earnings statements sort
 
 2018-11-30
@@ -832,3 +844,4 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [HRSPLT-399]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-399
 [HRSPLT-400]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-400
 [HRSPLT-401]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-401
+[HRSPLT-402]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-402

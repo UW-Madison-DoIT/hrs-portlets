@@ -37,11 +37,11 @@
     <context:component-scan base-package="edu.wisc.portlet.hrs.web.payroll"/>
 
     <bean class="edu.wisc.hr.service.ernstmt.MergingEarningsStatementService">
-        <property name="daos">
-            <list>
-                <ref bean="restEarningStatementDao"/>
-                <ref bean="soapEarningsStatementDao"/>
-            </list>
+        <property name="hrsEarningsStatementDao">
+            <ref bean="soapEarningsStatementDao"/>
+        </property>
+        <property name="cypressEarningsStatementDao">
+            <ref bean="restEarningStatementDao"/>
         </property>
     </bean>
 
