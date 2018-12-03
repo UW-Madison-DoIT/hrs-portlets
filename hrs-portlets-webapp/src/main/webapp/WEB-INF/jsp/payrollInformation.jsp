@@ -94,7 +94,12 @@
        <c:if test="${earningsStatementsError}">
         <p>Error loading
           <c:if test="${not empty earningsStatements}">some of </c:if>
-          your earnings statements. Try again later or contact the Help Desk.</p>
+          your earnings statements.
+          <a aria-label="Reload the page to try to load earnings statements that did not load"
+            href="javascript:window.location.reload(true)">
+            Try again
+          </a>
+          or contact the Help Desk.</p>
         <c:if test="${not empty earningsStatements}">
           <p>MyUW successfully loaded others of your earnings statements, shown below.</p>
         </c:if>

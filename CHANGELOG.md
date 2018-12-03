@@ -18,6 +18,8 @@ publication of Payroll Information as fname `earnings-statement-for-all`.
   [HRSPLT-402][], [#167][] )
 + Fix reference to the show all earnings statements toggle ( [HRSPLT-399][],
   [#166][] )
++ Add UI control to reload page in case where earnings statements table failed
+  ( [HRSPLT-403][] , [#168][] )
 
 ### 6.0.1 fix earnings statements sort
 
@@ -823,6 +825,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#164]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/164
 [#166]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/166
 [#167]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/167
+[#168]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/168
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348
@@ -849,3 +852,4 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [HRSPLT-400]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-400
 [HRSPLT-401]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-401
 [HRSPLT-402]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-402
+[HRSPLT-403]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-403
