@@ -180,9 +180,8 @@
                   name="dl-show-all-earnings-statements-toggle" />
               </form>
             </div>
+          </c:if>
         </div>
-        </c:if>
-      </div>
       <c:if test="${not empty understandingEarningUrl}">
           <div class="dl-link">
             <a href="${understandingEarningUrl}" target="_blank">Understanding Your Earnings Statement</a>
@@ -242,6 +241,7 @@
         </sec:authorize>
       </div>
 
+      </div>
     </div>
     <div id="${n}dl-tax-statements" class="dl-tax-statements ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
 
