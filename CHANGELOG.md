@@ -9,6 +9,11 @@ publication of Payroll Information as fname `earnings-statement-for-all`.
 
 (No changes so far.)
 
+### 6.0.4 fix tax statements tab
+
++ Fix div matching bug that under some circumstances would break the tax
+  tax statements tab in Payroll Information ( [HRSPLT-404][], [#169][] )
+
 ### 6.0.3 fix troubleshooter
 
 2018-12-06
@@ -836,6 +841,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#166]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/166
 [#167]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/167
 [#168]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/168
+[#169]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/169
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348
@@ -863,3 +869,4 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [HRSPLT-401]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-401
 [HRSPLT-402]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-402
 [HRSPLT-403]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-403
+[HRSPLT-404]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-404
