@@ -162,18 +162,21 @@
                     <c:set var="surplusEarningsStatements" value="true" />
                     <tr class="earnings-statement-beyond-ten" style="display:none">
                       <td headers="paid" class="dl-data-text">
-                        <a href="javascript:window.open('${earningsStatement.url}');">
+                        <a href="${earningsStatement.url}"
+                          target="_blank" rel="noopener noreferrrer">
                           ${earningsStatement.paid}
                         </a>
                       </td>
                       <td headers="earned" class="dl-data-text">
-                        <a href="javascript:window.open('${earningsStatement.url}');">
+                        <a href="${earningsStatement.url}"
+                          target="_blank" rel="noopener noreferrrer">
                           ${earningsStatement.earned}
                         </a>
                       </td>
                       <td headers="amount" class="dl-data-number">
                         <a class="dl-earning-amount"
-                          href="javascript:window.open('${earningsStatement.url}');">
+                          href="${earningsStatement.url}"
+                          target="_blank" rel="noopener noreferrrer">
                           ${earningsStatement.amount}
                         </a>
                       </td>
