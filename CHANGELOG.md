@@ -7,7 +7,8 @@ publication of Payroll Information as fname `earnings-statement-for-all`.
 
 ### (Unreleased)
 
-(No changes so far.)
++ style: obsessively 2-space-indent `payrollInformation.jsp` in the hope of
+  sooner detecting future bugs like HRSPLT-404.
 
 ### 6.0.4 fix tax statements tab
 
