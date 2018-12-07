@@ -7,6 +7,8 @@ publication of Payroll Information as fname `earnings-statement-for-all`.
 
 ### (Unreleased)
 
++ fix: open surplus earnings statements like opening the first ten earnings
+  statements, not with JavaScript that'll trigger pop-up blockers.
 + style: obsessively 2-space-indent `payrollInformation.jsp` in the hope of
   sooner detecting future bugs like HRSPLT-404.
 
