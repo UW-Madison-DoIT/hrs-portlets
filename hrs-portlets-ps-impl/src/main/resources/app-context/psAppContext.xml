@@ -255,7 +255,11 @@
         <property name="interceptors" ref="hrsWss4jSecurityInterceptor" />
         <property name="messageSender" ref="hrsWebServiceMessageSender" />
         <property name="checkConnectionForFault" value="false" />
+        <property name="faultMessageResolver" ref="hrsFaultMessageResolver"/>
     </bean>
+
+    <bean id="hrsFaultMessageResolver" class="edu.wisc.hrs.dao.ResponseLoggingFaultResolver" />
+
     <bean id="hrsMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
         <property name="contextPaths">
             <list>

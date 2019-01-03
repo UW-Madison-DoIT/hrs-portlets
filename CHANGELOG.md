@@ -7,6 +7,9 @@ publication of Payroll Information as fname `earnings-statement-for-all`.
 
 ### (Unreleased)
 
++ fix: log at DEBUG level the SOAP message when encountering a SOAP fault in the HRS integration (
+  [HRSPLT-408][])
+
 ### 6.0.5 avoid popups in surplus earnings statement hyperlinks
 
 2018-12-10
@@ -883,3 +886,4 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [HRSPLT-402]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-402
 [HRSPLT-403]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-403
 [HRSPLT-404]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-404
+[HRSPLT-404]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-408
