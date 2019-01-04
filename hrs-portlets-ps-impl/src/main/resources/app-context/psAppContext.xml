@@ -249,7 +249,7 @@
     </bean>
 
 
-    <bean id="baseHrsWebServiceTemplate" class="org.jasig.springframework.ws.client.core.DestinationOverridingWebServiceTemplate" abstract="true">
+    <bean id="baseHrsWebServiceTemplate" class="edu.wisc.portlet.hrs.util.ErrorLoggingDestinationOverridingWebServiceTemplate" abstract="true">
         <property name="marshaller" ref="hrsMarshaller" />
         <property name="unmarshaller" ref="hrsMarshaller" />
         <property name="interceptors" ref="hrsWss4jSecurityInterceptor" />

@@ -7,8 +7,9 @@ publication of Payroll Information as fname `earnings-statement-for-all`.
 
 ### (Unreleased)
 
-+ fix: log at DEBUG level the SOAP message when encountering a SOAP fault in the HRS integration (
-  [HRSPLT-408][], [#172][])
++ experimental: fix: log at DEBUG level when encountering error sending-and-receiving a SOAP 
+  message. At TRACE level log the raw response. Special handling when the error is a SOAP fault and 
+  hrs-portlets understands that it's a SOAP fault. ( [HRSPLT-408][], [#172][], [#173][] )
 
 ### 6.0.5 avoid popups in surplus earnings statement hyperlinks
 
@@ -859,6 +860,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#168]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/168
 [#169]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/169
 [#172]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/172
+[#173]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/173
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348
