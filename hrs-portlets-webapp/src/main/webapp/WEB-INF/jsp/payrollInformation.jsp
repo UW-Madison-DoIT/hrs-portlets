@@ -277,7 +277,7 @@
         <c:if test="${not empty hrsUrls['View 1095-C']}">
           <a class="btn btn-primary"
             href="${hrsUrls['View 1095-C']}"
-            target="_blank" rel="noopener noreferrer">View 1095-C</a>
+            target="_blank" rel="noopener noreferrer">View 2018 1095-C</a>
         </c:if>
         <c:if test="${not empty hrsUrls['1095-C Consent']}">
           <a class="btn btn-default"

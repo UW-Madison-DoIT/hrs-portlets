@@ -8,6 +8,8 @@ publication of Payroll Information as fname `earnings-statement-for-all`.
 ### (Unreleased)
 
 + fix: clarify label of link to HRS-vended W-2s, that these are *2018* W-2s. ( [HRSPLT-411][], [#174][] )
++ fix: clarify label of link to HRS-vended 1095-Cs, that these are *2018*
+  1095-Cs. ( [HRSPLT-412][], [#175][] )
 + experimental: fix: log at DEBUG level when encountering error sending-and-receiving a SOAP 
   message. At TRACE level log the raw response. Special handling when the error is a SOAP fault and 
   hrs-portlets understands that it's a SOAP fault. ( [HRSPLT-408][], [#172][], [#173][] )
@@ -863,6 +865,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#172]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/172
 [#173]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/173
 [#174]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/173
+[#175]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/175
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348
@@ -893,3 +896,4 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [HRSPLT-404]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-404
 [HRSPLT-404]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-408
 [HRSPLT-411]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-411
+[HRSPLT-412]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-412
