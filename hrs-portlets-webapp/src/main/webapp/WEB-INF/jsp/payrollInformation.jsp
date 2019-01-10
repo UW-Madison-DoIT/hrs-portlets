@@ -266,7 +266,7 @@
         <c:if test="${not empty hrsUrls['View W-2']}">
           <a class="btn btn-primary"
             href="${hrsUrls['View W-2']}"
-            target="_blank" rel="noopener noreferrer">View W-2</a>
+            target="_blank" rel="noopener noreferrer">View 2018 W-2</a>
         </c:if>
         <c:if test="${not empty hrsUrls['W-2 Consent']}">
           <a class="btn btn-default"
