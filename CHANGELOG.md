@@ -872,7 +872,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#169]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/169
 [#172]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/172
 [#173]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/173
-[#174]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/173
+[#174]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/174
 [#175]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/175
 [#176]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/176
 
