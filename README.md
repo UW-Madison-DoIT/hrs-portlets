@@ -193,6 +193,15 @@ this hour limiting policy applies to them.)
 + `managerListOfLinks` : JSON suitable for driving a `list-of-links` widget representing links
   appropriate to the employee's roles for approving others' time and absences.
 
+### Payroll Information
+
++ `listOfLinks` : JSON suitable for driving a `list-of-links` widget for the
+  Payroll Information app. 4 links: the Payroll Information app relevant to the
+  viewing employee ("Earnings Statements"), the direct deposit updating
+  affordance appropriate to the employee ("Direct Deposit"), the tax statements
+  tab of the relevant Payroll Information app ("Tax Statements"), and the PDF
+  form for updating payroll tax withholdings ("Update W4").
+
 ### Roles
 
 + `hasRole` : JSON suitable for driving a `switch` widget switching on whether the employee has a
