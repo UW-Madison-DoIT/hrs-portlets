@@ -62,7 +62,6 @@ public class PayrollListOfLinksController
     taxStatementsLink.setHref("/portal/p/" + fname + "?pP_requestedContent=Tax%20Statements");
     taxStatementsLink.setIcon("toll");
 
-
     Link withholdingsLink = new Link();
     withholdingsLink.setTitle("Update W4");
     withholdingsLink.setHref(WITHHOLDINGS_PDF_URL);
@@ -121,7 +120,7 @@ public class PayrollListOfLinksController
     Map<String, String> urls = this.getHrsUrls();
 
     if (roles.contains(ROLE_SELF_SERVICE_DIRECT_DEPOSIT) &&
-        ( null != urls.get(HrsUrlDao.SELF_SERVICE_DIRECT_DEPOSIT_KEY))) {
+        (null != urls.get(HrsUrlDao.SELF_SERVICE_DIRECT_DEPOSIT_KEY))) {
       directDepositLink.setHref(urls.get(HrsUrlDao.SELF_SERVICE_DIRECT_DEPOSIT_KEY));
       directDepositLink.setIcon("account_balance_wallet");
     } else {
@@ -130,7 +129,6 @@ public class PayrollListOfLinksController
     }
     return directDepositLink;
   }
-
 
   @Autowired
   public void setRolesDao(HrsRolesDao hrsRolesDao) {
