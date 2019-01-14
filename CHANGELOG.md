@@ -17,9 +17,10 @@ publication of Payroll Information as fname `earnings-statement-for-all`.
 + fix: clarify label of link to HRS-vended W-2s, that these are *2018* W-2s. ( [HRSPLT-411][], [#174][] )
 + fix: clarify label of link to HRS-vended 1095-Cs, that these are *2018*
   1095-Cs. ( [HRSPLT-412][], [#175][] )
-+ experimental: fix: log at DEBUG level when encountering error sending-and-receiving a SOAP 
-  message. At TRACE level log the raw response. Special handling when the error is a SOAP fault and 
-  hrs-portlets understands that it's a SOAP fault. ( [HRSPLT-408][], [#172][], [#173][] )
++ fix: log at DEBUG level when encountering error sending-and-receiving a SOAP
+  message. At TRACE level log the raw response. Special handling when the error
+  is a SOAP fault and hrs-portlets understands that it's a SOAP fault. (
+  [HRSPLT-408][], [#172][], [#173][] )
 
 ### 6.0.5 avoid popups in surplus earnings statement hyperlinks
 
