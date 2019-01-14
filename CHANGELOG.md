@@ -7,6 +7,13 @@ publication of Payroll Information as fname `earnings-statement-for-all`.
 
 ### (Unreleased)
 
++ feat: add Payroll Information list-of-links resource URL (path: `listOfLinks`)
+  that honors `ROLE_VIEW_DIRECT_DEPOSIT` in the same way as the Payroll
+  Information portlet content honors that role (linking employee self-service
+  Direct Deposit iff the employee has that role and the `Direct Deposit` HRS URL
+  is set, otherwise linking the PDF form for adjusting direct deposit.) (
+  [HRSPLT-369][], [#176][] )
+
 + fix: clarify label of link to HRS-vended W-2s, that these are *2018* W-2s. ( [HRSPLT-411][], [#174][] )
 + fix: clarify label of link to HRS-vended 1095-Cs, that these are *2018*
   1095-Cs. ( [HRSPLT-412][], [#175][] )
@@ -866,6 +873,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#173]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/173
 [#174]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/173
 [#175]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/175
+[#176]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/176
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348
@@ -873,6 +881,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [HRSPLT-363]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-363
 [HRSPLT-365]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-365
 [HRSPLT-368]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-368
+[HRSPLT-369]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-369
 [HRSPLT-370]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-370
 [HRSPLT-371]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-371
 [HRSPLT-375]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-375
