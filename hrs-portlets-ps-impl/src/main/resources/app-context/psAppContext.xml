@@ -45,6 +45,13 @@
         <entry key="UW_EMPLOYEE_ACTIVE">
           <set>
             <value>ROLE_UW_EMPLOYEE_ACTIVE</value>
+              <!-- No effect, just a canary in the mine. -->
+            <value>ROLE_VIEW_ABSENCE_HISTORIES</value>
+                <!-- effects
+                  In Time and Absence
+                    Allows rendering absenceHistories.json
+                    Show the Absence tab
+                -->
           </set>
         </entry>
 
@@ -52,11 +59,6 @@
         <entry key="UW_DYN_AM_EMPLOYEE">
             <set>
                 <value>ROLE_VIEW_ABSENCE_HISTORIES</value>
-                <!-- effects
-                  In Time and Absence
-                    Allows rendering absenceHistories.json
-                    Show the Absence tab
-                -->
                 <value>ROLE_ENTER_EDIT_CANCEL_OWN_ABSENCES</value>
                 <!--
                   In Time and Absence
