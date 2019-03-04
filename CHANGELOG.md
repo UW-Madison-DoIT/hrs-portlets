@@ -8,7 +8,7 @@ publication of Payroll Information as fname `earnings-statement-for-all`.
 ### (Unreleased)
 
 + feat: change message `label.yearEndLeaveBalance` and its default value to
-  "University Staff end of year leave balance" ( [HRSPLT-418][] )
+  "University Staff end of year leave balance" ( [HRSPLT-418][], [#179][] )
 
 ### 6.2.0 Absence tab for all
 
@@ -893,6 +893,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#175]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/175
 [#176]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/176
 [#178]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/178
+[#179]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/179
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348
