@@ -110,7 +110,8 @@
     <c:if test="${not empty hrsUrls['Year End Leave Balances']}">
         <div class="dl-link">
             <a href="${hrsUrls['Year End Leave Balances']}"
-               target="_blank"><spring:message code="label.yearEndLeaveBalance" text="Year End University Staff Leave Balance"/></a><br/>
+               target="_blank"><spring:message code="label.yearEndLeaveBalance"
+               text="University Staff end of year leave balance"/></a><br/>
         </div>
     </c:if>
     <sec:authorize ifAnyGranted="ROLE_ENTER_EDIT_CANCEL_OWN_ABSENCES">
