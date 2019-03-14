@@ -71,7 +71,7 @@
         <br/>
         <div class="data-table-description"
           style="color:black;">
-          2019 and after Earnings Statements will no longer have leave balances.
+          2019 and after Earnings Statements do not have leave balances.
           <c:choose>
             <c:when test="${not empty prefs['timeAndAbsenceFName']
               && not empty prefs['timeAndAbsenceFName'][0]}">
