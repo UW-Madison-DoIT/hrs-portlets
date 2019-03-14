@@ -35,11 +35,11 @@
       <div class="fl-widget hrs-notification-wrapper alert alert-info">
         <div class="hrs-notification-content">
           <p>
-            IF YOU ARE NO LONGER A UW EMPLOYEE, MyUW cannot provide your 2018
-            W-2, 2019 earnings statements, or self-service access to change your
-            mailing address. You may contact your prior employer for help
-            accessing these documents, to update your mailing address, or to
-            submit a duplicate tax statement request.
+            <strong>If you are no longer a UW employee,</strong> MyUW cannot
+            provide your 2018 W-2, 2019 earnings statements, or self-service
+            access to change your mailing address. You may contact your prior
+            employer for help accessing these documents, to update your mailing
+            address, or to submit a duplicate tax statement request.
           </p>
         </div>
       </div>
