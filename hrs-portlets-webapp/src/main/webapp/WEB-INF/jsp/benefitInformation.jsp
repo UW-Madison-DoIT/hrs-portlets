@@ -90,7 +90,7 @@
           <c:when test="${not empty prefs['benefitsSummaryUrl']
             && not empty prefs['benefitsSummaryUrl'][0]}">
             <div class='col-xs-4 col-xs-offset-2'>
-              <a href="${prefs['benefitsSummaryUrl'][0]}" 
+              <a href="${prefs['benefitsSummaryUrl'][0]}"
                 target="_blank" rel="noopener noreferer"
                 class="btn btn-default">
                   View Benefits Summary Detail
@@ -99,7 +99,7 @@
           </c:when>
           <c:when test="${not empty hrsUrls['Benefits Summary']}">
             <div class='col-xs-4 col-xs-offset-2'>
-              <a href="${hrsUrls['Benefits Summary']}" 
+              <a href="${hrsUrls['Benefits Summary']}"
                 target="_blank" rel="noopener noreferer"
                 class="btn btn-default">
                   View Benefits Summary Detail
