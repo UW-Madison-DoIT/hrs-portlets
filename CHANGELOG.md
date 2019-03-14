@@ -13,7 +13,7 @@ publication of Payroll Information as fname `earnings-statement-for-all`.
   `ROLE_UW_EMPLOYEE_ACTIVE` mitigating their lack of access to HRS self-service
   content (W-2s and earnings statements issued in 2019).
   ( [HRSPLT-425][], [#182][] )
-+ feat: change message `label.yearEndLeaveBalance` and its default value to
++ fix: change message `label.yearEndLeaveBalance` and its default value to
   "University Staff end of year leave balance" ( [HRSPLT-418][], [#179][] )
 + fix: in Payroll Information, characterize 2019 as the present rather than as
   the future in the microcopy about 2019 and beyond earnings statements not
