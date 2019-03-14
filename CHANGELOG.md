@@ -8,8 +8,9 @@ publication of Payroll Information as fname `earnings-statement-for-all`.
 ### (Unreleased)
 
 + fix: in Payroll Information, show message to users without
-  ROLE_UW_EMPLOYEE_ACTIVE mitigating their lack of access to HRS self-service
-  content (W-2s and earnings statements issued in 2019). ( [HRSPLT-425][], )
+  `ROLE_UW_EMPLOYEE_ACTIVE` mitigating their lack of access to HRS self-service
+  content (W-2s and earnings statements issued in 2019).
+  ( [HRSPLT-425][], [#182][] )
 + feat: change message `label.yearEndLeaveBalance` and its default value to
   "University Staff end of year leave balance" ( [HRSPLT-418][], [#179][] )
 + fix: in Payroll Information, characterize 2019 as the present rather than as
@@ -900,6 +901,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#176]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/176
 [#178]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/178
 [#179]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/179
+[#182]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/182
 [#183]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/183
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
