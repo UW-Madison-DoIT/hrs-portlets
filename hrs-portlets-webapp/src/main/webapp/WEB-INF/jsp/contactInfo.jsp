@@ -206,6 +206,7 @@
     </c:choose>
   </div>
 
+  <sec:authorize ifAnyGranted="ROLE_UW_EMPLOYEE_ACTIVE">
   <c:choose>
     <c:when test="${not empty prefs['updateMyPersonalInfoUrl']
       && not empty prefs['updateMyPersonalInfoUrl'][0]}">
@@ -378,6 +379,7 @@
     </c:otherwise>
 
   </c:choose>
+  </sec:authorize>
   
   <div class="change-business-email-dialog hrs" title="Change Campus Business Email">
     <div>

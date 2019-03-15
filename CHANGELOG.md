@@ -7,6 +7,8 @@ publication of Payroll Information as fname `earnings-statement-for-all`.
 
 ### (Unreleased)
 
++ fix: in Personal Information, predicate the edit hyperlink (into HRS
+  self-service) on ROLE_UW_EMPLOYEE_ACTIVE ( [HRSPLT-424][], [#181][]  )
 + fix: in Payroll Information, show message to users without
   `ROLE_UW_EMPLOYEE_ACTIVE` mitigating their lack of access to HRS self-service
   content (W-2s and earnings statements issued in 2019).
@@ -901,6 +903,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#176]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/176
 [#178]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/178
 [#179]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/179
+[#181]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/181
 [#182]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/182
 [#183]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/183
 
@@ -937,5 +940,6 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [HRSPLT-412]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-412
 [HRSPLT-415]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-415
 [HRSPLT-418]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-418
+[HRSPLT-424]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-424
 [HRSPLT-425]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-425
 [HRSPLT-426]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-426
