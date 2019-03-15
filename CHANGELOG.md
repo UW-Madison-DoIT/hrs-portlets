@@ -20,15 +20,15 @@ publication of Payroll Information as fname `earnings-statement-for-all`.
   self-service content and functions (W-2s and earnings statements issued in
   2019; self-service home mailing address updating).
   ( [HRSPLT-425][], [#182][], [HRSPLT-429][], [#185][] )
++ fix: in Benefit Information, mitigate the case where an employee has an HRS
+  emplid and so has access to Benefit Information, but no longer has roles in
+  HRS, and so the links to HRS self-service will not work for the employee.
+  ( [HRSPLT-423][], [#180][] )
 + fix: change message `label.yearEndLeaveBalance` and its default value to
   "University Staff end of year leave balance" ( [HRSPLT-418][], [#179][] )
 + fix: in Payroll Information, characterize 2019 as the present rather than as
   the future in the microcopy about 2019 and beyond earnings statements not
   including leave balances. ( [HRSPLT-426][], [#183][] )
-+ fix: in Benefit Information, mitigate the case where an employee has an HRS
-  emplid and so has access to Benefit Information, but no longer has roles in
-  HRS, and so the links to HRS self-service will not work for the employee.
-  ( [HRSPLT-423][], [#180][] )
 
 ### 6.2.0 Absence tab for all
 
