@@ -8,7 +8,7 @@ publication of Payroll Information as fname `earnings-statement-for-all`.
 ### (Unreleased)
 
 + fix: in Personal Information, predicate the edit hyperlink (into HRS
-  self-service) on ROLE_UW_EMPLOYEE_ACTIVE ( [HRSPLT-424][], [#181][]  )
+  self-service) on ROLE_UW_EMPLOYEE_ACTIVE ( [HRSPLT-424][], [#181][] )
 + fix: in Payroll Information and in Personal Information, show message to users
   without `ROLE_UW_EMPLOYEE_ACTIVE` mitigating their lack of access to HRS
   self-service content and functions (W-2s and earnings statements issued in
