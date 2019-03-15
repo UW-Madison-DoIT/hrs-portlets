@@ -35,11 +35,11 @@
       <div class="fl-widget hrs-notification-wrapper alert alert-info">
         <div class="hrs-notification-content">
           <p>
-            <strong>If you are no longer a UW employee,</strong> MyUW cannot
-            provide your 2018 W-2, 2019 earnings statements, or self-service
-            access to change your mailing address. You may contact your prior
-            employer for help accessing these documents, to update your mailing
-            address, or to submit a duplicate tax statement request.
+            Former employees do not have online access to their 2019 and forward
+            earning statements and 2018 and forward W-2s.
+            <a href="https://kb.wisc.edu/helpdesk/page.php?id=90392"
+              target="_blank" rel="noopener noreferrer">
+              Learn more about accessing statements</a>.
           </p>
         </div>
       </div>
