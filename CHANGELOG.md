@@ -18,6 +18,10 @@ publication of Payroll Information as fname `earnings-statement-for-all`.
 + fix: in Payroll Information, characterize 2019 as the present rather than as
   the future in the microcopy about 2019 and beyond earnings statements not
   including leave balances. ( [HRSPLT-426][], [#183][] )
++ fix: in Benefit Information, mitigate the case where an employee has an HRS
+  emplid and so has access to Benefit Information, but no longer has roles in
+  HRS, and so the links to HRS self-service will not work for the employee.
+  ( [HRSPLT-423][], [#180][] )
 
 ### 6.2.0 Absence tab for all
 
@@ -903,6 +907,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#176]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/176
 [#178]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/178
 [#179]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/179
+[#180]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/180
 [#181]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/181
 [#182]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/182
 [#183]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/183
@@ -940,6 +945,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [HRSPLT-412]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-412
 [HRSPLT-415]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-415
 [HRSPLT-418]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-418
+[HRSPLT-423]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-423
 [HRSPLT-424]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-424
 [HRSPLT-425]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-425
 [HRSPLT-426]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-426
