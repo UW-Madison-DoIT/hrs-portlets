@@ -45,7 +45,16 @@
         <entry key="UW_EMPLOYEE_ACTIVE">
           <set>
             <value>ROLE_UW_EMPLOYEE_ACTIVE</value>
-              <!-- No effect, just a canary in the mine. -->
+              <!-- effects
+                In Personal Information
+                  Shows hyperlink to HRS self-service personal information
+                    editing, and explananda.
+                When this role is NOT present
+                  Shows messages in Payroll Information, Personal Information,
+                    and in Benefit Information mitigating the degraded
+                    experience of hyperlinks into HRS self-service that will not
+                    actually work for the presumably former employee.
+              -->
             <value>ROLE_VIEW_ABSENCE_HISTORIES</value>
                 <!-- effects
                   In Time and Absence
