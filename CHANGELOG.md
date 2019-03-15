@@ -9,10 +9,11 @@ publication of Payroll Information as fname `earnings-statement-for-all`.
 
 + fix: in Personal Information, predicate the edit hyperlink (into HRS
   self-service) on ROLE_UW_EMPLOYEE_ACTIVE ( [HRSPLT-424][], [#181][]  )
-+ fix: in Payroll Information, show message to users without
-  `ROLE_UW_EMPLOYEE_ACTIVE` mitigating their lack of access to HRS self-service
-  content (W-2s and earnings statements issued in 2019).
-  ( [HRSPLT-425][], [#182][] )
++ fix: in Payroll Information and in Personal Information, show message to users
+  without `ROLE_UW_EMPLOYEE_ACTIVE` mitigating their lack of access to HRS
+  self-service content and functions (W-2s and earnings statements issued in
+  2019; self-service home mailing address updating).
+  ( [HRSPLT-425][], [#182][], [HRSPLT-429][], [#185][] )
 + fix: change message `label.yearEndLeaveBalance` and its default value to
   "University Staff end of year leave balance" ( [HRSPLT-418][], [#179][] )
 + fix: in Payroll Information, characterize 2019 as the present rather than as
@@ -911,6 +912,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#181]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/181
 [#182]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/182
 [#183]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/183
+[#185]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/185
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348
@@ -949,3 +951,4 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [HRSPLT-424]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-424
 [HRSPLT-425]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-425
 [HRSPLT-426]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-426
+[HRSPLT-429]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-429

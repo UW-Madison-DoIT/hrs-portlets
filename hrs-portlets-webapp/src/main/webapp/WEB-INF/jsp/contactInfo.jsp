@@ -38,6 +38,21 @@
       <a href="${helpUrl}" target="_blank">Help</a>
     </div>
   </div>
+
+  <sec:authorize ifNotGranted="ROLE_UW_EMPLOYEE_ACTIVE">
+    <div class="fl-widget hrs-notification-wrapper alert alert-info">
+      <div class="hrs-notification-content">
+        <p>
+          Former employees do not have online access to update their home
+          address.
+          <a href="https://kb.wisc.edu/helpdesk/page.php?id=90392"
+            target="_blank" rel="noopener noreferrer">
+            Learn more about updating personal information</a>.
+        </p>
+      </div>
+    </div>
+  </sec:authorize>
+
   <hrs:notification/>
   <div class="c-info-name">
     <c:choose>
