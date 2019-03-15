@@ -5,7 +5,13 @@
 The v6 major version was occasioned by introducing dependency on a new
 publication of Payroll Information as fname `earnings-statement-for-all`.
 
-### (Unreleased)
+### (Unreleased beyond 6.2.1)
+
+(No changes yet.)
+
+### 6.2.1 Mitigate former employee loss of HRS self-service access
+
+2019-03-15
 
 + fix: in Personal Information, predicate the edit hyperlink (into HRS
   self-service) on ROLE_UW_EMPLOYEE_ACTIVE ( [HRSPLT-424][], [#181][] )
