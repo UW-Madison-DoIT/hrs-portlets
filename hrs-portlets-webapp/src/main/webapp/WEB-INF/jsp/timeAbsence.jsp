@@ -28,7 +28,17 @@
   <c:choose>
     <c:when test="${not empty hrsUrls['Fluid Time']}">
       <script>
-        window.location.replace("${hrsUrls['Fluid Time']}");
+        // open HRS self-service in new tab. New tab for 'external apps' that
+        // do not feel like part of MyUW is the MyUW local style on this
+        // WARNING: Browser pop-up blockers will sometimes block this. However,
+        // we already incur pop-up blocker issues when launching into earnings
+        // statements and tax statements vended by HRS self-service, so this
+        // may not be in practice any worse than status quo.
+        window.open("${hrsUrls['Fluid Time']}", "_blank");
+        // having opened HRS self-service in a new tab, point this tab back to
+        // the MyUW home page (better would be to point it at wherever the user
+        // launched Time and Absence from).
+        window.location.replace("/web");
       </script>
     </c:when>
     <c:otherwise>

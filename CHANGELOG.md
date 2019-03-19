@@ -7,7 +7,11 @@ publication of Payroll Information as fname `earnings-statement-for-all`.
 
 ### (Unreleased beyond 6.2.1)
 
-(No changes yet.)
++ fix: in Time and Absence, when in lieu of delivering MyUW Time and Absence
+  instead launching HRS self-service "Fluid Time", launch that in a new tab and
+  return the main MyUW tab back to viewing the MyUW home page. Fulfills local
+  MyUW style that launches of external-to-the-portal applications happen in new
+  tabs. ( [HRSPLT-431][], [#187][] )
 
 ### 6.2.1 Mitigate former employee loss of HRS self-service access
 
@@ -919,6 +923,7 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [#182]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/182
 [#183]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/183
 [#185]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/185
+[#187]: https://github.com/UW-Madison-DoIT/hrs-portlets/pull/187
 
 [HRSPLT-346]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-346
 [HRSPLT-348]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-348
@@ -958,3 +963,4 @@ This and many more earlier releases exist as [releases in the GitHub repo][].
 [HRSPLT-425]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-425
 [HRSPLT-426]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-426
 [HRSPLT-429]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-429
+[HRSPLT-431]: https://jira.doit.wisc.edu/jira/browse/HRSPLT-431
