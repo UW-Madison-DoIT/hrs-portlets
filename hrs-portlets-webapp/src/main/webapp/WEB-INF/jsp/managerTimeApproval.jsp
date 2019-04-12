@@ -31,7 +31,10 @@
             <a href="${hrsUrls['Time Management']}" target="_blank">Manager Self Service - Time Management</a>
         </div>
         <div class="dl-help-link">
-          <a href="${helpUrl}" target="_blank">Help</a>
+          <myuw-help-link
+            app-context="Approvals"
+            url="${helpUrl}">
+          </myuw-help-link>
         </div>
       </div>
     

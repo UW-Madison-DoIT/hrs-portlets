@@ -27,7 +27,10 @@
   <div style='margin: 0 10px;'>
     <div class="dl-banner-links">
       <div class="dl-help-link">
-        <a href="${helpUrl}" target="_blank">Help</a>
+        <myuw-help-link
+          app-context="Payroll"
+          url="${helpUrl}">
+        </myuw-help-link>
       </div>
     </div>
 

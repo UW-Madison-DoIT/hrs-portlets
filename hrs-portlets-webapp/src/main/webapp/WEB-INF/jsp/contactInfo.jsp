@@ -35,7 +35,10 @@
 <div id="${n}dl-contact-info" class="dl-contact-info hrs">
   <div class="dl-banner-links">
     <div class="dl-help-link">
-      <a href="${helpUrl}" target="_blank">Help</a>
+      <myuw-help-link
+        app-context="Personal Information"
+        url="${helpUrl}">
+      </myuw-help-link>
     </div>
   </div>
 

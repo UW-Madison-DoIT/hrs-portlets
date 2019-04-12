@@ -59,7 +59,10 @@
         </div>
       </c:if>
       <div class="dl-help-link">
-        <a href="${helpUrl}" target="_blank">Help</a>
+        <myuw-help-link
+          app-context="Time and Absence"
+          url="${helpUrl}">
+        </myuw-help-link>
       </div>
     </div>
 
