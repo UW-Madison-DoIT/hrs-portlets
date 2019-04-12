@@ -37,7 +37,7 @@
           </myuw-help-link>
         </div>
       </div>
-    
+
       <hrs:notification/>
   </div>
   <div>
@@ -49,7 +49,7 @@
       <a href="${hrsUrls['Approve Payable time']}" target="_blank" class="btn btn-default">Approve Payable Time</a>
     </span>
   </div>
-  
+
   <div id="${n}dl-tabs" class="dl-tabs ui-tabs ui-widget ui-widget-content ui-corner-all inner-nav-container">
     <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all inner-nav">
       <c:set var="activeTabStyle" value="ui-tabs-selected ui-state-active"/>
@@ -147,7 +147,7 @@
             }
           });
         </sec:authorize>
-          
+
         <sec:authorize ifAnyGranted="ROLE_VIEW_MANAGED_TIMES">
           dl.pager.init("#${n}dl-time", {
             columnDefs: [
@@ -161,11 +161,11 @@
             }
           });
         </sec:authorize>
-        
+
         dl.tabs("#${n}dl-tabs");
-        
+
         dl.util.clickableContainer("#${n}dl-time-absence");
-    });    
+    });
 })(dl_v1.jQuery, dl_v1);
 </rs:compressJs>
 </script>

@@ -133,9 +133,9 @@
                                   <span>
                                       <a href="#" onclick='dl_v1.displayEdit(false);' class="uportal-button fancy-cancel btn btn-default"><spring:message code="button.cancel" text="Cancel"/></a>
                                   </span>
-                                  
+
                               </div>
-                              
+
                           </div>
                       </div>
                   </spring:nestedPath>
@@ -228,19 +228,19 @@
   <c:choose>
     <c:when test="${not empty prefs['updateMyPersonalInfoUrl']
       && not empty prefs['updateMyPersonalInfoUrl'][0]}">
-      
+
       <!-- configured with HRS self-service personal information update
        URL via portlet-preference. Use HRS PUM 22 content. -->
-       
+
        <!-- federal reporting statuses deliberately removed in PUM22 mode,
-            in favor of that data just being down inside 
+            in favor of that data just being down inside
             linked HRS self-service UI. -->
-      
+
       <div class="dl-contact-info-update">
         <div>
           <p>
             <strong>
-            <a href="${prefs['updateMyPersonalInfoUrl'][0]}" 
+            <a href="${prefs['updateMyPersonalInfoUrl'][0]}"
               target="_blank" rel="noopener noreferer">
               Update My Personal Information
             </a>
@@ -259,7 +259,7 @@
           <p>
             <strong>
               <spring:message code="updateBusinessOfficeAddressInstructionsPart1"
-                text="To update your Business/Office Address, please contact"/> 
+                text="To update your Business/Office Address, please contact"/>
               <c:choose>
                 <c:when test="${not empty humanResourceOfficeContactUrl}">
                   <a href="${humanResourceOfficeContactUrl}"
@@ -277,33 +277,33 @@
             </strong>
           </p>
         </div>
-      </div>  
+      </div>
     </c:when>
     <c:when test="${not empty hrsUrls['Personal Information']}">
-      
+
       <!-- Not configured with a self-service personal information update URL
       via portlet preference, but have a URL fom HRS URLs web service.
       Legacy mode. -->
-      
+
       <div class="federal-reporting-statuses">
         <!-- federal reporting statuses only show in legacy mode. -->
         <c:if test="${not empty hrsUrls['Disability Status']}">
           <div>
             <span>
               <strong>
-                <spring:message 
-                  code="label.disability.status" 
+                <spring:message
+                  code="label.disability.status"
                   text="Disability Status"/>
               </strong>
             </span>
-            <span>( 
-              <a 
-                aria-label="view or update Disability Status" 
-                href="${hrsUrls['Disability Status']}" 
+            <span>(
+              <a
+                aria-label="view or update Disability Status"
+                href="${hrsUrls['Disability Status']}"
                 target="_blank"
                 rel="noopener noreferer">
                   <spring:message code="label.status.link" text="view/update"/>
-              </a> 
+              </a>
             )</span>
           </div>
         </c:if>
@@ -312,20 +312,20 @@
           <div>
             <span>
               <strong>
-                <spring:message 
-                  code="label.veteran.status" 
+                <spring:message
+                  code="label.veteran.status"
                   text="Veteran Status"/>
               </strong>
             </span>
-            <span>( 
-              <a 
-                aria-label="view or update Veteran Status" 
-                href="${hrsUrls['Veteran Status']}" 
+            <span>(
+              <a
+                aria-label="view or update Veteran Status"
+                href="${hrsUrls['Veteran Status']}"
                 target="_blank">
-                  <spring:message  
-                    code="label.status.link" 
+                  <spring:message
+                    code="label.status.link"
                     text="view/update"/>
-              </a> 
+              </a>
             )</span>
           </div>
         </c:if>
@@ -334,27 +334,27 @@
           <div>
             <span>
               <strong>
-                <spring:message 
-                  code="label.ethnic.groups" 
+                <spring:message
+                  code="label.ethnic.groups"
                   text="Ethnic Groups"/>
               </strong>
             </span>
-            <span>( 
-              <a 
-                aria-label="view or update Ethnic Groups" 
-                href="${hrsUrls['Ethnic Groups']}" 
+            <span>(
+              <a
+                aria-label="view or update Ethnic Groups"
+                href="${hrsUrls['Ethnic Groups']}"
                 target="_blank"
                 rel="noopener noreferer">
                   <spring:message code="label.status.link" text="view/update"/>
-              </a> 
+              </a>
             )</span>
           </div>
         </c:if>
       </div>
-      
+
       <div class="dl-contact-info-update">
-        <a 
-          href="${hrsUrls['Personal Information']}" 
+        <a
+          href="${hrsUrls['Personal Information']}"
           target="_blank"
           rel="noopener noreferer">
             <spring:message code="updateInfoLink"/>
@@ -367,7 +367,7 @@
           <p>
             <strong>
               <spring:message code="updateBusinessOfficeAddressInstructionsPart1"
-                text="To update your Business/Office Address, please contact "/> 
+                text="To update your Business/Office Address, please contact "/>
               <c:choose>
                 <c:when test="${not empty humanResourceOfficeContactUrl}">
                   <a href="${humanResourceOfficeContactUrl}"
@@ -398,14 +398,14 @@
 
   </c:choose>
   </sec:authorize>
-  
+
   <div class="change-business-email-dialog hrs" title="Change Campus Business Email">
     <div>
       Email address used for official campus communications, for the directory, and other authorized uses.
     </div>
     <form action="javascript:;" novalidate>
       <div>
-        
+
       </div>
       <fieldset>
         <table>
@@ -447,43 +447,43 @@
             errorClass: 'dl-invalid-field',
             messageClass: 'dl-validator-error'
         };
-        
+
         var form = $("#${n}dl-contact-info .change-business-email-dialog form").validator(validatorConfig);
         var validator = form.data("validator");
-        
 
-        
+
+
         var closeDialog = function(changeEmailDialog) {
             changeEmailDialog.data("closing", true);
             changeEmailDialog.dialog('close');
             form[0].reset();
         };
-        
+
         var dialogCloseHandler = function(changeEmailDialog) {
             var email1 = form.find("input[name='email1']").val();
             var email2 = form.find("input[name='email2']").val();
-            
+
             if ((email1 != undefined && email1 != "") || (email2 != undefined && email2 != "")) {
                 var close = confirm("Close the Change Business Email Address box?");
                 if (!close) {
                     return false;
                 }
             }
-            
+
             closeDialog(changeEmailDialog);
         };
-        
+
         var dialogSubmitHandler = function(e, changeEmailDialog) {
             //Always cancel the actual submit
             e.preventDefault();
-            
+
             validator.checkValidity();
 
             var email1 = form.find("input[name='email1']").val();
             var email2 = form.find("input[name='email2']").val();
-            
+
             $.log("Update email: " + email1 + " " + email2);
-            
+
             if (email1 != email2) {
                 validator.invalidate({
                     email2: "Email addresses must match"
@@ -496,7 +496,7 @@
             }
             else {
                 closeDialog(changeEmailDialog);
-                
+
                 var changeEmailLink = $("#${n}dl-contact-info .change-business-email");
                 changeEmailLink.mask("Updating ...");
                 $.ajax({
@@ -520,8 +520,8 @@
                 });
             }
         };
-        
-        
+
+
         var dialogParent = $("#${n}dl-contact-info");
         var changeEmailDialog = $("#${n}dl-contact-info .change-business-email-dialog").dialog({
             autoOpen: false,
@@ -536,7 +536,7 @@
             width: dialogParent.width(),
             beforeClose: function(e, ui) {
                 var changeEmailDialog = $(e.target);
-                
+
                 var closing = changeEmailDialog.data("closing");
                 if (!closing) {
                     dialogCloseHandler(changeEmailDialog);
@@ -548,7 +548,7 @@
                 $(e.target).data("closed", false);
             }
         });
-        
+
         form.bind("reset", function(e) {
             var closing = changeEmailDialog.data("closing");
             var closed = changeEmailDialog.data("closed");
@@ -556,15 +556,15 @@
                 dialogCloseHandler(changeEmailDialog);
             }
         });
-        
+
         form.submit(function(e) {
             dialogSubmitHandler(e, changeEmailDialog);
         });
-        
+
         $("#${n}dl-contact-info .business-email-details a.change-business-email").click(function() {
             changeEmailDialog.dialog('open');
         });
-    });    
+    });
 })(dl_v1.jQuery);
 </rs:compressJs>
 </script>
@@ -573,7 +573,7 @@
    $(document).ready(function() {
       $(".${n}edit").hide();
       $(".${n}edit-error").hide();
-      
+
       dl_v1.displayEdit = function (enable) {
     	  if(enable) {
     		  $(".${n}view").hide();
@@ -582,10 +582,10 @@
     		  $(".${n}edit").hide();
     		  $(".${n}edit-error").hide();
     		  $(".${n}view").show();
-    		  
+
     	  }
       }
-   });			
+   });
 })(dl_v1.jQuery);
 </script>
 
@@ -595,8 +595,8 @@
    $(document).ready(function() {
 	   dl_v1.displayEdit(true);
 	   $(".${n}edit-error").show();
-   });			
-})(dl_v1.jQuery);	
+   });
+})(dl_v1.jQuery);
 </script>
 </c:if>
 </c:if>
