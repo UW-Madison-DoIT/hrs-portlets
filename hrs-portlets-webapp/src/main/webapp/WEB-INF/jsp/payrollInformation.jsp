@@ -26,12 +26,7 @@
   class="fl-widget portlet dl-payroll-information hrs">
   <div style='margin: 0 10px;'>
     <div class="dl-banner-links">
-      <div class="dl-help-link">
-        <myuw-help-link
-          app-context="Payroll"
-          url="${helpUrl}">
-        </myuw-help-link>
-      </div>
+      <hrs:helpLink appContext="Payroll" />
     </div>
 
     <sec:authorize ifNotGranted="ROLE_UW_EMPLOYEE_ACTIVE">

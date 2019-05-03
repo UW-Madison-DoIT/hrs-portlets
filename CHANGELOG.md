@@ -7,7 +7,8 @@ publication of Payroll Information as fname `earnings-statement-for-all`.
 
 ### (Unreleased beyond 6.2.1)
 
-(No changes yet.)
++ feat: improve affordance of upper-right help hyperlinks. Implementation
+  introduces a `helpLink` JSP tag.
 
 ### 6.2.1 Mitigate former employee loss of HRS self-service access
 

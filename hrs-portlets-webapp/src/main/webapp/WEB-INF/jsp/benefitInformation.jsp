@@ -46,12 +46,7 @@
     </c:when>
     </c:choose>
 
-    <div class="dl-help-link">
-      <myuw-help-link
-        app-context="Benefits"
-        url="${helpUrl}">
-      </myuw-help-link>
-    </div>
+    <hrs:helpLink appContext="Benefits" />
   </div>
 
   <hrs:notification/>
