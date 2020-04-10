@@ -3,7 +3,7 @@
     <parent>
         <groupId>edu.wisc.my.portlet.hrs</groupId>
         <artifactId>hrs-portlets-parent</artifactId>
-        <version>7.4.1-SNAPSHOT</version>
+        <version>7.4.1</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
