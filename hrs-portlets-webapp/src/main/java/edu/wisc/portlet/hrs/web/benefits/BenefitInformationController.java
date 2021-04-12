@@ -95,15 +95,9 @@ public class BenefitInformationController extends HrsControllerBase {
       final String emplId = PrimaryAttributeUtils.getPrimaryId();
       final String etfMemberId = (String) userInfo.get("eduWisconsinETFMemberID");
 
-      final String[] tabArray = request.getParameterMap().get("tab");
-      String tab = "";
-      if(tabArray!=null && tabArray.length == 1) {
-        tab = tabArray[0];
-      }
-
       final BenefitSummary benefitSummary = this.benefitSummaryDao.getBenefitSummary(emplId);
       model.addAttribute("enrollmentFlag", benefitSummary.getEnrollmentFlag());
-      model.addAttribute("tab", tab);
+
       boolean isMadisonUser = !StringUtils.isBlank(userInfo.get("wiscEduHRSEmplid"));
       model.addAttribute("isMadisonUser", isMadisonUser);
       final PortletPreferences preferences = request.getPreferences();
